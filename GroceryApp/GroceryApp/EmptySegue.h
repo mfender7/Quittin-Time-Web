@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EmptySegue.h
 //  GroceryApp
 //
 //  Created by Shane Owens on 6/7/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface EmptySegue : UIStoryboardSegue
 
 @end

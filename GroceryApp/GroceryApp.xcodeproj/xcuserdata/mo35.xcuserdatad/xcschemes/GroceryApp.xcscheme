@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4DB97BC193F8D0200FFDAE0"
+               BlueprintIdentifier = "B45CEEC91943E09900C05499"
                BuildableName = "GroceryApp.app"
                BlueprintName = "GroceryApp"
                ReferencedContainer = "container:GroceryApp.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4DB97E0193F8D0200FFDAE0"
+               BlueprintIdentifier = "B45CEEED1943E09900C05499"
                BuildableName = "GroceryAppTests.xctest"
                BlueprintName = "GroceryAppTests"
                ReferencedContainer = "container:GroceryApp.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4DB97BC193F8D0200FFDAE0"
+            BlueprintIdentifier = "B45CEEC91943E09900C05499"
             BuildableName = "GroceryApp.app"
             BlueprintName = "GroceryApp"
             ReferencedContainer = "container:GroceryApp.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4DB97BC193F8D0200FFDAE0"
+            BlueprintIdentifier = "B45CEEC91943E09900C05499"
             BuildableName = "GroceryApp.app"
             BlueprintName = "GroceryApp"
             ReferencedContainer = "container:GroceryApp.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4DB97BC193F8D0200FFDAE0"
+            BlueprintIdentifier = "B45CEEC91943E09900C05499"
             BuildableName = "GroceryApp.app"
             BlueprintName = "GroceryApp"
             ReferencedContainer = "container:GroceryApp.xcodeproj">

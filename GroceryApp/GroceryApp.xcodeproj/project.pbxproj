@@ -7,172 +7,238 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4DB97C1193F8D0200FFDAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97C0193F8D0200FFDAE0 /* Foundation.framework */; };
-		B4DB97C3193F8D0200FFDAE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97C2193F8D0200FFDAE0 /* CoreGraphics.framework */; };
-		B4DB97C5193F8D0200FFDAE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97C4193F8D0200FFDAE0 /* UIKit.framework */; };
-		B4DB97CB193F8D0200FFDAE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4DB97C9193F8D0200FFDAE0 /* InfoPlist.strings */; };
-		B4DB97CD193F8D0200FFDAE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB97CC193F8D0200FFDAE0 /* main.m */; };
-		B4DB97D1193F8D0200FFDAE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB97D0193F8D0200FFDAE0 /* AppDelegate.m */; };
-		B4DB97D4193F8D0200FFDAE0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DB97D2193F8D0200FFDAE0 /* Main_iPhone.storyboard */; };
-		B4DB97D7193F8D0200FFDAE0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DB97D5193F8D0200FFDAE0 /* Main_iPad.storyboard */; };
-		B4DB97DA193F8D0200FFDAE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB97D9193F8D0200FFDAE0 /* ViewController.m */; };
-		B4DB97DC193F8D0200FFDAE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DB97DB193F8D0200FFDAE0 /* Images.xcassets */; };
-		B4DB97E3193F8D0200FFDAE0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97E2193F8D0200FFDAE0 /* XCTest.framework */; };
-		B4DB97E4193F8D0200FFDAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97C0193F8D0200FFDAE0 /* Foundation.framework */; };
-		B4DB97E5193F8D0200FFDAE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97C4193F8D0200FFDAE0 /* UIKit.framework */; };
-		B4DB97ED193F8D0200FFDAE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4DB97EB193F8D0200FFDAE0 /* InfoPlist.strings */; };
-		B4DB97EF193F8D0200FFDAE0 /* GroceryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB97EE193F8D0200FFDAE0 /* GroceryAppTests.m */; };
-		B4DB97F9193F8D6900FFDAE0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97F8193F8D6900FFDAE0 /* CoreLocation.framework */; };
-		B4DB97FB193F8D7900FFDAE0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DB97FA193F8D7900FFDAE0 /* AdSupport.framework */; };
+		B45CEECE1943E09900C05499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECD1943E09900C05499 /* Foundation.framework */; };
+		B45CEED01943E09900C05499 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECF1943E09900C05499 /* CoreGraphics.framework */; };
+		B45CEED21943E09900C05499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEED11943E09900C05499 /* UIKit.framework */; };
+		B45CEED81943E09900C05499 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CEED61943E09900C05499 /* InfoPlist.strings */; };
+		B45CEEDA1943E09900C05499 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEED91943E09900C05499 /* main.m */; };
+		B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEDD1943E09900C05499 /* AppDelegate.m */; };
+		B45CEEE11943E09900C05499 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEDF1943E09900C05499 /* Main_iPhone.storyboard */; };
+		B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEE21943E09900C05499 /* Main_iPad.storyboard */; };
+		B45CEEE71943E09900C05499 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEE61943E09900C05499 /* ViewController.m */; };
+		B45CEEE91943E09900C05499 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEE81943E09900C05499 /* Images.xcassets */; };
+		B45CEEF01943E09900C05499 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEEEF1943E09900C05499 /* XCTest.framework */; };
+		B45CEEF11943E09900C05499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECD1943E09900C05499 /* Foundation.framework */; };
+		B45CEEF21943E09900C05499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEED11943E09900C05499 /* UIKit.framework */; };
+		B45CEEFA1943E09900C05499 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEF81943E09900C05499 /* InfoPlist.strings */; };
+		B45CEEFC1943E09900C05499 /* GroceryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEFB1943E09900C05499 /* GroceryAppTests.m */; };
+		B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF061943E34200C05499 /* SettingsViewController.m */; };
+		B45CEF0B1943E62000C05499 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF0A1943E62000C05499 /* AppLogo.png */; };
+		B45CEF0F1943E8DF00C05499 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF0E1943E8DF00C05499 /* settingsIcon.png */; };
+		B45CEF131943EBB900C05499 /* exampleMeal.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF121943EBB900C05499 /* exampleMeal.png */; };
+		B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF151943F2B800C05499 /* ContainerViewController.m */; };
+		B45CEF191943F5BE00C05499 /* GroceryListRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF181943F5BE00C05499 /* GroceryListRecipeViewController.m */; };
+		B45CEF1C1943FACB00C05499 /* thumbsDown.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF1A1943FACB00C05499 /* thumbsDown.png */; };
+		B45CEF1D1943FACB00C05499 /* thumbsUp.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF1B1943FACB00C05499 /* thumbsUp.png */; };
+		B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF1F1943FD2D00C05499 /* MoreChoicesTableViewController.m */; };
+		B45CEF231943FD7E00C05499 /* MealChoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF221943FD7E00C05499 /* MealChoiceTableViewCell.m */; };
+		B45CEF251944031C00C05499 /* MealChoices.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF241944031C00C05499 /* MealChoices.plist */; };
+		B45CEF28194413C000C05499 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF27194413C000C05499 /* EmptySegue.m */; };
+		B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2A1944157C00C05499 /* RecipeViewController.m */; };
+		B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2D1944159500C05499 /* GroceryListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4DB97E6193F8D0200FFDAE0 /* PBXContainerItemProxy */ = {
+		B45CEEF31943E09900C05499 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B4DB97B5193F8D0200FFDAE0 /* Project object */;
+			containerPortal = B45CEEC21943E09900C05499 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B4DB97BC193F8D0200FFDAE0;
+			remoteGlobalIDString = B45CEEC91943E09900C05499;
 			remoteInfo = GroceryApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B4DB97BD193F8D0200FFDAE0 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4DB97C0193F8D0200FFDAE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B4DB97C2193F8D0200FFDAE0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B4DB97C4193F8D0200FFDAE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B4DB97C8193F8D0200FFDAE0 /* GroceryApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryApp-Info.plist"; sourceTree = "<group>"; };
-		B4DB97CA193F8D0200FFDAE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B4DB97CC193F8D0200FFDAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4DB97CE193F8D0200FFDAE0 /* GroceryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryApp-Prefix.pch"; sourceTree = "<group>"; };
-		B4DB97CF193F8D0200FFDAE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B4DB97D0193F8D0200FFDAE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4DB97D3193F8D0200FFDAE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		B4DB97D6193F8D0200FFDAE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		B4DB97D8193F8D0200FFDAE0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4DB97D9193F8D0200FFDAE0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B4DB97DB193F8D0200FFDAE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B4DB97E1193F8D0200FFDAE0 /* GroceryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4DB97E2193F8D0200FFDAE0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B4DB97EA193F8D0200FFDAE0 /* GroceryAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryAppTests-Info.plist"; sourceTree = "<group>"; };
-		B4DB97EC193F8D0200FFDAE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B4DB97EE193F8D0200FFDAE0 /* GroceryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryAppTests.m; sourceTree = "<group>"; };
-		B4DB97F8193F8D6900FFDAE0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		B4DB97FA193F8D7900FFDAE0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B45CEECA1943E09900C05499 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45CEECD1943E09900C05499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B45CEECF1943E09900C05499 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B45CEED11943E09900C05499 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B45CEED51943E09900C05499 /* GroceryApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryApp-Info.plist"; sourceTree = "<group>"; };
+		B45CEED71943E09900C05499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B45CEED91943E09900C05499 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B45CEEDB1943E09900C05499 /* GroceryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryApp-Prefix.pch"; sourceTree = "<group>"; };
+		B45CEEDC1943E09900C05499 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B45CEEDD1943E09900C05499 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B45CEEE01943E09900C05499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		B45CEEE31943E09900C05499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B45CEEE51943E09900C05499 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B45CEEE61943E09900C05499 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B45CEEE81943E09900C05499 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B45CEEEE1943E09900C05499 /* GroceryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45CEEEF1943E09900C05499 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B45CEEF71943E09900C05499 /* GroceryAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroceryAppTests-Info.plist"; sourceTree = "<group>"; };
+		B45CEEF91943E09900C05499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B45CEEFB1943E09900C05499 /* GroceryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryAppTests.m; sourceTree = "<group>"; };
+		B45CEF051943E34200C05499 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B45CEF061943E34200C05499 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B45CEF0A1943E62000C05499 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppLogo.png; path = Images/AppLogo.png; sourceTree = "<group>"; };
+		B45CEF0E1943E8DF00C05499 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Images/settingsIcon.png; sourceTree = "<group>"; };
+		B45CEF121943EBB900C05499 /* exampleMeal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exampleMeal.png; path = Images/exampleMeal.png; sourceTree = "<group>"; };
+		B45CEF141943F2B800C05499 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		B45CEF151943F2B800C05499 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		B45CEF171943F5BE00C05499 /* GroceryListRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListRecipeViewController.h; sourceTree = "<group>"; };
+		B45CEF181943F5BE00C05499 /* GroceryListRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListRecipeViewController.m; sourceTree = "<group>"; };
+		B45CEF1A1943FACB00C05499 /* thumbsDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsDown.png; path = Images/thumbsDown.png; sourceTree = "<group>"; };
+		B45CEF1B1943FACB00C05499 /* thumbsUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsUp.png; path = Images/thumbsUp.png; sourceTree = "<group>"; };
+		B45CEF1E1943FD2D00C05499 /* MoreChoicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreChoicesTableViewController.h; sourceTree = "<group>"; };
+		B45CEF1F1943FD2D00C05499 /* MoreChoicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreChoicesTableViewController.m; sourceTree = "<group>"; };
+		B45CEF211943FD7E00C05499 /* MealChoiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealChoiceTableViewCell.h; sourceTree = "<group>"; };
+		B45CEF221943FD7E00C05499 /* MealChoiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealChoiceTableViewCell.m; sourceTree = "<group>"; };
+		B45CEF241944031C00C05499 /* MealChoices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MealChoices.plist; sourceTree = "<group>"; };
+		B45CEF26194413C000C05499 /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptySegue.h; sourceTree = "<group>"; };
+		B45CEF27194413C000C05499 /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptySegue.m; sourceTree = "<group>"; };
+		B45CEF291944157C00C05499 /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		B45CEF2A1944157C00C05499 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
+		B45CEF2C1944159500C05499 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
+		B45CEF2D1944159500C05499 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B4DB97BA193F8D0200FFDAE0 /* Frameworks */ = {
+		B45CEEC71943E09900C05499 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97FB193F8D7900FFDAE0 /* AdSupport.framework in Frameworks */,
-				B4DB97F9193F8D6900FFDAE0 /* CoreLocation.framework in Frameworks */,
-				B4DB97C3193F8D0200FFDAE0 /* CoreGraphics.framework in Frameworks */,
-				B4DB97C5193F8D0200FFDAE0 /* UIKit.framework in Frameworks */,
-				B4DB97C1193F8D0200FFDAE0 /* Foundation.framework in Frameworks */,
+				B45CEED01943E09900C05499 /* CoreGraphics.framework in Frameworks */,
+				B45CEED21943E09900C05499 /* UIKit.framework in Frameworks */,
+				B45CEECE1943E09900C05499 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4DB97DE193F8D0200FFDAE0 /* Frameworks */ = {
+		B45CEEEB1943E09900C05499 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97E3193F8D0200FFDAE0 /* XCTest.framework in Frameworks */,
-				B4DB97E5193F8D0200FFDAE0 /* UIKit.framework in Frameworks */,
-				B4DB97E4193F8D0200FFDAE0 /* Foundation.framework in Frameworks */,
+				B45CEEF01943E09900C05499 /* XCTest.framework in Frameworks */,
+				B45CEEF21943E09900C05499 /* UIKit.framework in Frameworks */,
+				B45CEEF11943E09900C05499 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4DB97B4193F8D0200FFDAE0 = {
+		B45CEEC11943E09900C05499 = {
 			isa = PBXGroup;
 			children = (
-				B4DB97C6193F8D0200FFDAE0 /* GroceryApp */,
-				B4DB97E8193F8D0200FFDAE0 /* GroceryAppTests */,
-				B4DB97BF193F8D0200FFDAE0 /* Frameworks */,
-				B4DB97BE193F8D0200FFDAE0 /* Products */,
+				B45CEED31943E09900C05499 /* GroceryApp */,
+				B45CEEF51943E09900C05499 /* GroceryAppTests */,
+				B45CEECC1943E09900C05499 /* Frameworks */,
+				B45CEECB1943E09900C05499 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B4DB97BE193F8D0200FFDAE0 /* Products */ = {
+		B45CEECB1943E09900C05499 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97BD193F8D0200FFDAE0 /* GroceryApp.app */,
-				B4DB97E1193F8D0200FFDAE0 /* GroceryAppTests.xctest */,
+				B45CEECA1943E09900C05499 /* GroceryApp.app */,
+				B45CEEEE1943E09900C05499 /* GroceryAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4DB97BF193F8D0200FFDAE0 /* Frameworks */ = {
+		B45CEECC1943E09900C05499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97FA193F8D7900FFDAE0 /* AdSupport.framework */,
-				B4DB97F8193F8D6900FFDAE0 /* CoreLocation.framework */,
-				B4DB97C0193F8D0200FFDAE0 /* Foundation.framework */,
-				B4DB97C2193F8D0200FFDAE0 /* CoreGraphics.framework */,
-				B4DB97C4193F8D0200FFDAE0 /* UIKit.framework */,
-				B4DB97E2193F8D0200FFDAE0 /* XCTest.framework */,
+				B45CEECD1943E09900C05499 /* Foundation.framework */,
+				B45CEECF1943E09900C05499 /* CoreGraphics.framework */,
+				B45CEED11943E09900C05499 /* UIKit.framework */,
+				B45CEEEF1943E09900C05499 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B4DB97C6193F8D0200FFDAE0 /* GroceryApp */ = {
+		B45CEED31943E09900C05499 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97CF193F8D0200FFDAE0 /* AppDelegate.h */,
-				B4DB97D0193F8D0200FFDAE0 /* AppDelegate.m */,
-				B4DB97D2193F8D0200FFDAE0 /* Main_iPhone.storyboard */,
-				B4DB97D5193F8D0200FFDAE0 /* Main_iPad.storyboard */,
-				B4DB97D8193F8D0200FFDAE0 /* ViewController.h */,
-				B4DB97D9193F8D0200FFDAE0 /* ViewController.m */,
-				B4DB97DB193F8D0200FFDAE0 /* Images.xcassets */,
-				B4DB97C7193F8D0200FFDAE0 /* Supporting Files */,
+				B45CEF091943E5C900C05499 /* ViewControllers */,
+				B45CEEDC1943E09900C05499 /* AppDelegate.h */,
+				B45CEEDD1943E09900C05499 /* AppDelegate.m */,
+				B45CEEDF1943E09900C05499 /* Main_iPhone.storyboard */,
+				B45CEEE21943E09900C05499 /* Main_iPad.storyboard */,
+				B45CEEE81943E09900C05499 /* Images.xcassets */,
+				B45CEED41943E09900C05499 /* Supporting Files */,
 			);
 			path = GroceryApp;
 			sourceTree = "<group>";
 		};
-		B4DB97C7193F8D0200FFDAE0 /* Supporting Files */ = {
+		B45CEED41943E09900C05499 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97C8193F8D0200FFDAE0 /* GroceryApp-Info.plist */,
-				B4DB97C9193F8D0200FFDAE0 /* InfoPlist.strings */,
-				B4DB97CC193F8D0200FFDAE0 /* main.m */,
-				B4DB97CE193F8D0200FFDAE0 /* GroceryApp-Prefix.pch */,
+				B45CEF26194413C000C05499 /* EmptySegue.h */,
+				B45CEF27194413C000C05499 /* EmptySegue.m */,
+				B45CEF081943E5C200C05499 /* Images */,
+				B45CEED51943E09900C05499 /* GroceryApp-Info.plist */,
+				B45CEED61943E09900C05499 /* InfoPlist.strings */,
+				B45CEED91943E09900C05499 /* main.m */,
+				B45CEEDB1943E09900C05499 /* GroceryApp-Prefix.pch */,
+				B45CEF241944031C00C05499 /* MealChoices.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B4DB97E8193F8D0200FFDAE0 /* GroceryAppTests */ = {
+		B45CEEF51943E09900C05499 /* GroceryAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97EE193F8D0200FFDAE0 /* GroceryAppTests.m */,
-				B4DB97E9193F8D0200FFDAE0 /* Supporting Files */,
+				B45CEEFB1943E09900C05499 /* GroceryAppTests.m */,
+				B45CEEF61943E09900C05499 /* Supporting Files */,
 			);
 			path = GroceryAppTests;
 			sourceTree = "<group>";
 		};
-		B4DB97E9193F8D0200FFDAE0 /* Supporting Files */ = {
+		B45CEEF61943E09900C05499 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4DB97EA193F8D0200FFDAE0 /* GroceryAppTests-Info.plist */,
-				B4DB97EB193F8D0200FFDAE0 /* InfoPlist.strings */,
+				B45CEEF71943E09900C05499 /* GroceryAppTests-Info.plist */,
+				B45CEEF81943E09900C05499 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B45CEF081943E5C200C05499 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B45CEF1A1943FACB00C05499 /* thumbsDown.png */,
+				B45CEF1B1943FACB00C05499 /* thumbsUp.png */,
+				B45CEF121943EBB900C05499 /* exampleMeal.png */,
+				B45CEF0E1943E8DF00C05499 /* settingsIcon.png */,
+				B45CEF0A1943E62000C05499 /* AppLogo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B45CEF091943E5C900C05499 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B45CEF051943E34200C05499 /* SettingsViewController.h */,
+				B45CEF061943E34200C05499 /* SettingsViewController.m */,
+				B45CEEE51943E09900C05499 /* ViewController.h */,
+				B45CEEE61943E09900C05499 /* ViewController.m */,
+				B45CEF141943F2B800C05499 /* ContainerViewController.h */,
+				B45CEF151943F2B800C05499 /* ContainerViewController.m */,
+				B45CEF171943F5BE00C05499 /* GroceryListRecipeViewController.h */,
+				B45CEF181943F5BE00C05499 /* GroceryListRecipeViewController.m */,
+				B45CEF1E1943FD2D00C05499 /* MoreChoicesTableViewController.h */,
+				B45CEF1F1943FD2D00C05499 /* MoreChoicesTableViewController.m */,
+				B45CEF211943FD7E00C05499 /* MealChoiceTableViewCell.h */,
+				B45CEF221943FD7E00C05499 /* MealChoiceTableViewCell.m */,
+				B45CEF291944157C00C05499 /* RecipeViewController.h */,
+				B45CEF2A1944157C00C05499 /* RecipeViewController.m */,
+				B45CEF2C1944159500C05499 /* GroceryListViewController.h */,
+				B45CEF2D1944159500C05499 /* GroceryListViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4DB97BC193F8D0200FFDAE0 /* GroceryApp */ = {
+		B45CEEC91943E09900C05499 /* GroceryApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4DB97F2193F8D0200FFDAE0 /* Build configuration list for PBXNativeTarget "GroceryApp" */;
+			buildConfigurationList = B45CEEFF1943E09900C05499 /* Build configuration list for PBXNativeTarget "GroceryApp" */;
 			buildPhases = (
-				B4DB97B9193F8D0200FFDAE0 /* Sources */,
-				B4DB97BA193F8D0200FFDAE0 /* Frameworks */,
-				B4DB97BB193F8D0200FFDAE0 /* Resources */,
+				B45CEEC61943E09900C05499 /* Sources */,
+				B45CEEC71943E09900C05499 /* Frameworks */,
+				B45CEEC81943E09900C05499 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -180,42 +246,42 @@
 			);
 			name = GroceryApp;
 			productName = GroceryApp;
-			productReference = B4DB97BD193F8D0200FFDAE0 /* GroceryApp.app */;
+			productReference = B45CEECA1943E09900C05499 /* GroceryApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B4DB97E0193F8D0200FFDAE0 /* GroceryAppTests */ = {
+		B45CEEED1943E09900C05499 /* GroceryAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4DB97F5193F8D0200FFDAE0 /* Build configuration list for PBXNativeTarget "GroceryAppTests" */;
+			buildConfigurationList = B45CEF021943E09900C05499 /* Build configuration list for PBXNativeTarget "GroceryAppTests" */;
 			buildPhases = (
-				B4DB97DD193F8D0200FFDAE0 /* Sources */,
-				B4DB97DE193F8D0200FFDAE0 /* Frameworks */,
-				B4DB97DF193F8D0200FFDAE0 /* Resources */,
+				B45CEEEA1943E09900C05499 /* Sources */,
+				B45CEEEB1943E09900C05499 /* Frameworks */,
+				B45CEEEC1943E09900C05499 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B4DB97E7193F8D0200FFDAE0 /* PBXTargetDependency */,
+				B45CEEF41943E09900C05499 /* PBXTargetDependency */,
 			);
 			name = GroceryAppTests;
 			productName = GroceryAppTests;
-			productReference = B4DB97E1193F8D0200FFDAE0 /* GroceryAppTests.xctest */;
+			productReference = B45CEEEE1943E09900C05499 /* GroceryAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B4DB97B5193F8D0200FFDAE0 /* Project object */ = {
+		B45CEEC21943E09900C05499 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Shane Owens";
 				TargetAttributes = {
-					B4DB97E0193F8D0200FFDAE0 = {
-						TestTargetID = B4DB97BC193F8D0200FFDAE0;
+					B45CEEED1943E09900C05499 = {
+						TestTargetID = B45CEEC91943E09900C05499;
 					};
 				};
 			};
-			buildConfigurationList = B4DB97B8193F8D0200FFDAE0 /* Build configuration list for PBXProject "GroceryApp" */;
+			buildConfigurationList = B45CEEC51943E09900C05499 /* Build configuration list for PBXProject "GroceryApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,97 +289,111 @@
 				en,
 				Base,
 			);
-			mainGroup = B4DB97B4193F8D0200FFDAE0;
-			productRefGroup = B4DB97BE193F8D0200FFDAE0 /* Products */;
+			mainGroup = B45CEEC11943E09900C05499;
+			productRefGroup = B45CEECB1943E09900C05499 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4DB97BC193F8D0200FFDAE0 /* GroceryApp */,
-				B4DB97E0193F8D0200FFDAE0 /* GroceryAppTests */,
+				B45CEEC91943E09900C05499 /* GroceryApp */,
+				B45CEEED1943E09900C05499 /* GroceryAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B4DB97BB193F8D0200FFDAE0 /* Resources */ = {
+		B45CEEC81943E09900C05499 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97D7193F8D0200FFDAE0 /* Main_iPad.storyboard in Resources */,
-				B4DB97DC193F8D0200FFDAE0 /* Images.xcassets in Resources */,
-				B4DB97D4193F8D0200FFDAE0 /* Main_iPhone.storyboard in Resources */,
-				B4DB97CB193F8D0200FFDAE0 /* InfoPlist.strings in Resources */,
+				B45CEF251944031C00C05499 /* MealChoices.plist in Resources */,
+				B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */,
+				B45CEF0B1943E62000C05499 /* AppLogo.png in Resources */,
+				B45CEEE91943E09900C05499 /* Images.xcassets in Resources */,
+				B45CEF0F1943E8DF00C05499 /* settingsIcon.png in Resources */,
+				B45CEF1D1943FACB00C05499 /* thumbsUp.png in Resources */,
+				B45CEF1C1943FACB00C05499 /* thumbsDown.png in Resources */,
+				B45CEEE11943E09900C05499 /* Main_iPhone.storyboard in Resources */,
+				B45CEED81943E09900C05499 /* InfoPlist.strings in Resources */,
+				B45CEF131943EBB900C05499 /* exampleMeal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4DB97DF193F8D0200FFDAE0 /* Resources */ = {
+		B45CEEEC1943E09900C05499 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97ED193F8D0200FFDAE0 /* InfoPlist.strings in Resources */,
+				B45CEEFA1943E09900C05499 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B4DB97B9193F8D0200FFDAE0 /* Sources */ = {
+		B45CEEC61943E09900C05499 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97DA193F8D0200FFDAE0 /* ViewController.m in Sources */,
-				B4DB97D1193F8D0200FFDAE0 /* AppDelegate.m in Sources */,
-				B4DB97CD193F8D0200FFDAE0 /* main.m in Sources */,
+				B45CEF191943F5BE00C05499 /* GroceryListRecipeViewController.m in Sources */,
+				B45CEF231943FD7E00C05499 /* MealChoiceTableViewCell.m in Sources */,
+				B45CEEE71943E09900C05499 /* ViewController.m in Sources */,
+				B45CEF28194413C000C05499 /* EmptySegue.m in Sources */,
+				B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */,
+				B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */,
+				B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */,
+				B45CEEDA1943E09900C05499 /* main.m in Sources */,
+				B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */,
+				B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */,
+				B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4DB97DD193F8D0200FFDAE0 /* Sources */ = {
+		B45CEEEA1943E09900C05499 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DB97EF193F8D0200FFDAE0 /* GroceryAppTests.m in Sources */,
+				B45CEEFC1943E09900C05499 /* GroceryAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B4DB97E7193F8D0200FFDAE0 /* PBXTargetDependency */ = {
+		B45CEEF41943E09900C05499 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4DB97BC193F8D0200FFDAE0 /* GroceryApp */;
-			targetProxy = B4DB97E6193F8D0200FFDAE0 /* PBXContainerItemProxy */;
+			target = B45CEEC91943E09900C05499 /* GroceryApp */;
+			targetProxy = B45CEEF31943E09900C05499 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B4DB97C9193F8D0200FFDAE0 /* InfoPlist.strings */ = {
+		B45CEED61943E09900C05499 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B4DB97CA193F8D0200FFDAE0 /* en */,
+				B45CEED71943E09900C05499 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B4DB97D2193F8D0200FFDAE0 /* Main_iPhone.storyboard */ = {
+		B45CEEDF1943E09900C05499 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B4DB97D3193F8D0200FFDAE0 /* Base */,
+				B45CEEE01943E09900C05499 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		B4DB97D5193F8D0200FFDAE0 /* Main_iPad.storyboard */ = {
+		B45CEEE21943E09900C05499 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B4DB97D6193F8D0200FFDAE0 /* Base */,
+				B45CEEE31943E09900C05499 /* Base */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		B4DB97EB193F8D0200FFDAE0 /* InfoPlist.strings */ = {
+		B45CEEF81943E09900C05499 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B4DB97EC193F8D0200FFDAE0 /* en */,
+				B45CEEF91943E09900C05499 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -321,7 +401,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B4DB97F0193F8D0200FFDAE0 /* Debug */ = {
+		B45CEEFD1943E09900C05499 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,7 +440,7 @@
 			};
 			name = Debug;
 		};
-		B4DB97F1193F8D0200FFDAE0 /* Release */ = {
+		B45CEEFE1943E09900C05499 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -393,7 +473,7 @@
 			};
 			name = Release;
 		};
-		B4DB97F3193F8D0200FFDAE0 /* Debug */ = {
+		B45CEF001943E09900C05499 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -406,7 +486,7 @@
 			};
 			name = Debug;
 		};
-		B4DB97F4193F8D0200FFDAE0 /* Release */ = {
+		B45CEF011943E09900C05499 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -419,7 +499,7 @@
 			};
 			name = Release;
 		};
-		B4DB97F6193F8D0200FFDAE0 /* Debug */ = {
+		B45CEF031943E09900C05499 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroceryApp.app/GroceryApp";
@@ -441,7 +521,7 @@
 			};
 			name = Debug;
 		};
-		B4DB97F7193F8D0200FFDAE0 /* Release */ = {
+		B45CEF041943E09900C05499 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroceryApp.app/GroceryApp";
@@ -462,32 +542,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4DB97B8193F8D0200FFDAE0 /* Build configuration list for PBXProject "GroceryApp" */ = {
+		B45CEEC51943E09900C05499 /* Build configuration list for PBXProject "GroceryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4DB97F0193F8D0200FFDAE0 /* Debug */,
-				B4DB97F1193F8D0200FFDAE0 /* Release */,
+				B45CEEFD1943E09900C05499 /* Debug */,
+				B45CEEFE1943E09900C05499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4DB97F2193F8D0200FFDAE0 /* Build configuration list for PBXNativeTarget "GroceryApp" */ = {
+		B45CEEFF1943E09900C05499 /* Build configuration list for PBXNativeTarget "GroceryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4DB97F3193F8D0200FFDAE0 /* Debug */,
-				B4DB97F4193F8D0200FFDAE0 /* Release */,
+				B45CEF001943E09900C05499 /* Debug */,
+				B45CEF011943E09900C05499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		B4DB97F5193F8D0200FFDAE0 /* Build configuration list for PBXNativeTarget "GroceryAppTests" */ = {
+		B45CEF021943E09900C05499 /* Build configuration list for PBXNativeTarget "GroceryAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4DB97F6193F8D0200FFDAE0 /* Debug */,
-				B4DB97F7193F8D0200FFDAE0 /* Release */,
+				B45CEF031943E09900C05499 /* Debug */,
+				B45CEF041943E09900C05499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B4DB97B5193F8D0200FFDAE0 /* Project object */;
+	rootObject = B45CEEC21943E09900C05499 /* Project object */;
 }

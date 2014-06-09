@@ -12,7 +12,12 @@
 
 @end
 
-@implementation RecipeViewController
+@implementation RecipeViewController{
+    NSDictionary *mealChoices;
+    NSArray *mealNames;
+}
+
+@synthesize mealTitle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +32,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    mealNames = mealChoices.allKeys;
+    mealTitle.text = mealNames[0];
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RecipeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *mealTitle;
 
 @end

@@ -75,9 +75,7 @@
     }
     
     // Configure the cell...
-    if (indexPath.section == indexPath.row) {
-        cell.textLabel.text = mealNames[indexPath.row];
-    }
+    cell.textLabel.text = mealNames[indexPath.section];
     
     
     return cell;
@@ -138,4 +136,7 @@
 }
 */
 
+- (IBAction)done:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

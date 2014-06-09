@@ -19,9 +19,11 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-2r-0cF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="Recipe" id="fBL-eX-zbF">
+                                    <navigationItem id="fBL-eX-zbF">
                                         <barButtonItem key="rightBarButtonItem" image="settingsIcon.png" id="bS9-kJ-dgy">
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <segue destination="vXZ-lx-hvc" kind="modal" id="tXx-ni-JuF"/>
                                             </connections>
@@ -53,7 +55,6 @@
         <!--Recipe View Controller-->
         <scene sceneID="js8-l6-inH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xqJ-xq-U4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aZc-do-FX0" customClass="RecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uNe-4G-Ynh"/>
@@ -67,6 +68,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="borderBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="yUb-Hg-6e5">
+                                        <rect key="frame" x="-1" y="0.0" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exampleMeal.png" translatesAutoresizingMaskIntoConstraints="NO" id="MIF-un-DjI">
                                         <rect key="frame" x="5" y="5" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,10 +86,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Example Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="iOC-fc-KkP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Directions:" translatesAutoresizingMaskIntoConstraints="NO" id="iOC-fc-KkP">
                                 <rect key="frame" x="0.0" y="118" width="320" height="406"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -94,7 +102,11 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="524"/>
+                    <connections>
+                        <outlet property="mealTitle" destination="PNu-0y-vye" id="q0z-lg-Se0"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqJ-xq-U4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="1988"/>
         </scene>
@@ -136,9 +148,11 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdY-pC-JIu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="Settings" id="sUK-R4-y52">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ASL-jk-MPz">
+                                        <barButtonItem key="rightBarButtonItem" title="X" id="ASL-jk-MPz">
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="dismiss:" destination="vXZ-lx-hvc" id="uZh-qk-n2n"/>
                                             </connections>
@@ -146,10 +160,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="pH4-sb-IFL">
-                                <rect key="frame" x="0.0" y="0.0" width="88" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -186,7 +196,6 @@
         <!--Grocery List View Controller-->
         <scene sceneID="0t2-2H-y8x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jlL-mO-Fy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Sny-wV-Nu7" customClass="GroceryListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hie-h5-XbU"/>
@@ -200,6 +209,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="borderBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="cZl-k0-JR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exampleMeal.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-w4-6je">
                                         <rect key="frame" x="5" y="5" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +232,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientsCell" id="JnL-9T-588">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Ingredient" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientsCell" id="JnL-9T-588">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JnL-9T-588" id="bjw-FY-9T4">
@@ -228,6 +241,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sny-wV-Nu7" id="Txn-3M-Izb"/>
+                                    <outlet property="delegate" destination="Sny-wV-Nu7" id="Rmw-Zk-MRI"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brn-xn-VaU">
                                 <rect key="frame" x="0.0" y="480" width="320" height="44"/>
@@ -250,7 +267,11 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="524"/>
+                    <connections>
+                        <outlet property="mealTitle" destination="sFZ-1z-ra3" id="81J-Dm-hnU"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlL-mO-Fy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="1305"/>
         </scene>
@@ -262,30 +283,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="oCY-Sc-sTK">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <items>
+                                <navigationItem id="UyW-Ly-PFF">
+                                    <barButtonItem key="rightBarButtonItem" title="X" id="osR-68-998">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="done:" destination="ksc-Q4-rxN" id="FFw-xR-pPq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealChoiceCell" textLabel="WOd-V0-Vec" detailTextLabel="Ule-BH-nng" imageView="obu-yx-ufN" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="P0U-r8-eZ0" customClass="MealChoiceTableViewCell">
-                                <rect key="frame" x="0.0" y="55" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="99" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P0U-r8-eZ0" id="Que-4J-cyE">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Meal Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WOd-V0-Vec">
-                                            <rect key="frame" x="197" y="37" width="78" height="21"/>
+                                            <rect key="frame" x="139" y="37" width="78" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ule-BH-nng">
-                                            <rect key="frame" x="197" y="58" width="43" height="15"/>
+                                            <rect key="frame" x="139" y="58" width="43" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="exampleMeal.png" id="obu-yx-ufN">
-                                            <rect key="frame" x="15" y="0.0" width="167" height="109"/>
+                                            <rect key="frame" x="15" y="0.0" width="109" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -306,8 +342,9 @@
     </scenes>
     <resources>
         <image name="AppLogo.png" width="218" height="203"/>
-        <image name="exampleMeal.png" width="630" height="410"/>
-        <image name="settingsIcon.png" width="44" height="44"/>
+        <image name="borderBox.png" width="50" height="51"/>
+        <image name="exampleMeal.png" width="141" height="141"/>
+        <image name="settingsIcon.png" width="38" height="38"/>
         <image name="thumbsDown.png" width="44" height="44"/>
         <image name="thumbsUp.png" width="44" height="44"/>
     </resources>

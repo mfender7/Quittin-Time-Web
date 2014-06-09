@@ -10,9 +10,15 @@
 
 @interface GroceryListViewController ()
 
+
 @end
 
-@implementation GroceryListViewController
+@implementation GroceryListViewController{
+    NSDictionary *mealChoices;
+    NSArray *mealNames;
+}
+
+@synthesize mealTitle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +33,61 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    mealNames = mealChoices.allKeys;
+    mealTitle.text = mealNames[0];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return mealNames.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = @"Ingredients";
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IngredientsCell"];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"IngredientsCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    // Configure the cell...
+    cell.textLabel.text = mealNames[indexPath.row];
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

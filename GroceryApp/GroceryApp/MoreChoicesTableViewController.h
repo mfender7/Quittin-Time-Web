@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MoreChoicesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)done:(id)sender;
 
 @end

@@ -36,6 +36,7 @@
 		B45CEF28194413C000C05499 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF27194413C000C05499 /* EmptySegue.m */; };
 		B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2A1944157C00C05499 /* RecipeViewController.m */; };
 		B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2D1944159500C05499 /* GroceryListViewController.m */; };
+		B45CEF301944DCD500C05499 /* borderBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF2F1944DCD500C05499 /* borderBox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		B45CEF2A1944157C00C05499 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		B45CEF2C1944159500C05499 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		B45CEF2D1944159500C05499 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
+		B45CEF2F1944DCD500C05499 /* borderBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = borderBox.png; path = Images/borderBox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		B45CEF081943E5C200C05499 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B45CEF2F1944DCD500C05499 /* borderBox.png */,
 				B45CEF1A1943FACB00C05499 /* thumbsDown.png */,
 				B45CEF1B1943FACB00C05499 /* thumbsUp.png */,
 				B45CEF121943EBB900C05499 /* exampleMeal.png */,
@@ -308,6 +311,7 @@
 				B45CEF251944031C00C05499 /* MealChoices.plist in Resources */,
 				B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */,
 				B45CEF0B1943E62000C05499 /* AppLogo.png in Resources */,
+				B45CEF301944DCD500C05499 /* borderBox.png in Resources */,
 				B45CEEE91943E09900C05499 /* Images.xcassets in Resources */,
 				B45CEF0F1943E8DF00C05499 /* settingsIcon.png in Resources */,
 				B45CEF1D1943FACB00C05499 /* thumbsUp.png in Resources */,
@@ -558,6 +562,7 @@
 				B45CEF011943E09900C05499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B45CEF021943E09900C05499 /* Build configuration list for PBXNativeTarget "GroceryAppTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +571,7 @@
 				B45CEF041943E09900C05499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,7 +17,7 @@
     NSArray *mealNames;
 }
 
-@synthesize mealTitle;
+@synthesize recipeView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +35,7 @@
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
-    mealTitle.text = mealNames[0];
+    recipeView.text = @"1 cup Pace® Salsa Verde\n\n2 cups diced cooked chicken\n\n1 large red pepper, diced\n\n1 large avocado, diced\n\n1/2 cup sour cream\n\n4 (10 inch) flour tortillas, warmed\n\n2 cups shredded lettuce\n\n\nStep 1:\nStir 1/2 cup salsa, chicken, pepper and avocado in a large bowl. Stir the remaining salsa and sour cream in a small bowl.\n\nStep 2:\nSpread 1/4 cup sour cream mixture onto each tortilla to within 1/2 inch of the edge. Top each with 1 cup chicken mixture and 1/2 cup lettuce. Fold the sides of the tortillas over the filling and then fold up the ends to enclose the filling. Cut each wrap in half before serving.";
 }
 
 - (void)didReceiveMemoryWarning

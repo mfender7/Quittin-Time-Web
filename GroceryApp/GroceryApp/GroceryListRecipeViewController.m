@@ -9,11 +9,19 @@
 #import "GroceryListRecipeViewController.h"
 #import "ContainerViewController.h"
 
+
 @interface GroceryListRecipeViewController ()
 @property (nonatomic, weak) ContainerViewController *containerViewController;
 @end
 
-@implementation GroceryListRecipeViewController
+
+@implementation GroceryListRecipeViewController{
+    NSDictionary *mealChoices;
+    NSArray *mealNames;
+}
+
+@synthesize mealTitle;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +50,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    mealNames = mealChoices.allKeys;
+    mealTitle.text = mealNames[1];
     
     UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
     Swiperight.direction=UISwipeGestureRecognizerDirectionRight;

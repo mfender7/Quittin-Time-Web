@@ -10,5 +10,6 @@
 
 @interface GroceryListRecipeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView *mealTitle;
 
 @end

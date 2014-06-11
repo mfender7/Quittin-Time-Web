@@ -14,7 +14,9 @@
 
 @implementation SettingsViewController
 {
-    NSArray *tableData;
+    NSDictionary *settingsDict;
+    NSArray *settingsList;
+    
     
 }
 
@@ -23,7 +25,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return settingsList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -44,7 +46,7 @@
     }
     
     // Configure the cell...
-    
+    cell.textLabel.text = settingsList[indexPath.section];
     
     return cell;
 }
@@ -71,7 +73,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    tableData = [NSArray arrayWithObjects:@"Meal Styles", @"Family Size", @"Hated Foods", nil];
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"SettingsList" withExtension:@"plist"];
+    settingsDict = [NSDictionary dictionaryWithContentsOfURL:url];
+    settingsList = settingsDict.allKeys;
 }
 
 - (void)didReceiveMemoryWarning

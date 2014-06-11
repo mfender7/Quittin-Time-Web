@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GroceryListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *mealTitle;
 
 @end

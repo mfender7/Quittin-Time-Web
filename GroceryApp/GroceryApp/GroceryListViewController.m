@@ -16,9 +16,10 @@
 @implementation GroceryListViewController{
     NSDictionary *mealChoices;
     NSArray *mealNames;
+    NSDictionary *ingredientsDict;
+    NSArray *ingredientsList;
 }
 
-@synthesize mealTitle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +37,12 @@
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
-    mealTitle.text = mealNames[0];
+    
+    NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"Ingredients" withExtension:@"plist"];
+    ingredientsDict = [NSDictionary dictionaryWithContentsOfURL:url2];
+    ingredientsList = ingredientsDict.allKeys;
+    
+    
     
 }
 
@@ -51,7 +57,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return mealNames.count;
+    return ingredientsList.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -83,7 +89,7 @@
     
     
     // Configure the cell...
-    cell.textLabel.text = mealNames[indexPath.row];
+    cell.textLabel.text = [ingredientsDict objectForKey:ingredientsList[indexPath.row]];
     
     
     return cell;

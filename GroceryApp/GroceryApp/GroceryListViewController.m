@@ -37,6 +37,7 @@
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
     mealTitle.text = mealNames[0];
+    
 }
 
 #pragma mark - Table view data source
@@ -77,6 +78,9 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"IngredientsCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    //NSArray *ingredients = [[NSArray alloc] initWithArray:mealNames];
+    
+    
     
     // Configure the cell...
     cell.textLabel.text = mealNames[indexPath.row];

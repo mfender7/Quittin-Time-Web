@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4034A2D1947E92900F0B822 /* TutorialViewController.m */; };
 		B45CEECE1943E09900C05499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECD1943E09900C05499 /* Foundation.framework */; };
 		B45CEED01943E09900C05499 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECF1943E09900C05499 /* CoreGraphics.framework */; };
 		B45CEED21943E09900C05499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEED11943E09900C05499 /* UIKit.framework */; };
@@ -15,7 +16,6 @@
 		B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEDD1943E09900C05499 /* AppDelegate.m */; };
 		B45CEEE11943E09900C05499 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEDF1943E09900C05499 /* Main_iPhone.storyboard */; };
 		B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEE21943E09900C05499 /* Main_iPad.storyboard */; };
-		B45CEEE71943E09900C05499 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEE61943E09900C05499 /* ViewController.m */; };
 		B45CEEE91943E09900C05499 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEE81943E09900C05499 /* Images.xcassets */; };
 		B45CEEF01943E09900C05499 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEEEF1943E09900C05499 /* XCTest.framework */; };
 		B45CEEF11943E09900C05499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECD1943E09900C05499 /* Foundation.framework */; };
@@ -50,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4034A2C1947E92900F0B822 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		B4034A2D1947E92900F0B822 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		B45CEECA1943E09900C05499 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45CEECD1943E09900C05499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B45CEECF1943E09900C05499 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +64,6 @@
 		B45CEEDD1943E09900C05499 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B45CEEE01943E09900C05499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B45CEEE31943E09900C05499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		B45CEEE51943E09900C05499 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B45CEEE61943E09900C05499 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B45CEEE81943E09900C05499 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B45CEEEE1943E09900C05499 /* GroceryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45CEEEF1943E09900C05499 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -214,8 +214,6 @@
 			children = (
 				B45CEF051943E34200C05499 /* SettingsViewController.h */,
 				B45CEF061943E34200C05499 /* SettingsViewController.m */,
-				B45CEEE51943E09900C05499 /* ViewController.h */,
-				B45CEEE61943E09900C05499 /* ViewController.m */,
 				B45CEF141943F2B800C05499 /* ContainerViewController.h */,
 				B45CEF151943F2B800C05499 /* ContainerViewController.m */,
 				B45CEF171943F5BE00C05499 /* GroceryListRecipeViewController.h */,
@@ -228,6 +226,8 @@
 				B45CEF2A1944157C00C05499 /* RecipeViewController.m */,
 				B45CEF2C1944159500C05499 /* GroceryListViewController.h */,
 				B45CEF2D1944159500C05499 /* GroceryListViewController.m */,
+				B4034A2C1947E92900F0B822 /* TutorialViewController.h */,
+				B4034A2D1947E92900F0B822 /* TutorialViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -339,7 +339,6 @@
 			files = (
 				B45CEF191943F5BE00C05499 /* GroceryListRecipeViewController.m in Sources */,
 				B45CEF231943FD7E00C05499 /* MealChoiceTableViewCell.m in Sources */,
-				B45CEEE71943E09900C05499 /* ViewController.m in Sources */,
 				B45CEF28194413C000C05499 /* EmptySegue.m in Sources */,
 				B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */,
 				B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */,
@@ -348,6 +347,7 @@
 				B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */,
 				B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */,
 				B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */,
+				B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

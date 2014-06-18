@@ -9,22 +9,29 @@
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
         <option value="rating">Rating</option>
-      </select>
+      </sele
 
     </div> -->
     <div class="col-md-10">
       <!--Body content-->
 
-      <ul class="recipes">
+      <table class="table table-striped recipes">
         <!--| filter:query | orderBy:orderProp -->
-        <li ng-repeat="recipe in recipes"
+        <tr ng-repeat="recipe in recipes"
             class="thumbnail recipe-listing">
-          <a href="#/recipes/{{recipe.id}}">
-          <img ng-src="{{recipe.imageUrl}}">
-          <span>Recipe name:{{recipe.name}}</span>
-          <p>Recipe description:{{recipe.description}}</p></a>
-        </li>
-      </ul>
+            <td>
+                <a href="#/recipes/{{recipe.id}}">
+                <img ng-src="{{recipe.imageUrl}}" width="300px">
+                </a>
+            </td>
+            <td>
+                <a href="#/recipes/{{recipe.id}}">
+                <strong>{{recipe.name}}</strong>
+                <p>{{recipe.description}}</p>
+                </a>
+            </td>
+        </tr>
+      </table>
 
     </div>
   </div>

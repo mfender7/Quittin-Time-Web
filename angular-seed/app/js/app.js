@@ -5,7 +5,8 @@
 
 var mealMeApp = angular.module('mealMeApp', [
   'ngRoute',
-  'mealMeControllers'
+  'mealMeControllers',
+  'mobile-angular-ui'
   //,
   //'myApp.filters',
   //'myApp.services',

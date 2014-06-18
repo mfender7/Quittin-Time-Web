@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4034A2D1947E92900F0B822 /* TutorialViewController.m */; };
 		B4034A3019487FB800F0B822 /* greenCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = B4034A2F19487FB800F0B822 /* greenCheck.png */; };
 		B4034A321948B83900F0B822 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4034A311948B83900F0B822 /* Ingredients.plist */; };
 		B4034A341948C25A00F0B822 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4034A331948C25A00F0B822 /* SettingsList.plist */; };
@@ -40,6 +39,7 @@
 		B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2A1944157C00C05499 /* RecipeViewController.m */; };
 		B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2D1944159500C05499 /* GroceryListViewController.m */; };
 		B45CEF301944DCD500C05499 /* borderBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF2F1944DCD500C05499 /* borderBox.png */; };
+		B496AE1F195128FB00BD83BC /* UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496AE1E195128FB00BD83BC /* UsernameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B4034A2C1947E92900F0B822 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
-		B4034A2D1947E92900F0B822 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		B4034A2F19487FB800F0B822 /* greenCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenCheck.png; path = Images/greenCheck.png; sourceTree = "<group>"; };
 		B4034A311948B83900F0B822 /* Ingredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredients.plist; sourceTree = "<group>"; };
 		B4034A331948C25A00F0B822 /* SettingsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsList.plist; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		B45CEF2C1944159500C05499 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		B45CEF2D1944159500C05499 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
 		B45CEF2F1944DCD500C05499 /* borderBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = borderBox.png; path = Images/borderBox.png; sourceTree = "<group>"; };
+		B496AE1D195128FB00BD83BC /* UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsernameViewController.h; sourceTree = "<group>"; };
+		B496AE1E195128FB00BD83BC /* UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsernameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +221,6 @@
 		B45CEF091943E5C900C05499 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B4034A2C1947E92900F0B822 /* TutorialViewController.h */,
-				B4034A2D1947E92900F0B822 /* TutorialViewController.m */,
 				B45CEF051943E34200C05499 /* SettingsViewController.h */,
 				B45CEF061943E34200C05499 /* SettingsViewController.m */,
 				B45CEF1E1943FD2D00C05499 /* MoreChoicesTableViewController.h */,
@@ -237,6 +235,8 @@
 				B45CEF2D1944159500C05499 /* GroceryListViewController.m */,
 				B45CEF141943F2B800C05499 /* ContainerViewController.h */,
 				B45CEF151943F2B800C05499 /* ContainerViewController.m */,
+				B496AE1D195128FB00BD83BC /* UsernameViewController.h */,
+				B496AE1E195128FB00BD83BC /* UsernameViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -356,10 +356,10 @@
 				B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */,
 				B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */,
 				B45CEEDA1943E09900C05499 /* main.m in Sources */,
+				B496AE1F195128FB00BD83BC /* UsernameViewController.m in Sources */,
 				B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */,
 				B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */,
 				B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */,
-				B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

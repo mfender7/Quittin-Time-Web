@@ -18,9 +18,11 @@
 @implementation GroceryListRecipeViewController{
     NSDictionary *mealChoices;
     NSArray *mealNames;
+    BOOL viewIsGroceryList;
 }
 
 @synthesize mealTitle;
+@synthesize tutorialText;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,6 +56,8 @@
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
     mealTitle.text = mealNames[1];
+    viewIsGroceryList = YES;
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     
     UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
     Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
@@ -66,17 +70,31 @@
 
 -(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-     NSLog(@"%s", __PRETTY_FUNCTION__);
     //Do what you want here
-    [self.containerViewController showRecipeViewController];
+    if (viewIsGroceryList) {
+        UIView *viewToRemove = [self.view viewWithTag:99];
+        [UIView animateWithDuration:0.3
+                         animations:^{viewToRemove.alpha = 0.0;}
+                         completion:^(BOOL finished){ [viewToRemove removeFromSuperview]; }];
+        [self.containerViewController showRecipeViewController];
+        viewIsGroceryList = NO;
+    }
+
     
 }
 
 -(void)swiperight:(UISwipeGestureRecognizer*)gestureRecognizer
 {
-     NSLog(@"%s", __PRETTY_FUNCTION__);
     //Do what you want here
-    [self.containerViewController showGroceryListViewController];
+    if (!viewIsGroceryList) {
+        UIView *viewToRemove = [self.view viewWithTag:99];
+        [UIView animateWithDuration:0.3
+                         animations:^{viewToRemove.alpha = 0.0;}
+                         completion:^(BOOL finished){ [viewToRemove removeFromSuperview]; }];
+        [self.containerViewController showGroceryListViewController];
+        viewIsGroceryList = YES;
+    }
+
     
     
     //      [[UIViewController alloc] initWithNibName:@"QueryController1" bundle:nil];
@@ -99,5 +117,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

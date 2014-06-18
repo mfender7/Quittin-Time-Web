@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fcv-T3-CaK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dMd-bI-i29">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Choose a Username-->
+        <!--Username View Controller - Choose a Username-->
         <scene sceneID="EYa-iI-Aqz">
             <objects>
-                <viewController id="Egf-yp-8WC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="usernameVC" id="Egf-yp-8WC" customClass="UsernameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="plL-Wk-m5S"/>
                         <viewControllerLayoutGuide type="bottom" id="ROv-jt-IRT"/>
@@ -39,26 +39,34 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EId-q3-V2V">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem width="58" style="plain" systemItem="fixedSpace" id="NyD-oq-rCv"/>
                                     <barButtonItem title="Gimme a Grocery List!" id="mOV-nt-2yb">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="fcv-T3-CaK" kind="push" id="iKW-Eg-ric"/>
+                                            <action selector="goToGroceryList:" destination="Egf-yp-8WC" id="zhx-l2-jXo"/>
+                                            <segue destination="fcv-T3-CaK" kind="push" identifier="goToGroceryList" id="iKW-Eg-ric"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Choose a Username" id="yfR-PY-IPI"/>
+                    <connections>
+                        <outlet property="password" destination="c85-hV-hIa" id="Dic-fG-fd1"/>
+                        <outlet property="passwordCheck" destination="FZD-P6-dT4" id="nV9-an-oyh"/>
+                        <outlet property="username" destination="eoe-WH-0ED" id="yp2-wY-mty"/>
+                        <outlet property="usernameCheck" destination="A2u-9U-KRj" id="7K7-75-XON"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOj-2B-ylo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109" y="1647"/>
         </scene>
-        <!--Grocery List Recipe View Controller-->
+        <!--Grocery List Recipe View Controller - MealMe-->
         <scene sceneID="fgP-61-Dqf">
             <objects>
                 <viewController storyboardIdentifier="SteadyState" id="fcv-T3-CaK" customClass="GroceryListRecipeViewController" sceneMemberID="viewController">
@@ -70,25 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-2r-0cF">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <navigationItem id="fBL-eX-zbF">
-                                        <barButtonItem key="rightBarButtonItem" image="settingsIcon.png" id="bS9-kJ-dgy">
-                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <segue destination="vXZ-lx-hvc" kind="modal" id="tXx-ni-JuF"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-b2-dw8">
-                                <rect key="frame" x="0.0" y="0.0" width="88" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uum-SB-uor">
                                 <rect key="frame" x="0.0" y="171" width="320" height="397"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,13 +111,13 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brn-xn-VaU">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem image="thumbsUp.png" style="plain" id="j9I-cb-d4h">
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                     <barButtonItem width="35" style="plain" systemItem="fixedSpace" id="d4m-gs-Vc5"/>
                                     <barButtonItem title="More Choices" id="Swx-1k-5UQ">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="ksc-Q4-rxN" kind="modal" id="8j6-ai-zf3"/>
                                         </connections>
@@ -140,13 +129,53 @@
                                 </items>
                                 <color key="barTintColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <textView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="99" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Swipe left to see directions for making this meal." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="os7-qX-esj">
+                                <rect key="frame" x="174" y="306" width="146" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ttW-Gj-eTZ"/>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationItem key="navigationItem" title="MealMe" id="ttW-Gj-eTZ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="NPx-vz-8yZ">
+                            <view key="customView" contentMode="scaleToFill" id="G2t-rP-1un">
+                                <rect key="frame" x="16" y="2" width="45" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iMJ-TO-qKm">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Reu-9o-y7K">
+                            <view key="customView" contentMode="scaleToFill" id="XTL-Yn-lXV">
+                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE1-V8-VTD">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="settingsIcon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="Jd4-6Q-LgZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mealTitle" destination="sFZ-1z-ra3" id="3ZS-T8-TEY"/>
+                        <outlet property="tutorialText" destination="os7-qX-esj" id="w82-SI-iOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSQ-Ad-Jvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,12 +185,12 @@
         <!--Navigation Controller-->
         <scene sceneID="ZQ8-jb-ki6">
             <objects>
-                <navigationController definesPresentationContext="YES" id="dMd-bI-i29" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="firstUseNavVC" definesPresentationContext="YES" id="dMd-bI-i29" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eEH-3x-UXW">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TMq-SJ-YJN" kind="push" id="drH-ic-ogI"/>
+                        <segue destination="TMq-SJ-YJN" kind="relationship" relationship="rootViewController" id="fnz-9U-KFP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBC-VF-FgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,7 +200,7 @@
         <!--View Controller - Choose Your Style-->
         <scene sceneID="9p0-n2-dMq">
             <objects>
-                <viewController id="TMq-SJ-YJN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mealStyleVC" id="TMq-SJ-YJN" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aV3-qn-tbs"/>
                         <viewControllerLayoutGuide type="bottom" id="3k5-DR-Te7"/>
@@ -191,7 +220,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BE6-pa-mbf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="mealStyle" reuseIdentifier="mealStyle" id="BE6-pa-mbf">
                                         <rect key="frame" x="0.0" y="64" width="101" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -214,9 +243,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-kn-uk8">
-                                <rect key="frame" x="137" y="473" width="32" height="30"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Your Style" id="93I-Xb-fpi">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="gIs-Je-PzO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dRz-kn-uk8">
+                                <rect key="frame" x="264" y="7" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -224,10 +259,8 @@
                                     <segue destination="DiK-am-S79" kind="push" id="ij3-bp-g4W"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Choose Your Style" id="93I-Xb-fpi"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdL-i3-y70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,7 +269,7 @@
         <!--View Controller - Tell Us About You-->
         <scene sceneID="ZuK-9F-F8g">
             <objects>
-                <viewController id="DiK-am-S79" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userPrefsVC" id="DiK-am-S79" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5l-1L-tFh"/>
                         <viewControllerLayoutGuide type="bottom" id="wbJ-wj-d8d"/>
@@ -292,9 +325,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npr-xF-t6c">
-                                <rect key="frame" x="254" y="208" width="32" height="30"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tell Us About You" id="Ezi-UU-qus">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="iOC-JD-Gc2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Npr-xF-t6c">
+                                <rect key="frame" x="264" y="7" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -302,10 +341,8 @@
                                     <segue destination="Egf-yp-8WC" kind="push" id="Opv-hv-pz0"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tell Us About You" id="Ezi-UU-qus"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiF-bs-3yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,11 +377,18 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Directions:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-1i-bN0">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-1i-bN0">
                                 <rect key="frame" x="9" y="0.0" width="82" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Directions:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -497,15 +541,14 @@
         <!--More Choices Table View Controller-->
         <scene sceneID="AYY-aO-qHp">
             <objects>
-                <tableViewController id="ksc-Q4-rxN" customClass="MoreChoicesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hJU-6y-8hn">
+                <tableViewController storyboardIdentifier="menuVC" id="ksc-Q4-rxN" customClass="MoreChoicesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hJU-6y-8hn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="oCY-Sc-sTK">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <items>
                                 <navigationItem title="Today's Menu" id="UyW-Ly-PFF">
                                     <barButtonItem key="rightBarButtonItem" title="X" id="osR-68-998">

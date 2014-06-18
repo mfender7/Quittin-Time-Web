@@ -65,7 +65,7 @@
     switch (section)
     {
         case 0:
-            sectionName = @"Ingredients";
+            sectionName = @"Grocery List:";
             break;
         default:
             sectionName = @"";

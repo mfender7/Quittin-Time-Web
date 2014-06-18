@@ -1,18 +1,19 @@
 //
-//  TutorialViewController.m
+//  UsernameViewController.m
 //  GroceryApp
 //
-//  Created by Shane Owens on 6/10/14.
+//  Created by Shane Owens on 6/17/14.
 //  Copyright (c) 2014 Shane Owens. All rights reserved.
 //
 
-#import "TutorialViewController.h"
+#import "UsernameViewController.h"
+#import "GroceryListRecipeViewController.h"
 
-@interface TutorialViewController ()
+@interface UsernameViewController ()
 
 @end
 
-@implementation TutorialViewController
+@implementation UsernameViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,7 +23,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad
 {
@@ -47,11 +47,20 @@
 }
 */
 
-- (IBAction)done:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:@"loginDone"];
-    [defaults synchronize];
-    [self performSegueWithIdentifier:@"TutorialDone" sender:self];
-    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"goToGroceryList"])
+    {
+        // Get reference to the destination view controller
+        //GroceryListRecipeViewController *groceryListVC = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        //[groceryListVC isFirstUse];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"firstUse"];
+        [defaults synchronize];
+    }
 }
+
 @end

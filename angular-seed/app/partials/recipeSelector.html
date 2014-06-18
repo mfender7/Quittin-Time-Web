@@ -12,27 +12,25 @@
       </sele
 
     </div> -->
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <table class="table table-striped recipes">
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="list-group">
         <!--| filter:query | orderBy:orderProp -->
-        <tr ng-repeat="recipe in recipes"
-            class="thumbnail recipe-listing">
-            <td>
-                <a href="#/recipes/{{recipe.id}}">
-                <img ng-src="{{recipe.imageUrl}}" width="300px">
-                </a>
-            </td>
-            <td>
-                <a href="#/recipes/{{recipe.id}}">
-                <strong>{{recipe.name}}</strong>
-                <p>{{recipe.description}}</p>
-                </a>
-            </td>
-        </tr>
-      </table>
-
+        <a ng-repeat="recipe in recipes" href="#/recipes/{{recipe.id}}" class="list-group-item thumbnail recipe-listing">
+            <table>
+                <row>
+                    <td>
+                        <img ng-src="{{recipe.imageUrl}}" width="300px">
+                    </td>
+                    <td>
+                        <strong>{{recipe.name}}</strong>
+                        <p>{{recipe.description}}</p>
+                    </td>
+                </row>
+            </table>
+        </a>
     </div>
   </div>
+</div>
+
 </div>

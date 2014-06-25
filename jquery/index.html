@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dish Funnel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Make address bar disappear in iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<!-- TODO Set an image for application startup for iPhone-->
+	<link rel="apple-touch-startup-image" href="filename.png" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+	
+</head>
+<body>
+    <section data-role="page" class="header_default footer_default" id="loginWin">
+ 
+        <div data-role="content">
+            <h1><a href="#mealSelector">Choose a meal</a></h1>
+			<img src="images/viewsourcelogo.png" alt="Placeholder icon"> <!-- TODO add real icon -->
+        </div><!-- /content -->
+    </section><!-- /loginWin -->
+	
+	<!-- Choose a dinner -->
+	<section data-role="page" class="header_default footer_default" id="mealSelector">
+ 
+ 
+        <div data-role="content" id="recipelist">
+<!-- <form class="ui-filterable"><input id="searchposts" data-type="search"></form><ul data-role="listview" data-filter="true" data-input="#searchposts"><li><a href="#recipe-Chicken-salad-with-basil-and-parmesan-309576" onclick = "showRecipe(Chicken-salad-with-basil-and-parmesan-309576)"><img src="http://lh4.ggpht.com/e7-jniVWaIcn2_d5-hT5jR52w-zdTB6dUYNP2QNwDI1Y9kVRUotX-2y0BKEkWKtrMtxgHH2fjGv7_wchojr_=s90" alt="Chicken Salad with Basil and Parmesan"><h3>Chicken Salad with Basil and Parmesan</h3></a></li><li><a href="#recipe-Whiskey-Chicken-Allrecipes" onclick = "showRecipe(Whiskey-Chicken-Allrecipes)"><img src="http://lh3.ggpht.com/cCDQ7v9da78XI_ITjktEkf0cxV4G-ddNVJ6WQcJVFoRjv3SzIv2g03R-99Qgm8bLl3uDnPwyRsbzooCdGngEcA=s90" alt="Whiskey Chicken"><h3>Whiskey Chicken</h3></a></li><li><a href="#recipe-Chicken-Fritz-466963" onclick = "showRecipe(Chicken-Fritz-466963)"><img src="http://lh4.ggpht.com/CUG6ENZ5ZaOi-gbcTkFZ9A123PAzek15qTk53pHTVPnC1PH92O-ayqt4PDPgp_OycTTLVgU4m8e-Kv7daA7lcxs=s90" alt="Chicken Fritz"><h3>Chicken Fritz</h3></a></li><li><a href="#recipe-Chicken-Caprese-512479" onclick = "showRecipe(Chicken-Caprese-512479)"><img src="http://lh6.ggpht.com/YV6IbDkZqbl2dEd-s6yRU0qnXyUM3_QWimLHkqILnHg14w7ysKjdELus7EhvHq4QfW0QD1IPELMzJGXyOl3bdw=s90" alt="Chicken Caprese"><h3>Chicken Caprese</h3></a></li><li><a href="#recipe-Simply-Parmesan-Chicken-Allrecipes" onclick = "showRecipe(Simply-Parmesan-Chicken-Allrecipes)"><img src="http://lh5.ggpht.com/xKUecmTW7W9-8go_7SiStOl4weFo7XXeNdJF9soWJ6q0KHM8S3sMHRzEUiprkkSLBYp4cOHTuANFMj-_RALz2w=s90" alt="Simply Parmesan Chicken"><h3>Simply Parmesan Chicken</h3></a></li><li><a href="#recipe-Smoked-Paprika-Chicken-The-Shiksa-in-the-Kitchen-200675" onclick = "showRecipe(Smoked-Paprika-Chicken-The-Shiksa-in-the-Kitchen-200675)"><img src="http://lh4.ggpht.com/B1ldEB7Dsj8r45FYUMZmxFdybJN_eBc4rt2rxIbaCaMH8GpKVk97xzaiMbEDgSKDbKkrHVLUs6RPM6rKxjV_=s90" alt="Smoked Paprika Chicken"><h3>Smoked Paprika Chicken</h3></a></li><li><a href="#recipe-Drunken-chicken-302220" onclick = "showRecipe(Drunken-chicken-302220)"><img src="http://lh6.ggpht.com/r7xCWrddmZ6XLIr7LwlKxHP4FVDq0QWBNDqyg_xoq52dgcq3O-gsFwutx_w7AUqKrL8dQORG_TFANoI4PTjh=s90" alt="Drunken Chicken"><h3>Drunken Chicken</h3></a></li><li><a href="#recipe-Creamy-Chicken-Allrecipes" onclick = "showRecipe(Creamy-Chicken-Allrecipes)"><img src="http://lh6.ggpht.com/NIbd3mx8FacbPrS1IXFAES_-2WK61di7xmqiju6wVyswgwQbyaX-GJV4lXS46bppZgXegolVDBS1GKkZNRhG=s90" alt="Creamy Chicken"><h3>Creamy Chicken</h3></a></li><li><a href="#recipe-Easy-Chicken-Lettuce-Wraps-513151" onclick = "showRecipe(Easy-Chicken-Lettuce-Wraps-513151)"><img src="http://lh5.ggpht.com/JA3sOmAMrrvdUAS3qpDVdxjtBPElJHuAxdZZs1jfbLs0RNVEBYvz7FsCaAEhCCZRgHzJBh6Iuh7rFMv-9DWf2bc=s90" alt="Easy Chicken Lettuce Wraps"><h3>Easy Chicken Lettuce Wraps</h3></a></li><li><a href="#recipe-Chicken-florentine-bowtie-pasta-334939" onclick = "showRecipe(Chicken-florentine-bowtie-pasta-334939)"><img src="http://lh5.ggpht.com/NQIgfnIrP-31XEvU5V6Pz9xgVHO0xcD2PmYZsqq9x_-mmayQHBBMLQQj4vC3VFnBM61tbilMtg_8-sw23kqwPg=s90" alt="Chicken Florentine Bowtie Pasta"><h3>Chicken Florentine Bowtie Pasta</h3></a></li></ul> -->
+        </div><!-- /content --> 
+    </section><!-- recipe selector -->
+	<script src="js/script.js"></script>
+	<!-- <script // TODO insert RESTful API call here
+	src="json/sampleJSON.json&callback=listRecipes"></script> -->
+</body>
+</html>

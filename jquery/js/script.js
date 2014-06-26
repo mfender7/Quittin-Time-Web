@@ -66,3 +66,14 @@ function listRecipes(data) {
   output += "</ul>"; // close the list
   $('#recipelist').html(output).enhanceWithin();
 } //listRecipes
+
+function showRecipe(id) {
+	// $.getJSON('http://iviewsource.com/?json=get_post&post_id=' + id + '&callback=?', function(data) {
+	var output = '<h3>' + val.recipeName + '</h3>';
+	output += '<ol>';
+	// val.instructions.forEach(entry){
+	output += '<li>' + 'This is one of the directions.' /* entry */ + '</li>';
+	// }
+	output += '</ol>';
+	$('#recipeDetail').html(output).enhanceWithin();
+} // showRecipe

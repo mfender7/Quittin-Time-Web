@@ -1,0 +1,14 @@
+TODO
+
+Low Priority
+<!-- TODO Set an image for application startup for iPhone-->
+<link rel="apple-touch-startup-image" href="filename.png" />
+<!-- TODO should sync meal preferences and others with the server -->
+// TODO change temp meal icon logo to our logo and splash logo to our logo
+// TODO insert description into recipeDetail? output += '<p>' + excerpt + "</p>";
+// TODO change this to our logo in showDesiredRecipe
+// comment code
+// implement full login sequence
+
+Must do
+// TODO hit server RESTful API $.get("URL to set cuisine");

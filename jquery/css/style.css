@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+#recipeInstructions > h3 {
+padding-left: 100px;
+}
+
 /* #home {
   background: url('../images/background_viewsource.png')
 } */
@@ -21,4 +25,10 @@ li.ui-li-has-thumb img {
 
 iframe {
   width: 100%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }

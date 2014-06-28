@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Make address bar disappear in iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	
-	<!-- TODO Set an image for application startup for iPhone-->
-	<link rel="apple-touch-startup-image" href="filename.png" />
+	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
+	<!-- <link rel="apple-touch-startup-image" href="filename.png" /> -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
 	<link rel="stylesheet" href="css/style.css">
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -15,36 +14,100 @@
 	
 </head>
 <body>
-    <section data-role="page" class="header_default footer_default" id="loginWin">
- 
+	<!-- splash -->
+    <section data-role="page" class="header_default" id="splash">
         <div data-role="content">
             <h1><a href="#mealSelector" class="ui-btn ui-corner-all">Choose a meal</a></h1>
 			<img src="images/viewsourcelogo.png" alt="Placeholder icon"> <!-- TODO add real icon -->
         </div><!-- /content -->
-    </section><!-- /loginWin -->
+    </section><!-- /splash -->
 	
 	<!-- Choose a dinner -->
-	<section data-role="page" class="header_default footer_default" id="mealSelector" data-title="Recipe List"> 
+	<section data-role="page" class="header_default" id="mealSelector" data-title="Recipe List"> 
         <div data-role="content" id="recipelist">
 
         </div><!-- /content --> 
     </section><!-- recipe selector -->
 	
 	<!-- Recipe detail -->
-	<section data-role="page" class="header_default footer_default" id="recipeDetail" data-title="Recipe Detail"> 
+	<section data-role="page" class="header_default" id="recipeDetail" data-title="Recipe Detail"> 
         <div data-role="content" id="recipeInstructions">
 
         </div><!-- /content --> 
     </section><!-- recipe selector -->
 	
 	<!-- Settings -->
-	<section data-role="page" class="header_default footer_default" id="settings" data-title="Settings"> 
+	<section data-role="page" class="header_settings" id="settings" data-title="Settings"> 
         <div data-role="content" id="settingsContent">
-
+			<h3>
+				<!-- cuisine selector -->
+				<a href="#cuisineSelector" class="ui-btn ui-corner-all">
+					Choose a cuisine
+				</a>
+				<!-- family size -->
+				<label for="slider">Family Size</label>
+				<input type="range" name="slider" id="slider" value="2" min="0" max="8">
+				<!-- Foods I won't eat -->
+				<a href="#excludedFoods" class="ui-btn ui-corner-all">
+					Foods I won't eat
+				</a>
+				<!-- Login -->
+				<a href="#login" class="ui-btn ui-corner-all">
+					Login
+				</a>
+			
+			</h3>
         </div><!-- /content --> 
-    </section><!-- recipe selector -->
+    </section><!-- settings -->
+	
+	<!-- Cuisine Selector -->
+	<section data-role="page" class="header_settings" id="cuisineSelector" data-title="Cuisine Selector"> 
+        <div data-role="content" id="cuisineSelectorContent">
+			<ul id="cuisineList">
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Chicken')">Chicken</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Pollo')">Pollo</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Poulet')">Poulet</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Kip')">Kip</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Pullum')">Pullum</li>
+			</ul>
+        </div><!-- /content -->
+    </section><!-- cuisine selector -->
+	
+	<!-- Foods I won't eat -->
+	<section data-role="page" class="header_settings" id="excludedFoods" data-title="Foods I won't eat"> 
+        <div data-role="content" id="excludedFoodsContent">
+			
+        </div><!-- /content -->
+    </section><!-- foods I won't eat -->
+	
+	<!-- Login -->
+	<section data-role="page" class="header_settings" id="login" data-title="Login">
+        <div data-role="content" id="loginContent">
+			<!--  <form action="#" id="loginForm">
+		 
+				<input type="text" name="username" placeholder="username">
+				<input type="password" name="password" placeholder="password">
+				<div data-role="fieldcontain" class="ui-hide-label">
+					<fieldset data-role="controlgroup">
+					   <input type="checkbox" name="checkbox-agree" id="checkbox-remember"/>
+					   <label for="checkbox-remember">Remember me</label>
+					</fieldset>
+				</div> -->
+				<!-- <input type="submit" value="Login"> -->
+				<!-- <a class="ui-btn ui-corner-all" onclick="login()">Login</a>
+			</form> -->
+ 
+        </div><!-- /content -->
+    </section><!-- login -->
+	
+	<!-- Logged in -->
+	<!-- <section data-role="page" id="login" data-title="Login">  -->
+        <!-- <div data-role="content" id="loggedInContent"> -->
+			
+        <!-- </div><!-- /content --> -->
+    <!-- </section><!-- Logged In --> -->
 	<script src="js/script.js"></script>
-	<!-- <script // TODO insert RESTful API call here
-	src="json/sampleJSON.json&callback=listRecipes"></script> -->
+	<script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? -->
+	<script src="js/jquery.json.js"></script> <!-- Provides improved functionality to output to JSON-->
 </body>
 </html>

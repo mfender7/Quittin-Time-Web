@@ -11,8 +11,16 @@
   margin: 0 auto;
 }
 
+#splash > div > img {
+width: 100%;
+}
+
 #recipeInstructions > h3 {
 padding-left: 100px;
+}
+
+#recipeInstructions > ol > li {
+white-space: normal;
 }
 
 /* #home {

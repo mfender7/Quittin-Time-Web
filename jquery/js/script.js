@@ -7,9 +7,12 @@ $(document).ready(function() {
 		if ($($(this)).hasClass("header_default")) {
 			var curPage = $.mobile.activePage.data('url');
 			var pageUpName = '';
+			var backButtonCodeNeeded = true;
+			
 			switch(curPage) {
 				case "splash":
 					pageUpName = "splash";
+					backButtonCodeNeeded = false; // don't need a back button on the splash screen
 					break;
 				case "mealSelector":
 					pageUpName = "splash";
@@ -21,8 +24,10 @@ $(document).ready(function() {
 					pageUpName = "splash";
 					break;
 			}
+			// only insert back button if it's not the top directory
+			var backButtonCode = backButtonCodeNeeded ? '<a href="#' + pageUpName + '" class="ui-btn-left ui-btn ui-btn-inline ui-btn-icon-notext ui-mini ui-corner-all ui-icon-back">'+ pageUpName + '</a>' : '';
 			// data-rel="back"
-		  $('<header data-theme="b" data-role="header"><h1></h1><a href="#' + pageUpName + '" class="ui-btn-left ui-btn ui-btn-inline ui-btn-icon-notext ui-mini ui-corner-all ui-icon-back">'+ pageUpName + '</a><button class="ui-btn-right ui-btn ui-btn-inline ui-btn-icon-notext ui-mini ui-corner-all ui-icon-gear" id="viewSettings">Settings</a></header>')
+		  $('<header data-theme="b" data-role="header"><h1></h1>'+ backButtonCode + '<button class="ui-btn-right ui-btn ui-btn-inline ui-btn-icon-notext ui-mini ui-corner-all ui-icon-gear" id="viewSettings">Settings</a></header>')
 			.prependTo( $(this) )
 			.toolbar({ position: "fixed" });
 			$("[data-role='header'] h1").text($(this).jqmData("title"));

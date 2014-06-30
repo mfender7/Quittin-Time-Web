@@ -15,7 +15,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch.	
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     BOOL firstUse = YES;
@@ -35,11 +36,12 @@
     if (!firstUse)
     {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-        UIViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"mealStyleVC"];
-        UIViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"userPrefsVC"];
-        UIViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"usernameVC"];
-        GroceryListRecipeViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"SteadyState"];
-        NSArray *controllers = @[vc1, vc2, vc3,vc4];
+        UIViewController *vc5 = [storyboard instantiateViewControllerWithIdentifier:@"mealStyleVC"];
+        UIViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"userPrefsVC"];
+        UIViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"quittinTimeVC"];
+        UIViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"allSetVC"];
+        GroceryListRecipeViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
+        NSArray *controllers = @[vc1, vc2, vc3,vc4,vc5];
         UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
         [navController setViewControllers:controllers];
         [navController popToViewController:vc1 animated:NO];

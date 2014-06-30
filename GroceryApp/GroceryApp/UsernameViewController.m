@@ -15,6 +15,11 @@
 
 @implementation UsernameViewController
 
+@synthesize username;
+@synthesize password;
+@synthesize usernameCheck;
+@synthesize passwordCheck;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +33,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    usernameCheck.hidden = YES;
+    passwordCheck.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,18 +56,38 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:@"goToGroceryList"])
-    {
-        // Get reference to the destination view controller
-        //GroceryListRecipeViewController *groceryListVC = [segue destinationViewController];
-        
-        // Pass any objects to the view controller here, like...
-        //[groceryListVC isFirstUse];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"firstUse"];
-        [defaults synchronize];
-    }
+        // Make sure your segue name in storyboard is the same as this line
+
+
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
+- (IBAction)usernameChanged:(id)sender {
+    usernameCheck.hidden = NO;
+    
+}
+
+- (IBAction)passwordChanged:(id)sender {
+    passwordCheck.hidden = NO;
+}
+
+- (IBAction)usernameSelected:(id)sender {
+    username.text = @"";
+}
+
+- (IBAction)passwordSelected:(id)sender {
+    password.text = @"";
+    password.secureTextEntry = YES;
+}
+
+- (IBAction)gotoGroceryList:(id)sender {
+        if (usernameCheck.isHidden == NO && passwordCheck.isHidden == NO) {
+            [self performSegueWithIdentifier:@"gotoGroceryList" sender:nil];
+        }
+}
 @end

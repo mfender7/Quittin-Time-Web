@@ -22,7 +22,7 @@
 }
 
 @synthesize mealTitle;
-@synthesize tutorialText;
+@synthesize viewSelect;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -57,50 +57,22 @@
     mealNames = mealChoices.allKeys;
     mealTitle.text = mealNames[1];
     viewIsGroceryList = YES;
-    [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
-    Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:Swiperight];
+    //Change Segmented Control Font Size
+    UIFont *font = [UIFont boldSystemFontOfSize:18.0f];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                           forKey:NSFontAttributeName];
+    [viewSelect setTitleTextAttributes:attributes
+                                    forState:UIControlStateNormal];
     
-    UISwipeGestureRecognizer * Swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
-    Swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:Swipeleft];
-}
-
--(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-    //Do what you want here
-    if (viewIsGroceryList) {
-        UIView *viewToRemove = [self.view viewWithTag:99];
-        [UIView animateWithDuration:0.3
-                         animations:^{viewToRemove.alpha = 0.0;}
-                         completion:^(BOOL finished){ [viewToRemove removeFromSuperview]; }];
-        [self.containerViewController showRecipeViewController];
-        viewIsGroceryList = NO;
-    }
+    
+    [viewSelect addTarget:self
+                         action:@selector(changeView:)
+               forControlEvents:UIControlEventValueChanged];
 
     
 }
 
--(void)swiperight:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-    //Do what you want here
-    if (!viewIsGroceryList) {
-        UIView *viewToRemove = [self.view viewWithTag:99];
-        [UIView animateWithDuration:0.3
-                         animations:^{viewToRemove.alpha = 0.0;}
-                         completion:^(BOOL finished){ [viewToRemove removeFromSuperview]; }];
-        [self.containerViewController showGroceryListViewController];
-        viewIsGroceryList = YES;
-    }
-
-    
-    
-    //      [[UIViewController alloc] initWithNibName:@"QueryController1" bundle:nil];
-    
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -119,4 +91,13 @@
 */
 
 
+- (void)changeView:(id)sender {
+    if (!viewIsGroceryList) {
+        [self.containerViewController showGroceryListViewController];
+        viewIsGroceryList = YES;
+    } else if (viewIsGroceryList) {
+            [self.containerViewController showRecipeViewController];
+            viewIsGroceryList = NO;
+    }
+}
 @end

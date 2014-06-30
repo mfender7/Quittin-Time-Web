@@ -11,7 +11,7 @@
 @interface GroceryListRecipeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *mealTitle;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *viewSelect;
 
-@property (weak, nonatomic) IBOutlet UITextView *tutorialText;
 
 @end

@@ -81,13 +81,13 @@
     [self addChildViewController:toViewController];
     
     if ([self.currentSegueIdentifier isEqualToString:SegueIdentifierFirst]) {
-        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:^(BOOL finished) {
+        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             [fromViewController removeFromParentViewController];
             [toViewController didMoveToParentViewController:self];
             self.transitionInProgress = NO;
         }];
     } else {
-        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:nil completion:^(BOOL finished) {
+        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             [fromViewController removeFromParentViewController];
             [toViewController didMoveToParentViewController:self];
             self.transitionInProgress = NO;

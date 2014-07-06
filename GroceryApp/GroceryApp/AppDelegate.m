@@ -7,18 +7,50 @@
 //
 
 #import "AppDelegate.h"
+#import "GroceryListRecipeViewController.h"
 
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch.	
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL firstUse = YES;
+    
+    if ([defaults objectForKey:@"firstUse"] != nil)
+    {
+        firstUse = [[defaults objectForKey:@"firstUse"] boolValue];
+        
+    }
+    else
+    {
+        [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"firstUse"];
+        [defaults synchronize];
+    }
+
+
+    if (!firstUse)
+    {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIViewController *vc5 = [storyboard instantiateViewControllerWithIdentifier:@"mealStyleVC"];
+        UIViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"userPrefsVC"];
+        UIViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"quittinTimeVC"];
+        UIViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"allSetVC"];
+        GroceryListRecipeViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"menuVC"];
+        NSArray *controllers = @[vc1, vc2, vc3,vc4,vc5];
+        UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+        [navController setViewControllers:controllers];
+        [navController popToViewController:vc1 animated:NO];
+    }
 
 
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -45,5 +77,6 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

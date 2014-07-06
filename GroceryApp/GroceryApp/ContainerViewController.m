@@ -36,8 +36,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
     // Instead of creating new VCs on each segue we want to hang on to existing
     // instances if we have it. Remove the second condition of the following
     // two if statements to get new VC instances instead.
@@ -64,6 +62,7 @@
             destView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
             [self.view addSubview:destView];
             [segue.destinationViewController didMoveToParentViewController:self];
+
         }
     }
     // By definition the second view controller will always be swapped with the
@@ -75,7 +74,6 @@
 
 - (void)swapFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
     
     toViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
@@ -83,13 +81,13 @@
     [self addChildViewController:toViewController];
     
     if ([self.currentSegueIdentifier isEqualToString:SegueIdentifierFirst]) {
-        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:nil completion:^(BOOL finished) {
+        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             [fromViewController removeFromParentViewController];
             [toViewController didMoveToParentViewController:self];
             self.transitionInProgress = NO;
         }];
     } else {
-        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:^(BOOL finished) {
+        [self transitionFromViewController:fromViewController toViewController:toViewController duration:0.5 options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finished) {
             [fromViewController removeFromParentViewController];
             [toViewController didMoveToParentViewController:self];
             self.transitionInProgress = NO;
@@ -114,7 +112,7 @@
         return;
         
     } else {
-        self.currentSegueIdentifier = SegueIdentifierSecond;
+        self.currentSegueIdentifier = SegueIdentifierFirst;
     }
 
     [self performSegueWithIdentifier:self.currentSegueIdentifier sender:nil];
@@ -132,12 +130,13 @@
     self.transitionInProgress = YES;
     self.currentSegueIdentifier = ([self.currentSegueIdentifier isEqualToString:SegueIdentifierFirst]) ? SegueIdentifierSecond : SegueIdentifierFirst;
     
+    
     if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierSecond]) && self.secondViewController) {
         
         [self swapFromViewController:self.firstViewController toViewController:self.secondViewController];
         return;
     } else {
-        self.currentSegueIdentifier = SegueIdentifierFirst;
+        self.currentSegueIdentifier = SegueIdentifierSecond;
     }
     
 

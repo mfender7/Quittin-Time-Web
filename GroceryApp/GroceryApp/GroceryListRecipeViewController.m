@@ -18,9 +18,11 @@
 @implementation GroceryListRecipeViewController{
     NSDictionary *mealChoices;
     NSArray *mealNames;
+    BOOL viewIsGroceryList;
 }
 
 @synthesize mealTitle;
+@synthesize viewSelect;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,35 +56,23 @@
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
     mealTitle.text = mealNames[1];
+    viewIsGroceryList = YES;
     
-    UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
-    Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:Swiperight];
+    //Change Segmented Control Font Size
+    UIFont *font = [UIFont boldSystemFontOfSize:18.0f];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                           forKey:NSFontAttributeName];
+    [viewSelect setTitleTextAttributes:attributes
+                                    forState:UIControlStateNormal];
     
-    UISwipeGestureRecognizer * Swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
-    Swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:Swipeleft];
+    
+    [viewSelect addTarget:self
+                         action:@selector(changeView:)
+               forControlEvents:UIControlEventValueChanged];
+
+    
 }
 
--(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-     NSLog(@"%s", __PRETTY_FUNCTION__);
-    //Do what you want here
-    [self.containerViewController showRecipeViewController];
-    
-}
-
--(void)swiperight:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-     NSLog(@"%s", __PRETTY_FUNCTION__);
-    //Do what you want here
-    [self.containerViewController showGroceryListViewController];
-    
-    
-    //      [[UIViewController alloc] initWithNibName:@"QueryController1" bundle:nil];
-    
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -100,4 +90,14 @@
 }
 */
 
+
+- (void)changeView:(id)sender {
+    if (!viewIsGroceryList) {
+        [self.containerViewController showGroceryListViewController];
+        viewIsGroceryList = YES;
+    } else if (viewIsGroceryList) {
+            [self.containerViewController showRecipeViewController];
+            viewIsGroceryList = NO;
+    }
+}
 @end

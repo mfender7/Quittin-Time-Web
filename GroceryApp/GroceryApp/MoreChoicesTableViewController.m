@@ -83,7 +83,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 
@@ -136,7 +136,5 @@
 }
 */
 
-- (IBAction)done:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
 @end
+

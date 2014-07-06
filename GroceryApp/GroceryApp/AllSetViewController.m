@@ -1,18 +1,21 @@
 //
-//  TutorialViewController.m
+//  AllSetViewController.m
 //  GroceryApp
 //
-//  Created by Shane Owens on 6/10/14.
+//  Created by Shane Owens on 6/29/14.
 //  Copyright (c) 2014 Shane Owens. All rights reserved.
 //
 
-#import "TutorialViewController.h"
+#import "AllSetViewController.h"
 
-@interface TutorialViewController ()
+@interface AllSetViewController ()
 
 @end
 
-@implementation TutorialViewController
+@implementation AllSetViewController
+
+@synthesize timeLabel;
+@synthesize timeLabelText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,11 +26,11 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    timeLabel.text = timeLabelText;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -44,14 +47,18 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"gotoMenu"])
+    {
+        // Get reference to the destination view controller
+        //GroceryListRecipeViewController *groceryListVC = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        //[groceryListVC isFirstUse];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"firstUse"];
+        [defaults synchronize];
+    }
 }
-*/
 
-- (IBAction)done:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:@"loginDone"];
-    [defaults synchronize];
-    [self performSegueWithIdentifier:@"TutorialDone" sender:self];
-    
-}
+
 @end

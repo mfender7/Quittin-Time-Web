@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4034A2D1947E92900F0B822 /* TutorialViewController.m */; };
-		B4034A3019487FB800F0B822 /* greenCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = B4034A2F19487FB800F0B822 /* greenCheck.png */; };
-		B4034A321948B83900F0B822 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4034A311948B83900F0B822 /* Ingredients.plist */; };
-		B4034A341948C25A00F0B822 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4034A331948C25A00F0B822 /* SettingsList.plist */; };
 		B45CEECE1943E09900C05499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECD1943E09900C05499 /* Foundation.framework */; };
 		B45CEED01943E09900C05499 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEECF1943E09900C05499 /* CoreGraphics.framework */; };
 		B45CEED21943E09900C05499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CEED11943E09900C05499 /* UIKit.framework */; };
@@ -26,20 +22,29 @@
 		B45CEEFA1943E09900C05499 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45CEEF81943E09900C05499 /* InfoPlist.strings */; };
 		B45CEEFC1943E09900C05499 /* GroceryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEEFB1943E09900C05499 /* GroceryAppTests.m */; };
 		B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF061943E34200C05499 /* SettingsViewController.m */; };
-		B45CEF0B1943E62000C05499 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF0A1943E62000C05499 /* AppLogo.png */; };
-		B45CEF0F1943E8DF00C05499 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF0E1943E8DF00C05499 /* settingsIcon.png */; };
-		B45CEF131943EBB900C05499 /* exampleMeal.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF121943EBB900C05499 /* exampleMeal.png */; };
 		B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF151943F2B800C05499 /* ContainerViewController.m */; };
 		B45CEF191943F5BE00C05499 /* GroceryListRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF181943F5BE00C05499 /* GroceryListRecipeViewController.m */; };
-		B45CEF1C1943FACB00C05499 /* thumbsDown.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF1A1943FACB00C05499 /* thumbsDown.png */; };
-		B45CEF1D1943FACB00C05499 /* thumbsUp.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF1B1943FACB00C05499 /* thumbsUp.png */; };
 		B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF1F1943FD2D00C05499 /* MoreChoicesTableViewController.m */; };
 		B45CEF231943FD7E00C05499 /* MealChoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF221943FD7E00C05499 /* MealChoiceTableViewCell.m */; };
-		B45CEF251944031C00C05499 /* MealChoices.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF241944031C00C05499 /* MealChoices.plist */; };
 		B45CEF28194413C000C05499 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF27194413C000C05499 /* EmptySegue.m */; };
 		B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2A1944157C00C05499 /* RecipeViewController.m */; };
 		B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2D1944159500C05499 /* GroceryListViewController.m */; };
-		B45CEF301944DCD500C05499 /* borderBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B45CEF2F1944DCD500C05499 /* borderBox.png */; };
+		B496AE1F195128FB00BD83BC /* UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496AE1E195128FB00BD83BC /* UsernameViewController.m */; };
+		B4F610FC1960BAFB00A21E44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F610FB1960BAFB00A21E44 /* QuartzCore.framework */; };
+		B4F610FF1961147800A21E44 /* AllSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F610FE1961147800A21E44 /* AllSetViewController.m */; };
+		B4F61101196117C700A21E44 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4F61100196117C700A21E44 /* SettingsList.plist */; };
+		B4F6110419612B0200A21E44 /* QuittinTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F6110319612B0200A21E44 /* QuittinTimeViewController.m */; };
+		B4F611071961361500A21E44 /* FoodsToAvoidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F611061961361500A21E44 /* FoodsToAvoidViewController.m */; };
+		B4F6111119613EDC00A21E44 /* Kid Friendly.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110919613EDC00A21E44 /* Kid Friendly.png */; };
+		B4F6111219613EDC00A21E44 /* Low Carb.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110A19613EDC00A21E44 /* Low Carb.png */; };
+		B4F6111319613EDC00A21E44 /* Low Fat.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110B19613EDC00A21E44 /* Low Fat.png */; };
+		B4F6111419613EDC00A21E44 /* Slow Cooker.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110C19613EDC00A21E44 /* Slow Cooker.png */; };
+		B4F6111519613EDC00A21E44 /* Low Calorie.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110D19613EDC00A21E44 /* Low Calorie.png */; };
+		B4F6111619613EDC00A21E44 /* Paleo.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110E19613EDC00A21E44 /* Paleo.png */; };
+		B4F6111719613EDC00A21E44 /* Clean Eating.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6110F19613EDC00A21E44 /* Clean Eating.png */; };
+		B4F6111819613EDC00A21E44 /* Classic Meals.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6111019613EDC00A21E44 /* Classic Meals.png */; };
+		B4F6111B1961400D00A21E44 /* ChooseMealStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F6111A1961400D00A21E44 /* ChooseMealStyleViewController.m */; };
+		B4F6111E1961493200A21E44 /* MealStyleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F6111D1961493200A21E44 /* MealStyleCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B4034A2C1947E92900F0B822 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
-		B4034A2D1947E92900F0B822 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
-		B4034A2F19487FB800F0B822 /* greenCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenCheck.png; path = Images/greenCheck.png; sourceTree = "<group>"; };
-		B4034A311948B83900F0B822 /* Ingredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredients.plist; sourceTree = "<group>"; };
-		B4034A331948C25A00F0B822 /* SettingsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsList.plist; sourceTree = "<group>"; };
 		B45CEECA1943E09900C05499 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45CEECD1943E09900C05499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B45CEECF1943E09900C05499 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,27 +78,42 @@
 		B45CEEFB1943E09900C05499 /* GroceryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryAppTests.m; sourceTree = "<group>"; };
 		B45CEF051943E34200C05499 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		B45CEF061943E34200C05499 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		B45CEF0A1943E62000C05499 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppLogo.png; path = Images/AppLogo.png; sourceTree = "<group>"; };
-		B45CEF0E1943E8DF00C05499 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Images/settingsIcon.png; sourceTree = "<group>"; };
-		B45CEF121943EBB900C05499 /* exampleMeal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exampleMeal.png; path = Images/exampleMeal.png; sourceTree = "<group>"; };
 		B45CEF141943F2B800C05499 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		B45CEF151943F2B800C05499 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		B45CEF171943F5BE00C05499 /* GroceryListRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListRecipeViewController.h; sourceTree = "<group>"; };
 		B45CEF181943F5BE00C05499 /* GroceryListRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListRecipeViewController.m; sourceTree = "<group>"; };
-		B45CEF1A1943FACB00C05499 /* thumbsDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsDown.png; path = Images/thumbsDown.png; sourceTree = "<group>"; };
-		B45CEF1B1943FACB00C05499 /* thumbsUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbsUp.png; path = Images/thumbsUp.png; sourceTree = "<group>"; };
 		B45CEF1E1943FD2D00C05499 /* MoreChoicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreChoicesTableViewController.h; sourceTree = "<group>"; };
 		B45CEF1F1943FD2D00C05499 /* MoreChoicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreChoicesTableViewController.m; sourceTree = "<group>"; };
 		B45CEF211943FD7E00C05499 /* MealChoiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealChoiceTableViewCell.h; sourceTree = "<group>"; };
 		B45CEF221943FD7E00C05499 /* MealChoiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealChoiceTableViewCell.m; sourceTree = "<group>"; };
-		B45CEF241944031C00C05499 /* MealChoices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MealChoices.plist; sourceTree = "<group>"; };
 		B45CEF26194413C000C05499 /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptySegue.h; sourceTree = "<group>"; };
 		B45CEF27194413C000C05499 /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptySegue.m; sourceTree = "<group>"; };
 		B45CEF291944157C00C05499 /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
 		B45CEF2A1944157C00C05499 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		B45CEF2C1944159500C05499 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		B45CEF2D1944159500C05499 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
-		B45CEF2F1944DCD500C05499 /* borderBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = borderBox.png; path = Images/borderBox.png; sourceTree = "<group>"; };
+		B496AE1D195128FB00BD83BC /* UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsernameViewController.h; sourceTree = "<group>"; };
+		B496AE1E195128FB00BD83BC /* UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsernameViewController.m; sourceTree = "<group>"; };
+		B4F610FB1960BAFB00A21E44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B4F610FD1961147800A21E44 /* AllSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSetViewController.h; sourceTree = "<group>"; };
+		B4F610FE1961147800A21E44 /* AllSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSetViewController.m; sourceTree = "<group>"; };
+		B4F61100196117C700A21E44 /* SettingsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsList.plist; sourceTree = "<group>"; };
+		B4F6110219612B0200A21E44 /* QuittinTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuittinTimeViewController.h; sourceTree = "<group>"; };
+		B4F6110319612B0200A21E44 /* QuittinTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuittinTimeViewController.m; sourceTree = "<group>"; };
+		B4F611051961361500A21E44 /* FoodsToAvoidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodsToAvoidViewController.h; sourceTree = "<group>"; };
+		B4F611061961361500A21E44 /* FoodsToAvoidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodsToAvoidViewController.m; sourceTree = "<group>"; };
+		B4F6110919613EDC00A21E44 /* Kid Friendly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kid Friendly.png"; path = "Images/Meal Plans/Kid Friendly.png"; sourceTree = "<group>"; };
+		B4F6110A19613EDC00A21E44 /* Low Carb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Low Carb.png"; path = "Images/Meal Plans/Low Carb.png"; sourceTree = "<group>"; };
+		B4F6110B19613EDC00A21E44 /* Low Fat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Low Fat.png"; path = "Images/Meal Plans/Low Fat.png"; sourceTree = "<group>"; };
+		B4F6110C19613EDC00A21E44 /* Slow Cooker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Slow Cooker.png"; path = "Images/Meal Plans/Slow Cooker.png"; sourceTree = "<group>"; };
+		B4F6110D19613EDC00A21E44 /* Low Calorie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Low Calorie.png"; path = "Images/Meal Plans/Low Calorie.png"; sourceTree = "<group>"; };
+		B4F6110E19613EDC00A21E44 /* Paleo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Paleo.png; path = "Images/Meal Plans/Paleo.png"; sourceTree = "<group>"; };
+		B4F6110F19613EDC00A21E44 /* Clean Eating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Clean Eating.png"; path = "Images/Meal Plans/Clean Eating.png"; sourceTree = "<group>"; };
+		B4F6111019613EDC00A21E44 /* Classic Meals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Classic Meals.png"; path = "Images/Meal Plans/Classic Meals.png"; sourceTree = "<group>"; };
+		B4F611191961400D00A21E44 /* ChooseMealStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMealStyleViewController.h; sourceTree = "<group>"; };
+		B4F6111A1961400D00A21E44 /* ChooseMealStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMealStyleViewController.m; sourceTree = "<group>"; };
+		B4F6111C1961493200A21E44 /* MealStyleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealStyleCollectionViewCell.h; sourceTree = "<group>"; };
+		B4F6111D1961493200A21E44 /* MealStyleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealStyleCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F610FC1960BAFB00A21E44 /* QuartzCore.framework in Frameworks */,
 				B45CEED01943E09900C05499 /* CoreGraphics.framework in Frameworks */,
 				B45CEED21943E09900C05499 /* UIKit.framework in Frameworks */,
 				B45CEECE1943E09900C05499 /* Foundation.framework in Frameworks */,
@@ -147,6 +163,7 @@
 		B45CEECC1943E09900C05499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4F610FB1960BAFB00A21E44 /* QuartzCore.framework */,
 				B45CEECD1943E09900C05499 /* Foundation.framework */,
 				B45CEECF1943E09900C05499 /* CoreGraphics.framework */,
 				B45CEED11943E09900C05499 /* UIKit.framework */,
@@ -172,16 +189,14 @@
 		B45CEED41943E09900C05499 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4F6110819613ECE00A21E44 /* Images */,
+				B4F61100196117C700A21E44 /* SettingsList.plist */,
 				B45CEF26194413C000C05499 /* EmptySegue.h */,
 				B45CEF27194413C000C05499 /* EmptySegue.m */,
-				B45CEF081943E5C200C05499 /* Images */,
 				B45CEED51943E09900C05499 /* GroceryApp-Info.plist */,
 				B45CEED61943E09900C05499 /* InfoPlist.strings */,
 				B45CEED91943E09900C05499 /* main.m */,
 				B45CEEDB1943E09900C05499 /* GroceryApp-Prefix.pch */,
-				B45CEF241944031C00C05499 /* MealChoices.plist */,
-				B4034A311948B83900F0B822 /* Ingredients.plist */,
-				B4034A331948C25A00F0B822 /* SettingsList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,25 +219,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B45CEF081943E5C200C05499 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B4034A2F19487FB800F0B822 /* greenCheck.png */,
-				B45CEF2F1944DCD500C05499 /* borderBox.png */,
-				B45CEF1A1943FACB00C05499 /* thumbsDown.png */,
-				B45CEF1B1943FACB00C05499 /* thumbsUp.png */,
-				B45CEF121943EBB900C05499 /* exampleMeal.png */,
-				B45CEF0E1943E8DF00C05499 /* settingsIcon.png */,
-				B45CEF0A1943E62000C05499 /* AppLogo.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		B45CEF091943E5C900C05499 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B4034A2C1947E92900F0B822 /* TutorialViewController.h */,
-				B4034A2D1947E92900F0B822 /* TutorialViewController.m */,
 				B45CEF051943E34200C05499 /* SettingsViewController.h */,
 				B45CEF061943E34200C05499 /* SettingsViewController.m */,
 				B45CEF1E1943FD2D00C05499 /* MoreChoicesTableViewController.h */,
@@ -237,8 +236,35 @@
 				B45CEF2D1944159500C05499 /* GroceryListViewController.m */,
 				B45CEF141943F2B800C05499 /* ContainerViewController.h */,
 				B45CEF151943F2B800C05499 /* ContainerViewController.m */,
+				B496AE1D195128FB00BD83BC /* UsernameViewController.h */,
+				B496AE1E195128FB00BD83BC /* UsernameViewController.m */,
+				B4F610FD1961147800A21E44 /* AllSetViewController.h */,
+				B4F610FE1961147800A21E44 /* AllSetViewController.m */,
+				B4F6110219612B0200A21E44 /* QuittinTimeViewController.h */,
+				B4F6110319612B0200A21E44 /* QuittinTimeViewController.m */,
+				B4F611051961361500A21E44 /* FoodsToAvoidViewController.h */,
+				B4F611061961361500A21E44 /* FoodsToAvoidViewController.m */,
+				B4F611191961400D00A21E44 /* ChooseMealStyleViewController.h */,
+				B4F6111A1961400D00A21E44 /* ChooseMealStyleViewController.m */,
+				B4F6111C1961493200A21E44 /* MealStyleCollectionViewCell.h */,
+				B4F6111D1961493200A21E44 /* MealStyleCollectionViewCell.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4F6110819613ECE00A21E44 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4F6110919613EDC00A21E44 /* Kid Friendly.png */,
+				B4F6110A19613EDC00A21E44 /* Low Carb.png */,
+				B4F6110B19613EDC00A21E44 /* Low Fat.png */,
+				B4F6110C19613EDC00A21E44 /* Slow Cooker.png */,
+				B4F6110D19613EDC00A21E44 /* Low Calorie.png */,
+				B4F6110E19613EDC00A21E44 /* Paleo.png */,
+				B4F6110F19613EDC00A21E44 /* Clean Eating.png */,
+				B4F6111019613EDC00A21E44 /* Classic Meals.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,20 +343,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4034A3019487FB800F0B822 /* greenCheck.png in Resources */,
-				B4034A321948B83900F0B822 /* Ingredients.plist in Resources */,
-				B45CEF251944031C00C05499 /* MealChoices.plist in Resources */,
+				B4F6111819613EDC00A21E44 /* Classic Meals.png in Resources */,
 				B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */,
-				B45CEF0B1943E62000C05499 /* AppLogo.png in Resources */,
-				B4034A341948C25A00F0B822 /* SettingsList.plist in Resources */,
-				B45CEF301944DCD500C05499 /* borderBox.png in Resources */,
 				B45CEEE91943E09900C05499 /* Images.xcassets in Resources */,
-				B45CEF0F1943E8DF00C05499 /* settingsIcon.png in Resources */,
-				B45CEF1D1943FACB00C05499 /* thumbsUp.png in Resources */,
-				B45CEF1C1943FACB00C05499 /* thumbsDown.png in Resources */,
+				B4F6111719613EDC00A21E44 /* Clean Eating.png in Resources */,
+				B4F6111219613EDC00A21E44 /* Low Carb.png in Resources */,
+				B4F6111319613EDC00A21E44 /* Low Fat.png in Resources */,
+				B4F6111119613EDC00A21E44 /* Kid Friendly.png in Resources */,
+				B4F61101196117C700A21E44 /* SettingsList.plist in Resources */,
 				B45CEEE11943E09900C05499 /* Main_iPhone.storyboard in Resources */,
 				B45CEED81943E09900C05499 /* InfoPlist.strings in Resources */,
-				B45CEF131943EBB900C05499 /* exampleMeal.png in Resources */,
+				B4F6111419613EDC00A21E44 /* Slow Cooker.png in Resources */,
+				B4F6111519613EDC00A21E44 /* Low Calorie.png in Resources */,
+				B4F6111619613EDC00A21E44 /* Paleo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F6110419612B0200A21E44 /* QuittinTimeViewController.m in Sources */,
+				B4F611071961361500A21E44 /* FoodsToAvoidViewController.m in Sources */,
 				B45CEF191943F5BE00C05499 /* GroceryListRecipeViewController.m in Sources */,
 				B45CEF231943FD7E00C05499 /* MealChoiceTableViewCell.m in Sources */,
 				B45CEF28194413C000C05499 /* EmptySegue.m in Sources */,
@@ -356,10 +383,13 @@
 				B45CEEDE1943E09900C05499 /* AppDelegate.m in Sources */,
 				B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */,
 				B45CEEDA1943E09900C05499 /* main.m in Sources */,
+				B496AE1F195128FB00BD83BC /* UsernameViewController.m in Sources */,
 				B45CEF071943E34200C05499 /* SettingsViewController.m in Sources */,
+				B4F610FF1961147800A21E44 /* AllSetViewController.m in Sources */,
 				B45CEF161943F2B800C05499 /* ContainerViewController.m in Sources */,
+				B4F6111B1961400D00A21E44 /* ChooseMealStyleViewController.m in Sources */,
 				B45CEF201943FD2D00C05499 /* MoreChoicesTableViewController.m in Sources */,
-				B4034A2E1947E92900F0B822 /* TutorialViewController.m in Sources */,
+				B4F6111E1961493200A21E44 /* MealStyleCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +528,7 @@
 				GCC_PREFIX_HEADER = "GroceryApp/GroceryApp-Prefix.pch";
 				INFOPLIST_FILE = "GroceryApp/GroceryApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -511,6 +542,7 @@
 				GCC_PREFIX_HEADER = "GroceryApp/GroceryApp-Prefix.pch";
 				INFOPLIST_FILE = "GroceryApp/GroceryApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -60,19 +60,19 @@
     return ingredientsList.count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    NSString *sectionName;
-    switch (section)
-    {
-        case 0:
-            sectionName = @"Ingredients";
-            break;
-        default:
-            sectionName = @"";
-            break;
-    }
-    return sectionName;
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    NSString *sectionName;
+//    switch (section)
+//    {
+//        case 0:
+//            sectionName = @"Grocery List:";
+//            break;
+//        default:
+//            sectionName = @"";
+//            break;
+//    }
+//    return sectionName;
+//}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,7 +97,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

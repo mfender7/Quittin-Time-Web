@@ -8,7 +8,6 @@ $(document).ready(function() {
 			var curPage = $.mobile.activePage.data('url');
 			var pageUpName = '';
 			var backButtonCodeNeeded = true;
-			
 			switch(curPage) {
 				case "splash":
 					pageUpName = "splash";
@@ -49,7 +48,7 @@ $(document).ready(function() {
       // }
     // }); //each link in navbar
 	// list recipes
-//	var jsonUrl = "http://80.74.134.201:3000/somerecipe?q=chicken";
+	// var jsonUrl = "http://80.74.134.201:3000/somerecipe?q=chicken";
 	var jsonUrl =  "json/sampleJSON.json";
 	$.getJSON( jsonUrl, function (data){listRecipes(data)});
 	//getData(jsonUrl);
@@ -219,8 +218,17 @@ function showDesiredRecipe(){
 	var desiredRecipe = JSON.parse(window.sessionStorage.getItem('desiredRecipe'));
 	var output = (desiredRecipe.smallImageUrls[0]) ?
 		  '<img align="left" src="' + desiredRecipe.smallImageUrls[0] + '" alt="' + desiredRecipe.recipeName + '">':
-		  '<img src="images/viewsourcelogo.png" alt="TODO">';
+		  '<img src="images/viewsourcelogo.png" alt="' + desiredRecipe.recipeName + '">';
 	output += '<h3>' + desiredRecipe.recipeName + '</h3>';
+	//output += '<div data-role="content" id="desiredRecipeContent">';
+	output += '<div data-role="tabs" id="desiredRecipeTabs">';
+	output += '<div data-role="navbar" id="desiredRecipeNavbar">';
+	output += '<ul>';
+	output += '<li><a href="#ingredients" data-ajax="false">Ingredients</a></li>';
+	output += '<li><a href="#instructions" data-ajax="false">Instructions</a></li>';
+	output += '</ul>';
+	output += '</div>'; // desiredRecipeNavbar
+	output += '<div id="ingredients">';
 	output += '<h5>Ingredients</h5>';
 	output += '<ul data-role="listview">'
 	for (i = 0; i < desiredRecipe.ingredients.length; i++){
@@ -229,6 +237,8 @@ function showDesiredRecipe(){
 		output += '</li>';
 	}
 	output += '</ul>';
+	output += '</div>'; // ingredients
+	output += '<div id="instructions">';
 	output += '<h5>Intstructions</h5>';
 	output += '<ol data-role="listview">';
 	var instructionArray = desiredRecipe.instructions.split('.');
@@ -240,6 +250,9 @@ function showDesiredRecipe(){
 		}
 	}
 	output += '</ol>';
+	output += '</div>'; // instructions
+	output += '</div>'; // desiredRecipeTabs
+	//output += '</div>'; // desiredRecipeContent
 	$('#recipeInstructions').html(output).enhanceWithin();
 } // showRecipe
 

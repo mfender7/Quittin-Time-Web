@@ -1,0 +1,309 @@
+{
+  "attribution": {
+    "html": "Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>",
+    "url": "http://www.yummly.com/recipes/",
+    "text": "Recipe search powered by Yummly",
+    "logo": "http://static.yummly.com/api-logo.png"
+  },
+  "totalMatchCount": 73452,
+  "facetCounts": {},
+  "matches": [
+    {
+      "smallImageUrls": [
+        "http://lh4.ggpht.com/e7-jniVWaIcn2_d5-hT5jR52w-zdTB6dUYNP2QNwDI1Y9kVRUotX-2y0BKEkWKtrMtxgHH2fjGv7_wchojr_=s90"
+      ],
+      "ingredients": [
+        "fresh basil",
+        "green onions",
+        "mayo",
+        "grated parmesan cheese",
+        "salt",
+        "ground black pepper",
+        "cooked chicken"
+      ],
+      "flavors": null,
+      "imageUrlsBySize": {
+        "90": "http://lh4.ggpht.com/xggeGxIgwVNoYmmiIRN36BubOH9rCY40mXh710HI2iMcq7LA3oRMR_9CxZPk-R_5RvolER9H5K8FmHv0gqItJyg=s90-c"
+      },
+      "attributes": {
+        "course": [
+          "Salads"
+        ]
+      },
+      "totalTimeInSeconds": 2700,
+      "rating": 5,
+      "recipeName": "Chicken Salad with Basil and Parmesan",
+      "sourceDisplayName": "Kalyn's Kitchen",
+      "id": "Chicken-salad-with-basil-and-parmesan-309576",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+
+    },
+    {
+      "smallImageUrls": [
+        "http://lh3.ggpht.com/cCDQ7v9da78XI_ITjktEkf0cxV4G-ddNVJ6WQcJVFoRjv3SzIv2g03R-99Qgm8bLl3uDnPwyRsbzooCdGngEcA=s90"
+      ],
+      "ingredients": [
+        "soy sauce",
+        "pineapple juice",
+        "garlic powder",
+        "brown sugar",
+        "boneless skinless chicken breasts",
+        "bourbon whiskey",
+        "ground black pepper"
+      ],
+      "flavors": {
+        "sour": 0.3333333333333333,
+        "salty": 0.8333333333333334,
+        "sweet": 0.8333333333333334,
+        "bitter": 0.3333333333333333,
+        "meaty": 0.16666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh4.ggpht.com/D31Ftoc_U4gvv2U3ZmKV_K6d5GREXJI4IzdCzYRi5Q8MrvdzO9uvkVnIhRZfMvG1ywGi4rLq93wHcyXKTWobOFE=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 1800,
+      "rating": 4,
+      "recipeName": "Whiskey Chicken",
+      "sourceDisplayName": "AllRecipes",
+      "id": "Whiskey-Chicken-Allrecipes",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh4.ggpht.com/CUG6ENZ5ZaOi-gbcTkFZ9A123PAzek15qTk53pHTVPnC1PH92O-ayqt4PDPgp_OycTTLVgU4m8e-Kv7daA7lcxs=s90"
+      ],
+      "ingredients": [
+        "safflower oil",
+        "onion",
+        "kosher salt",
+        "freshly ground pepper",
+        "cooked chicken",
+        "sweet paprika"
+      ],
+      "flavors": {
+        "sour": 0.3333333333333333,
+        "salty": 0.16666666666666666,
+        "sweet": 0.6666666666666666,
+        "bitter": 0.16666666666666666,
+        "piquant": 0.3333333333333333,
+        "meaty": 0.16666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh3.ggpht.com/UxAXD4WzOGsSRbRH1MGq8BiiDJn-CQ95khtRooSe8vQL9ISciXr1vBxie2YCsrzdiwVd-Kf9IQ7YpGtk_zmBf1o=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 3000,
+      "rating": 5,
+      "recipeName": "Chicken Fritz",
+      "sourceDisplayName": "Big Girls Small Kitchen",
+      "id": "Chicken-Fritz-466963",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh6.ggpht.com/YV6IbDkZqbl2dEd-s6yRU0qnXyUM3_QWimLHkqILnHg14w7ysKjdELus7EhvHq4QfW0QD1IPELMzJGXyOl3bdw=s90"
+      ],
+      "ingredients": [
+        "fresh mozzarella",
+        "fresh basil",
+        "olive oil",
+        "salt",
+        "tomatoes",
+        "balsamic vinegar",
+        "cooked chicken"
+      ],
+      "flavors": {
+        "sour": 0.3333333333333333,
+        "salty": 1,
+        "sweet": 0.5,
+        "bitter": 0.8333333333333334,
+        "meaty": 1
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh5.ggpht.com/MxMrfdlGI8sXJK0lLp3g-Y_FpJrx0JI3zx06jOMf_YUkLUzdDFNR-c7KKiwE10xP5PksrSsjcvf7qphDApWT=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 900,
+      "rating": 5,
+      "recipeName": "Chicken Caprese",
+      "sourceDisplayName": "Steamy Kitchen",
+      "id": "Chicken-Caprese-512479",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh5.ggpht.com/xKUecmTW7W9-8go_7SiStOl4weFo7XXeNdJF9soWJ6q0KHM8S3sMHRzEUiprkkSLBYp4cOHTuANFMj-_RALz2w=s90"
+      ],
+      "ingredients": [
+        "dried breadcrumbs",
+        "grated parmesan cheese",
+        "eggs",
+        "boneless skinless chicken breasts",
+        "italian seasoning"
+      ],
+      "flavors": {
+        "sour": 0.16666666666666666,
+        "salty": 0.8333333333333334,
+        "sweet": 0.16666666666666666,
+        "bitter": 0.5,
+        "meaty": 0.6666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh4.ggpht.com/wSztxHluA4QpWg2Ij1LZIMFXl2lcEW05W1VBbV8nIPHz7bDyjmIaemTsyCQ3yFSD4iMgYkvvpFUUWXoKcHI4rGg=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 2700,
+      "rating": 5,
+      "recipeName": "Simply Parmesan Chicken",
+      "sourceDisplayName": "AllRecipes",
+      "id": "Simply-Parmesan-Chicken-Allrecipes",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh4.ggpht.com/B1ldEB7Dsj8r45FYUMZmxFdybJN_eBc4rt2rxIbaCaMH8GpKVk97xzaiMbEDgSKDbKkrHVLUs6RPM6rKxjV_=s90"
+      ],
+      "ingredients": [
+        "smoked paprika",
+        "garlic salt",
+        "meat",
+        "boneless chicken skinless thigh",
+        "extra-virgin olive oil"
+      ],
+      "flavors": null,
+      "imageUrlsBySize": {
+        "90": "http://lh5.ggpht.com/c1WyAP36fwSxoaarTbNsx_AgGygEIw5Kz1BUoKoTYvbaVcvr_M4h4TYnW9J697_RN2Jy537lIsuTzS7mwPoGZg=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 2700,
+      "rating": 5,
+      "recipeName": "Smoked Paprika Chicken",
+      "sourceDisplayName": "The Shiksa in the Kitchen",
+      "id": "Smoked-Paprika-Chicken-The-Shiksa-in-the-Kitchen-200675",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh6.ggpht.com/r7xCWrddmZ6XLIr7LwlKxHP4FVDq0QWBNDqyg_xoq52dgcq3O-gsFwutx_w7AUqKrL8dQORG_TFANoI4PTjh=s90"
+      ],
+      "ingredients": [
+        "ginger",
+        "chicken broth",
+        "kosher salt",
+        "chicken parts",
+        "Shaoxing wine"
+      ],
+      "flavors": null,
+      "imageUrlsBySize": {
+        "90": "http://lh6.ggpht.com/flMxJBDXCi_NnOchXaeDDYoY-YBa5JKyhUhYgLFX6fAtt8XC-HMRdBh58EG2J6oUQ-qcW5PXwKBk1ZU6Hywm=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 3600,
+      "rating": 5,
+      "recipeName": "Drunken Chicken",
+      "sourceDisplayName": "Serious Eats",
+      "id": "Drunken-chicken-302220",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh6.ggpht.com/NIbd3mx8FacbPrS1IXFAES_-2WK61di7xmqiju6wVyswgwQbyaX-GJV4lXS46bppZgXegolVDBS1GKkZNRhG=s90"
+      ],
+      "ingredients": [
+        "garlic powder",
+        "boneless skinless chicken breasts",
+        "condensed cream of chicken soup",
+        "salt",
+        "ground black pepper"
+      ],
+      "flavors": {
+        "sour": 0.16666666666666666,
+        "salty": 1,
+        "sweet": 0.16666666666666666,
+        "bitter": 1,
+        "meaty": 0.16666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh3.ggpht.com/gxCuuaWwmnS2nN9gKM6SYpBd-MIwYDO-Bzmg5Onx0BZqHIrAV_9FihUvPxEnvqzBJ4Sj5chGig41Px_nY4sqzg=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 2700,
+      "rating": 4,
+      "recipeName": "Creamy Chicken",
+      "sourceDisplayName": "AllRecipes",
+      "id": "Creamy-Chicken-Allrecipes",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh5.ggpht.com/JA3sOmAMrrvdUAS3qpDVdxjtBPElJHuAxdZZs1jfbLs0RNVEBYvz7FsCaAEhCCZRgHzJBh6Iuh7rFMv-9DWf2bc=s90"
+      ],
+      "ingredients": [
+        "fish sauce",
+        "bibb lettuce",
+        "fresh lime juice",
+        "fresh cilantro",
+        "water",
+        "ground chicken",
+        "yellow onion"
+      ],
+      "flavors": {
+        "sour": 0.3333333333333333,
+        "salty": 0.6666666666666666,
+        "sweet": 0.16666666666666666,
+        "bitter": 0.3333333333333333,
+        "meaty": 0.6666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh5.ggpht.com/PQwNMMmYfYU3ux62Kuy8ag8TBdqyg1AG5gW9gKO_oxk1WtmJar-RMGIBGsHndI-ynsOSVoJWspuotGp3uKf6=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 1800,
+      "rating": 5,
+      "recipeName": "Easy Chicken Lettuce Wraps",
+      "sourceDisplayName": "Food Republic",
+      "id": "Easy-Chicken-Lettuce-Wraps-513151",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    },
+    {
+      "smallImageUrls": [
+        "http://lh5.ggpht.com/NQIgfnIrP-31XEvU5V6Pz9xgVHO0xcD2PmYZsqq9x_-mmayQHBBMLQQj4vC3VFnBM61tbilMtg_8-sw23kqwPg=s90"
+      ],
+      "ingredients": [
+        "baby spinach leaves",
+        "shredded mozzarella cheese",
+        "kosher salt",
+        "white onion",
+        "extra-virgin olive oil",
+        "ground black pepper",
+        "chicken breasts",
+        "bow-tie pasta",
+        "Philadelphia Cooking Creme",
+        "minced garlic"
+      ],
+      "flavors": {
+        "sour": 0.16666666666666666,
+        "salty": 0.16666666666666666,
+        "sweet": 0.16666666666666666,
+        "bitter": 0.16666666666666666,
+        "meaty": 0.6666666666666666
+      },
+      "imageUrlsBySize": {
+        "90": "http://lh5.ggpht.com/oeLx_E9OmzThj-VGPmXCLQ2U2SHsMqzn3pY0WMfsom1FMA2dhU_HCCJ4x-UjM0CfuZVrtlQlG317JTL4iSlV9A=s90-c"
+      },
+      "attributes": {},
+      "totalTimeInSeconds": 3600,
+      "rating": 5,
+      "recipeName": "Chicken Florentine Bowtie Pasta",
+      "sourceDisplayName": "Picky Palate",
+      "id": "Chicken-florentine-bowtie-pasta-334939",
+	  "instructions": "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+    }
+  ],
+  "criteria": {
+    "excludedIngredients": null,
+    "allowedIngredients": null,
+    "terms": null
+  }
+}

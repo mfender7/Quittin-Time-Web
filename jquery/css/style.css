@@ -1,0 +1,42 @@
+#home .ui-controlgroup {
+  width: 60%;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+#home img {
+  width: 100%;
+  max-width: 375px;
+  display: block;
+  margin: 0 auto;
+}
+
+#splash > div > img {
+width: 100%;
+}
+
+#recipeInstructions > h3 {
+padding-left: 100px;
+}
+
+#recipeInstructions > ol > li {
+white-space: normal;
+}
+
+/* #home {
+  background: url('../images/background_viewsource.png')
+} */
+
+li.ui-li-has-thumb img {
+  margin: 10px;
+}
+
+iframe {
+  width: 100%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

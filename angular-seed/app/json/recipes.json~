@@ -1,0 +1,79 @@
+[
+	{
+		"_comment":"http://allrecipes.com/recipe/salsa-verde-chicken-wraps/",
+		"id":"0001",
+		"imageUrl":"img/recipes/0001.jpg",
+		"name":"Salsa Verde Chicken Wraps",
+		"servings":"4",
+		"description":"These versatile wraps are great for lunch, dinner-on-the-go, or you can slice them into one-inch appetizers. Give them a try...they take just 15 minutes to make, and the flavor can't be beat.",
+		"ingredients":[
+			"1 cup Pace® Salsa Verde",
+			"2 cups diced cooked chicken",
+			"1 large red pepper, diced",
+			"1 large avocado, diced",
+			"1/2 cup sour cream",
+			"4 (10 inch) flour tortillas, warmed",
+			"2 cups shredded lettuce"
+		],
+		"directions":[
+			"Stir 1/2 cup salsa, chicken, pepper and avocado in a large bowl.",
+			"Stir the remaining salsa and sour cream in a small bowl.",
+			"Spread 1/4 cup sour cream mixture onto each tortilla to within 1/2 inch of the edge.",
+			"Top each with 1 cup chicken mixture and 1/2 cup lettuce.",
+			"Fold the sides of the tortillas over the filling and then fold up the ends to enclose the filling.",
+			"Cut each wrap in half before serving."
+		]
+	},
+	{
+		"_comment":"http://www.wholefoodsmarket.com/recipe/chicken-breasts-grilled-pineapple-and-tomatillo-salsa",
+		"id":"0002",
+		"imageUrl":"img/recipes/0002.jpg",
+		"name":"Chicken Breasts with Grilled Pineapple and Tomatillo Salsa",
+		"servings":"4",
+		"description":"Serve this easy grilling recipe over steamed brown rice with a green salad on the side for a satisfying meal. Savory onions, sweet pineapple and rich tomatillo salsa are a delicious sweet and spicy combo to top all manner of grilled meat and fish.",
+		"ingredients":[
+			"2 tablespoons canola oil; plus more for oiling the grill",
+			"1/2 large sweet white onion (such as Vidalia); cut into thick rings",
+			"6 pineapple spears",
+			"Salt and pepper; to taste",
+			"1 1/2 cup tomatillo salsa",
+			"2 tablespoons chopped cilantro",
+			"1 tablespoon lime juice",
+			"4 skinless, boneless chicken breast halves"
+		],
+		"directions":[
+			"Oil grill grates and preheat grill to medium-high heat.",
+			"Brush onions and pineapple with 1 tablespoon of the oil then season with salt and pepper.",
+			"Grill, flipping once, until just charred in spots and softened, 6 to 8 minutes total; transfer to a plate.",
+			"When cool enough to handle, roughly chop onions and pineapple and transfer to a bowl.",
+			"Add tomatillo salsa, cilantro, lime juice, salt and pepper and toss gently to combine.",
+			"Brush chicken all over with remaining tablespoon of oil and season with salt and pepper.",
+			"Grill, flipping once, until deep golden brown all over and cooked through, 8 to 10 minutes total.",
+			"Transfer chicken to a platter, spoon grilled pineapple salsa over the top and serve immediately."
+		]
+	},
+	{
+		"_comment":"http://allrecipes.com/recipe/worlds-best-lasagna/",
+		"id":"0003",
+		"imageUrl":"img/recipes/0003.jpg",
+		"name":"World's Best Lasagna",
+		"servings":"12",
+		"description":"It takes a little work, but it is worth it.",
+		"ingredients":[
+			"1 cup Pace® Salsa Verde",
+			"2 cups diced cooked chicken",
+			"1 large red pepper, diced",
+			"1 large avocado, diced",
+			"1/2 cup sour cream",
+			"4 (10 inch) flour tortillas, warmed",
+			"2 cups shredded lettuce"
+		],
+		"directions":[
+			"In a Dutch oven, cook sausage, ground beef, onion, and garlic over medium heat until well browned. Stir in crushed tomatoes, tomato paste, tomato sauce, and water. Season with sugar, basil, fennel seeds, Italian seasoning, 1 tablespoon salt, pepper, and 2 tablespoons parsley. Simmer, covered, for about 1 1/2 hours, stirring occasionally.",
+			"Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water. In a mixing bowl, combine ricotta cheese with egg, remaining parsley, and 1/2 teaspoon salt.",
+			"Preheat oven to 375 degrees F (190 degrees C).",
+			"To assemble, spread 1 1/2 cups of meat sauce in the bottom of a 9x13 inch baking dish. Arrange 6 noodles lengthwise over meat sauce. Spread with one half of the ricotta cheese mixture. Top with a third of mozzarella cheese slices. Spoon 1 1/2 cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese. Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray, or make sure the foil does not touch the cheese.",
+			"Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Cool for 15 minutes before serving."
+		]
+	}
+]

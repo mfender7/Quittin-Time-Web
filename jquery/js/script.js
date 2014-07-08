@@ -50,7 +50,7 @@ $(document).ready(function() {
 	// list recipes
 	// var jsonUrl = "http://80.74.134.201:3000/somerecipe?q=chicken";
 	var jsonUrl =  "json/sampleJSON.json";
-	$.getJSON( jsonUrl, function (data){listRecipes(data)});
+	// $.getJSON( jsonUrl, function (data){listRecipes(data)});
 	//getData(jsonUrl);
   }); //show_page
 }); //document.ready

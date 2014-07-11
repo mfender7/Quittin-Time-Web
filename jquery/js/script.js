@@ -48,9 +48,9 @@ $(document).ready(function() {
       // }
     // }); //each link in navbar
 	// list recipes
-	// var jsonUrl = "http://80.74.134.201:3000/somerecipe?q=chicken";
-	var jsonUrl =  "json/sampleJSON.json";
-	// $.getJSON( jsonUrl, function (data){listRecipes(data)});
+	var jsonUrl = "http://80.74.134.201/api/somerecipe?q=chicken";
+	// var jsonUrl =  "json/sampleJSON.json";
+	$.getJSON( jsonUrl, function (data){listRecipes(data)});
 	//getData(jsonUrl);
   }); //show_page
 }); //document.ready
@@ -210,7 +210,7 @@ function showRecipe(id) {
 			break;
 		}		
 	}
-	//showDesiredRecipe();
+	//showDesiredRecipe(); // commented this out to avoid calling this twice
 }
 
 function showDesiredRecipe(){
@@ -224,7 +224,7 @@ function showDesiredRecipe(){
 	output += '<div data-role="tabs" id="desiredRecipeTabs">';
 	output += '<div data-role="navbar" id="desiredRecipeNavbar">';
 	output += '<ul>';
-	output += '<li><a href="#ingredients" data-ajax="false">Ingredients</a></li>';
+	output += '<li><a href="#ingredients" data-ajax="false" class="ui-btn-active ui-state-persist">Ingredients</a></li>';
 	output += '<li><a href="#instructions" data-ajax="false">Instructions</a></li>';
 	output += '</ul>';
 	output += '</div>'; // desiredRecipeNavbar
@@ -253,7 +253,7 @@ function showDesiredRecipe(){
 	output += '</div>'; // instructions
 	output += '</div>'; // desiredRecipeTabs
 	//output += '</div>'; // desiredRecipeContent
-	$('#recipeInstructions').html(output).enhanceWithin();
+	$('#desiredRecipeContent').html(output).enhanceWithin();
 } // showRecipe
 
 var g_cuisine;

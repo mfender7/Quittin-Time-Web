@@ -7,18 +7,18 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
 	<!-- <link rel="apple-touch-startup-image" href="filename.png" /> -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.css">
 	<link rel="stylesheet" href="css/style.css">
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
-	
 </head>
 <body>
+  <div id="outermostDiv" class="center">
 	<!-- splash -->
     <section data-role="page" class="header_default" id="splash">
         <div data-role="content">
             <h1><a href="#mealSelector" class="ui-btn ui-corner-all">Choose a meal</a></h1>
-			<img src="images/QuittinTimeIcon.png" alt="Placeholder icon"> <!-- TODO add real icon -->
+			<img src="images/QuittinTimeIcon.png" alt="Placeholder icon" id="placeholderIcon"> <!-- TODO add real icon -->
         </div><!-- /content -->
     </section><!-- /splash -->
 	
@@ -55,6 +55,10 @@
 				<a href="#login" class="ui-btn ui-corner-all">
 					Login
 				</a>
+				<!-- Store Locator -->
+				<a href="#storeLocator" class"ui-btn ui-corner-all">
+					Store Locator
+				</a>
 			
 			</h3>
         </div><!-- /content --> 
@@ -79,6 +83,13 @@
 			
         </div><!-- /content -->
     </section><!-- foods I won't eat -->
+    
+    <!-- Find a store -->
+	<section data-role="page" class="header_settings" id="storeLocator" data-title="Store Locator"> 
+        <div data-role="content" id="storeLocatorContent">
+			
+        </div><!-- /content -->
+    </section><!-- Find a store -->
 	
 	<!-- Login -->
 	<section data-role="page" class="header_settings" id="login" data-title="Login">
@@ -104,10 +115,11 @@
 	<!-- <section data-role="page" id="login" data-title="Login">  -->
         <!-- <div data-role="content" id="loggedInContent"> -->
 			
-        <!-- </div><!-- /content --> -->
-    <!-- </section><!-- Logged In --> -->
+        <!-- </div><!-- /content -->
+    <!-- </section><!-- Logged In -->
 	<script src="js/script.js"></script>
 	<script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? -->
 	<script src="js/jquery.json.js"></script> <!-- Provides improved functionality to output to JSON-->
+  </div> <!-- outermostDiv -->
 </body>
 </html>

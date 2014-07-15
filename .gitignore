@@ -39,3 +39,6 @@ Thumbs.db
 # NPM log
 npm-debug.log
 .gitignore~
+
+# Aptana
+.project

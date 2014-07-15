@@ -12,6 +12,10 @@ $(document).ready(function() {
 				case "splash":
 					pageUpName = "splash";
 					backButtonCodeNeeded = false; // don't need a back button on the splash screen
+					
+					setTimeout(function() { 
+					    window.location = "#mealSelector"; 
+					 }, 1000);
 					break;
 				case "mealSelector":
 					pageUpName = "splash";
@@ -48,106 +52,18 @@ $(document).ready(function() {
       // }
     // }); //each link in navbar
 	// list recipes
-	var jsonUrl = "http://80.74.134.201/api/somerecipe?q=chicken";
-	// var jsonUrl =  "json/sampleJSON.json";
-	$.getJSON( jsonUrl, function (data){listRecipes(data)});
+	// var jsonUrl = "http://80.74.134.201/api/somerecipe";
+	var jsonUrl =  "json/sampleJSON.json";
+	console.log("About to get JSON");
+	$.getJSON( jsonUrl, function (data){
+		 console.log("I got the JSON file");
+		listRecipes(data);})
 	//getData(jsonUrl);
+  .fail(function(jqxhr, textStatus, error){
+  	console.log("failed to parse JSON. Error: " + error);
+  });
   }); //show_page
 }); //document.ready
-
-// // Create the XHR object.
-// function createCORSRequest(method, url) {
-  // var xhr = new XMLHttpRequest();
-  // if ("withCredentials" in xhr) {
-    // // XHR for Chrome/Firefox/Opera/Safari.
-    // xhr.open(method, url, true);
-  // } else if (typeof XDomainRequest != "undefined") {
-    // // XDomainRequest for IE.
-    // xhr = new XDomainRequest();
-    // xhr.open(method, url);
-  // } else {
-    // // CORS not supported.
-    // xhr = null;
-  // }
-  // return xhr;
-// }
-
-// // Helper method to parse the title tag from the response.
-// function getTitle(text) {
-  // return text.match('<title>(.*)?</title>')[1];
-// }
-
-// // Make the actual CORS request.
-// function getData(jsonUrl)
-// {
-
-  // // All HTML5 Rocks properties support CORS.
-  // var xhr = createCORSRequest('GET', jsonUrl);
-  // if (!xhr) {
-    // alert('CORS not supported');
-    // return;
-  // }
-
-  // // Response handlers.
-  // xhr.onload = function() {
-    // var text = xhr.responseText;
-	// listRecipes(text);
-    // var title = getTitle(text);
-    // alert('Response from CORS request to ' + jsonUrl + ': ' + title);
-  // };
-
-  // xhr.onerror = function() {
-    // alert('Woops, there was an error making the request.');
-  // };
-
-  // xhr.send();
-
-// // $.ajax({
-  // // // The 'type' property sets the HTTP method.
-  // // // A value of 'PUT' or 'DELETE' will trigger a preflight request.
-  // // type: 'GET',
-  // // // The URL to make the request to.
-  // // url: jsonUrl,
-  // // // The 'contentType' property sets the 'Content-Type' header.
-  // // // The JQuery default for this property is
-  // // // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
-  // // // a preflight. If you set this value to anything other than
-  // // // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
-  // // // you will trigger a preflight request.
-  // // contentType: 'text/plain',
-  // // xhrFields: {
-    // // // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
-    // // // This can be used to set the 'withCredentials' property.
-    // // // Set the value to 'true' if you'd like to pass cookies to the server.
-    // // // If this is enabled, your server must respond with the header
-    // // // 'Access-Control-Allow-Credentials: true'.
-    // // withCredentials: false
-  // // },
-  // // headers: {
-    // // // Set any custom headers here.
-    // // // If you set any non-simple headers, your server must include these
-    // // // headers in the 'Access-Control-Allow-Headers' response header.
-  // // },
-  // // success: function(data) {
-    // // // Here's where you handle a successful response.
-	// // listRecipes(data);
-  // // },
-
-  // // error: function() {
-    // // // Here's where you handle an error response.
-    // // // Note that if the error was due to a CORS issue,
-    // // // this function will still fire, but there won't be any additional
-    // // // information about the error.
-	// // console.log("Failed to get JSON at " + jsonUrl);
-  // // }
-// // });
-
-// }
-// $("#settings").on("pageshow", function() {
-	// console.log("Now showing the settings");
-	// var referrer =  document.referrer;
-	// console.log("Referer: " + referrer);
-// });
 
 $("#recipeDetail").on("pageshow", function(){
 	showDesiredRecipe();
@@ -189,6 +105,9 @@ function listRecipes(data) {
 		output += (val.smallImageUrls[0]) ?
 		  '<img src="' + val.smallImageUrls[0] + '" alt="' + val.recipeName + '">':
 		  '<img src="images/viewsourcelogo.png" alt="TODO">';
+	    // output += (val.image) ?
+		    // '<img src="' + val.image + '" alt="' + val.recipeName + '">':
+		    // '<img src="images/QuittinTimeIcon.png" alt="' + val.recipeName + '">';
 		output += '<h3>' + val.recipeName + "</h3>";
 		output += '</a>';
 		output += '</li>';
@@ -230,7 +149,7 @@ function showDesiredRecipe(){
 	output += '</div>'; // desiredRecipeNavbar
 	output += '<div id="ingredients">';
 	output += '<h5>Ingredients</h5>';
-	output += '<ul data-role="listview">'
+	output += '<ul data-role="listview">';
 	for (i = 0; i < desiredRecipe.ingredients.length; i++){
 		output += '<li>';
 		output += desiredRecipe.ingredients[i];

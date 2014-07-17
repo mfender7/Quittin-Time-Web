@@ -6,7 +6,7 @@
 	<!-- Make address bar disappear in iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
-	<!-- <link rel="apple-touch-startup-image" href="filename.png" /> -->
+	<link rel="apple-touch-startup-image" href="images/QuittinTimeIcon.png" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.css">
 	<link rel="stylesheet" href="css/style.css">
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -18,7 +18,7 @@
     <section data-role="page" class="header_default" id="splash">
         <div data-role="content">
             <h1><a href="#mealSelector" class="ui-btn ui-corner-all">Choose a meal</a></h1>
-			<img src="images/QuittinTimeIcon.png" alt="Placeholder icon" id="placeholderIcon"> <!-- TODO add real icon -->
+			<img src="images/QuittinTimeIcon.png" alt="Quittin' Time Icon" id="QuittinTimeIcon">
         </div><!-- /content -->
     </section><!-- /splash -->
 	
@@ -34,7 +34,7 @@
         <div data-role="content" id="desiredRecipeContent">
 
         </div><!-- /content --> 
-    </section><!-- recipe selector -->
+    </section><!-- recipe detail -->
 	
 	<!-- Settings -->
 	<section data-role="page" class="header_settings" id="settings" data-title="Settings"> 
@@ -56,7 +56,7 @@
 					Login
 				</a>
 				<!-- Store Locator -->
-				<a href="#storeLocator" class"ui-btn ui-corner-all">
+				<a href="#storeLocator" class="ui-btn ui-corner-all">
 					Store Locator
 				</a>
 			
@@ -87,39 +87,45 @@
     <!-- Find a store -->
 	<section data-role="page" class="header_settings" id="storeLocator" data-title="Store Locator"> 
         <div data-role="content" id="storeLocatorContent">
-			
+			<!-- <h3>Find a store</h3>
+			<p>Location: <input type="text" id="locationInput" size="50" /></p>
+			<div id="storeLocatorMap" style="width:400px;height:300px;"></div> -->
+			<form>
+	          <input id="groceryKeyword" type="text" placeholder="Keyword" size="90" />
+	          <input id="groceryZip" type="text" placeholder="Type in a zip code or city and state" size="90" />
+	        </form>
+	        <button class="ui-btn ui-corner-all" onclick="getLocation()">
+				Search
+			</button>
+        	<div id="mapCanvas"></div>
         </div><!-- /content -->
     </section><!-- Find a store -->
+	
+	<!-- Store detail -->
+	<section data-role="page" class="header_settings" id="storeDetail" data-title="Store Detail"> 
+        <div data-role="content" id="desiredStoreContent">
+
+        </div><!-- /content --> 
+    </section><!-- store detail -->
 	
 	<!-- Login -->
 	<section data-role="page" class="header_settings" id="login" data-title="Login">
         <div data-role="content" id="loginContent">
-			<!--  <form action="#" id="loginForm">
-		 
-				<input type="text" name="username" placeholder="username">
-				<input type="password" name="password" placeholder="password">
-				<div data-role="fieldcontain" class="ui-hide-label">
-					<fieldset data-role="controlgroup">
-					   <input type="checkbox" name="checkbox-agree" id="checkbox-remember"/>
-					   <label for="checkbox-remember">Remember me</label>
-					</fieldset>
-				</div> -->
-				<!-- <input type="submit" value="Login"> -->
-				<!-- <a class="ui-btn ui-corner-all" onclick="login()">Login</a>
-			</form> -->
- 
+        	<!-- This is implemented dynamically  -->
         </div><!-- /content -->
     </section><!-- login -->
-	
-	<!-- Logged in -->
-	<!-- <section data-role="page" id="login" data-title="Login">  -->
-        <!-- <div data-role="content" id="loggedInContent"> -->
-			
-        <!-- </div><!-- /content -->
-    <!-- </section><!-- Logged In -->
+
 	<script src="js/script.js"></script>
-	<script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? -->
+	<!-- <script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? --> -->
 	<script src="js/jquery.json.js"></script> <!-- Provides improved functionality to output to JSON-->
+	<!-- Google Places API -->
+	<!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script> -->
+	<!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+	<!-- <script src="jquery.geocomplete.js"></script> -->
+	<!-- <script type="text/javascript" src="js/ui.geo_autocomplete.js"></script> -->
+	<!-- <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script> -->
+	<!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script> -->
+	<!-- <script src="js/jquery.geocomplete.js"></script> -->
   </div> <!-- outermostDiv -->
 </body>
 </html>

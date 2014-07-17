@@ -4,6 +4,10 @@
 	max-width:760px;
 }
 
+img{
+	padding: 5px;
+}
+
 .ui-header{
 	margin-left: auto;
     margin-right: auto;

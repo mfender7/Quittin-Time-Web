@@ -55,6 +55,10 @@ $(document).on("pageshow", "[data-role='page']", function() {
 	// fillMap();
 }); //show_page
 
+ // ---------------------------------------------------------------------------------------
+ // FIND A RECIPE
+ // ---------------------------------------------------------------------------------------
+
 function listRecipes(data) {
 	window.sessionStorage.setItem('recipeJSON',JSON.stringify(data));
 	var output = '<form class="ui-filterable"><input id="searchposts" data-type="search"></form>';
@@ -74,10 +78,6 @@ function listRecipes(data) {
 	// id
 	// Loop through recipes
 	$.each(data.matches, function(key, val) {
-		// var tempDiv = document.createElement("tempDiv");
-		// tempDiv.innerHTML = val.excerpt;
-		// $("a", tempDiv).remove();
-		// var excerpt = tempDiv.innerHTML;
 		output += '<li>';
 		output += '<a href="#recipeDetail" onclick = "showRecipe(\''+ val.id + '\')">';
 		// Default icon or recipe-specific
@@ -95,10 +95,7 @@ function listRecipes(data) {
 	$('#recipelist').html(output).enhanceWithin();
 } //listRecipes
 
-$("#recipeDetail").on("pageshow", function(){
-	showDesiredRecipe();
-});
-
+// store information about the recipe. showDesiredRecipe() actually does the job of painting the data
 function showRecipe(id) {
 	var data = JSON.parse(window.sessionStorage.getItem('recipeJSON'));
 	// find the recipe we want in our JSON file
@@ -106,16 +103,20 @@ function showRecipe(id) {
 		if (data.matches[i].id == id){
 			// set a cookie
 			window.sessionStorage.setItem('desiredRecipe',JSON.stringify(data.matches[i]));
-			break;
+			return;
 		}
 	} // for each match
 } // showRecipe
+
+$("#recipeDetail").on("pageshow", function(){
+	showDesiredRecipe();
+});
 
 function showDesiredRecipe(){
 	var desiredRecipe = JSON.parse(window.sessionStorage.getItem('desiredRecipe'));
 	var output = (desiredRecipe.smallImageUrls[0]) ?
 		  '<img align="left" src="' + desiredRecipe.smallImageUrls[0] + '" alt="' + desiredRecipe.recipeName + '">':
-		  '<img src="images/viewsourcelogo.png" alt="' + desiredRecipe.recipeName + '">';
+		  '<img src="images/QuittinTimeIcon.png" alt="' + desiredRecipe.recipeName + '">';
 	output += '<h3>' + desiredRecipe.recipeName + '</h3>';
 	output += '<div data-role="tabs" id="desiredRecipeTabs">';
 	output += '<div data-role="navbar" id="desiredRecipeNavbar">';
@@ -126,13 +127,19 @@ function showDesiredRecipe(){
 	output += '</div>'; // desiredRecipeNavbar
 	output += '<div id="ingredients">';
 	output += '<h5>Ingredients</h5>';
-	output += '<ul data-role="listview">';
+	// output += '<ul data-role="listview">';
+	output += '<form> <fieldset data-role="controlgroup"> <legend>Vertical:</legend>';
+	
 	for (i = 0; i < desiredRecipe.ingredients.length; i++){
-		output += '<li>';
+		// output += '<li>';
+		output += '<input type="checkbox" name="ingredient_checkbox_' + i + '" id="ingredient_checkbox_' + i + '">';
+		output += '<label for="ingredient_checkbox_' + i + '">';
 		output += desiredRecipe.ingredients[i];
-		output += '</li>';
+		output += '</label>';
+		// output += '</li>';
 	}
-	output += '</ul>';
+	output += '</fieldset> </form>';
+	// output += '</ul>';
 	output += '</div>'; // ingredients
 	output += '<div id="instructions">';
 	output += '<h5>Intstructions</h5>';
@@ -208,6 +215,11 @@ function showLogin(){
 	$.mobile.navigate('#settings');
  }
  
+ // ---------------------------------------------------------------------------------------
+ // PICK A GROCERY STORE
+ // ---------------------------------------------------------------------------------------
+ 
+ 
 // // the select function uses the viewport of the chosen location to relocate the map
 // function fillMap() {
     // // var map = new google.maps.Map(document.getElementById("storeLocatorMap"), { mapTypeId: google.maps.MapTypeId.ROADMAP });
@@ -227,57 +239,159 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition,showError);
     } else { 
-        $('#mapCanvas').innerHTML = "Geolocation is not supported by this browser.";
+        $('#storeLocatorResults').innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
 function showPosition(position) {
-    $('#mapCanvas').html("<p>Latitude: " + position.coords.latitude + 
-    	"<br>Longitude: " + position.coords.longitude + "</p>").enhanceWithin();
-	var lat = position.coords.latitude;
-	var long = position.coords.longitude;
+    // $('#storeLocatorResults').html("<p>Latitude: " + position.coords.latitude + 
+    // "<br>Longitude: " + position.coords.longitude + "</p>").enhanceWithin();
+    var lat = position.coords.latitude;
+	var lon = position.coords.longitude;
+	window.sessionStorage.setItem('lat',lat);
+	window.sessionStorage.setItem('lon',lon);
+	displayCoordinates();
 	// var jsonUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?types=grocery_or_supermarket&location=' + lat + ',' + long + '&radius=5000&key=AIzaSyAdALk9fKSutYxvkBmfrODopOu1xuWRddc';
 	var jsonUrl = 'json/returnedStores.json';
     $.getJSON( jsonUrl, function (data){
  		console.log("I got the JSON file for places!");
-		// TODO handle json
-		listStores(data);
+		window.sessionStorage.setItem('storeJSON',JSON.stringify(data));
 	})
   .fail(function(jqxhr, textStatus, error){
   	console.log("failed to parse JSON for places. Error: " + error);
   });
 }
 
-function listStores(data){
-	var output = ''; // construct output
-	output += '<ul data-role="listview">';
+function displayCoordinates(){
+	if (window.sessionStorage.getItem('lat') && window.sessionStorage.getItem('lon')){
+		var lat = window.sessionStorage.getItem('lat');
+		var lon = window.sessionStorage.getItem('lon');
+		$('#groceryZip').attr('placeholder', 'Lat:' + Number(lat).toFixed(3) + ', Long:' + Number(lon).toFixed(3)); // round to 3 decimals
+	} else {
+		console.log("Couldn't find lat and lon in session storage");
+	}
+}
+
+$("#storeLocator").on("pageshow", function(){
+	listStores();
+});
+
+function listStores(){
+	var lat, lon;
+	if (window.sessionStorage.getItem('lat') && window.sessionStorage.getItem('lon')){
+		lat = window.sessionStorage.getItem('lat');
+		lon = window.sessionStorage.getItem('lon');
+		displayCoordinates();
+	} else {
+		console.log("Couldn't find lat and lon in session storage; calling getLocation()");
+		getLocation();
+	}
+	if (window.sessionStorage.getItem('storeJSON')){ // if we have a JSON from the store
+		var data = JSON.parse(window.sessionStorage.getItem('storeJSON')); // ,JSON.stringify(data));
+		var favoriteStore = JSON.parse(window.sessionStorage.getItem('favoriteStore'));
+		var output = ''; // construct output
+		output += '<ul data-role="listview">';
+		for (i = 0; i < data.results.length; i++){
+			if (data.results[i] != ''){
+				output += '<li>';
+				output += '<a href="#storeDetail" onclick = "setStoreDetail(\''+ data.results[i].place_id + '\')">';
+				// indicate that this is a favorite store if it is
+				if (favoriteStore && favoriteStore.place_id == data.results[i].place_id){
+					// output += '<div id="imageWrapper">'; // could use this for overlaying images
+					// output += '<img src="' + data.results[i].icon + '">';
+					output += '<img src="images/favorite.png">';
+					// output += '</div>';
+				} else {
+					output += '<img src="' + data.results[i].icon + '">';
+				}
+				output += '<b>' + data.results[i].name + '</b> <br/> at ' + data.results[i].vicinity;
+				output += '</a>';
+				output += '</li>';
+			}
+		} // for each instruction
+		output += '</ul>';
+		$('#storeLocatorResults').html(output).enhanceWithin();
+	} else {
+		console.log("Couldn't find a JSON for stores'");
+	}
+	// TODO figure out why this doesn't work
+	// Scroll so that you only see the results by default
+	var scroll = $(window).scrollTop();
+	$("#storeLocatorResults").scrollTop(scroll);
+}
+
+// store information about the store. showDesiredStore() actually does the job of painting the data
+function setStoreDetail(place_id){
+	// TODO issue call for place details
+	var data = JSON.parse(window.sessionStorage.getItem('storeJSON'));
+	// find the recipe we want in our JSON file
 	for (i = 0; i < data.results.length; i++){
-		if (data.results[i] != ''){
-			output += '<li>';
-			output += '<a href="#storeDetail" onclick = "showStore(\''+ data.results[i].place_id + '\')">';
-			output += '<b>' + data.results[i].name + '</b> <br/> at ' + data.results[i].vicinity;
-			output += '</a>';
-			output += '</li>';
+		if (data.results[i].place_id == place_id){
+			// set a session storage item
+			// NOTE: desiredStore is store to view; favoriteStore is store to use
+			window.sessionStorage.setItem('storeDetail',JSON.stringify(data.results[i]));
+			return;
 		}
-	} // for each instruction
-	output += '</ul>';
-	$('#mapCanvas').html(output).enhanceWithin();
-	
+	} // for each result
+}
+
+$("#storeDetail").on("pageshow", function(){
+	showStoreDetail();
+});
+
+function showStoreDetail(){
+	var desiredStore = JSON.parse(window.sessionStorage.getItem('storeDetail'));
+	// desiredStore has the following fields:
+	// geometry->location->lat,long
+	// icon (this is a URL)
+	// name
+	// place_id
+	// vicinity (address without city/state)
+	// types (array of what this counts as--might want to throw it out if entry 0 is not grocery_or_supermarket)
+	var output = (desiredStore.icon) ?
+		  '<img align="left" src="' + desiredStore.icon + '" alt="' + desiredStore.name + '">':
+		  '<img src="images/QuittinTimeIcon.png" alt="' + desiredStore.name + '">';
+	output += '<h3>' + desiredStore.name + '</h3>';
+	output += '<br/><p style="text-align:center;">' + desiredStore.vicinity + '</p>';
+	output += '<button class="ui-btn ui-corner-all" onclick="setFavoriteStore(\'' + desiredStore.place_id + '\')"> Set as favorite store </button>';
+	output += '<div id="favoritePlaceholder">';
+	var favoriteStore = JSON.parse(window.sessionStorage.getItem('favoriteStore'));
+	if (favoriteStore.place_id == desiredStore.place_id){
+		// indicate that this is a favorite if it is
+		output += '<table><tr><img src="images/favorite.png" style="vertical-align:middle; display:inline; padding-bottom:10px"></tr><tr><h4 style="display:inline;">Favorite store</h4></tr></table>';
+	}
+	output += '</div>'; // favoritePlaceholder
+	$('#shownStoreContent').html(output).enhanceWithin();
+} // showRecipe
+
+function setFavoriteStore(place_id){
+	var data = JSON.parse(window.sessionStorage.getItem('storeJSON'));
+	// find the recipe we want in our JSON file
+	for (i = 0; i < data.results.length; i++){
+		if (data.results[i].place_id == place_id){
+			// set a session storage item
+			// NOTE: desiredStore is store to view; favoriteStore is store to use
+			window.sessionStorage.setItem('favoriteStore',JSON.stringify(data.results[i]));
+			$('#favoritePlaceholder').html('<table><tr><img src="images/favorite.png" style="vertical-align:middle; display:inline; padding-bottom:10px"></tr><tr><h4 style="display:inline;">Favorite store</h4></tr></table>').enhanceWithin();
+			//alert(data.results[i].name + ' is now your favorite store.');
+			return;
+		}
+	} // for each result
 }
 
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            $('#mapCanvas').innerHTML = "User denied the request for Geolocation."
+            $('#storeLocatorResults').innerHTML = "User denied the request for Geolocation."
             break;
         case error.POSITION_UNAVAILABLE:
-            $('#mapCanvas').innerHTML = "Location information is unavailable."
+            $('#storeLocatorResults').innerHTML = "Location information is unavailable."
             break;
         case error.TIMEOUT:
-            $('#mapCanvas').innerHTML = "The request to get user location timed out."
+            $('#storeLocatorResults').innerHTML = "The request to get user location timed out."
             break;
         case error.UNKNOWN_ERROR:
-            $('#mapCanvas').innerHTML = "An unknown error occurred."
+            $('#storeLocatorResults').innerHTML = "An unknown error occurred."
             break;
     }
 }

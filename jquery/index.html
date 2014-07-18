@@ -87,23 +87,20 @@
     <!-- Find a store -->
 	<section data-role="page" class="header_settings" id="storeLocator" data-title="Store Locator"> 
         <div data-role="content" id="storeLocatorContent">
-			<!-- <h3>Find a store</h3>
-			<p>Location: <input type="text" id="locationInput" size="50" /></p>
-			<div id="storeLocatorMap" style="width:400px;height:300px;"></div> -->
 			<form>
 	          <input id="groceryKeyword" type="text" placeholder="Keyword" size="90" />
-	          <input id="groceryZip" type="text" placeholder="Type in a zip code or city and state" size="90" />
+	          <input id="groceryZip" type="text" placeholder="Where? (city, state or ZIP)" size="90" />
 	        </form>
 	        <button class="ui-btn ui-corner-all" onclick="getLocation()">
 				Search
 			</button>
-        	<div id="mapCanvas"></div>
+        	<div id="storeLocatorResults"></div>
         </div><!-- /content -->
     </section><!-- Find a store -->
 	
 	<!-- Store detail -->
 	<section data-role="page" class="header_settings" id="storeDetail" data-title="Store Detail"> 
-        <div data-role="content" id="desiredStoreContent">
+        <div data-role="content" id="shownStoreContent">
 
         </div><!-- /content --> 
     </section><!-- store detail -->
@@ -116,7 +113,7 @@
     </section><!-- login -->
 
 	<script src="js/script.js"></script>
-	<!-- <script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? --> -->
+	<!-- <script src="js/jquery.cookie.js"></script> <!-- TODO how to make and get cookies? -->
 	<script src="js/jquery.json.js"></script> <!-- Provides improved functionality to output to JSON-->
 	<!-- Google Places API -->
 	<!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script> -->

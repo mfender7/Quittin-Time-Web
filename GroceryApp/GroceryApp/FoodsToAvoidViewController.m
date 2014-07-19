@@ -11,6 +11,7 @@
 @interface FoodsToAvoidViewController () {
     NSArray *avoidedFoods;
     NSArray *avoidedFoodsSorted;
+    NSMutableArray *selectedFoods;
 }
 @end
 
@@ -31,6 +32,7 @@
     // Do any additional setup after loading the view.
     avoidedFoods = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
     avoidedFoodsSorted = [avoidedFoods sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    selectedFoods = [[NSMutableArray alloc] init];
     
 }
 
@@ -59,6 +61,16 @@
         cell = [nib objectAtIndex:0];
     }
     
+    NSNumber *rowNsNum = [NSNumber numberWithUnsignedInt:indexPath.row];
+    if ( [selectedFoods containsObject:rowNsNum]  )
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     // Configure the cell...
     cell.textLabel.text = [avoidedFoodsSorted objectAtIndex:indexPath.row];
 
@@ -70,11 +82,14 @@
 {
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSNumber *rowNsNum = [NSNumber numberWithUnsignedInt:indexPath.row];
     if (cell.accessoryType == UITableViewCellAccessoryNone) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [selectedFoods addObject:rowNsNum];
         // Reflect selection in data model
     } else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
+        [selectedFoods removeObject:rowNsNum];
         // Reflect deselection in data model
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dMd-bI-i29">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dMd-bI-i29">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -75,7 +75,7 @@
         <!--Grocery List Recipe View Controller-->
         <scene sceneID="fgP-61-Dqf">
             <objects>
-                <viewController storyboardIdentifier="SteadyState" id="fcv-T3-CaK" customClass="GroceryListRecipeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="groceryListVC" id="fcv-T3-CaK" customClass="GroceryListRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rKv-yO-BO6"/>
                         <viewControllerLayoutGuide type="bottom" id="6f3-7r-yqJ"/>
@@ -349,6 +349,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="lRM-6P-JIr" id="97e-FY-X2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOt-RY-BMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,6 +501,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <connections>
                                                 <action selector="restart:" destination="vXZ-lx-hvc" id="iLk-N3-cBi"/>
                                             </connections>
+                                        </barButtonItem>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="CNK-nV-L1t"/>
+                                        <barButtonItem style="plain" id="AE2-KX-JGl">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1JF-vH-J7d">
+                                                <rect key="frame" x="174" y="7" width="130" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Trigger Notification">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="triggerNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Vz-tF-8l2"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </items>
                                 </toolbar>

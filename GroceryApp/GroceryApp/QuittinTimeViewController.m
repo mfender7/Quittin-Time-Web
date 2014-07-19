@@ -47,6 +47,7 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"gotoAllSet"])
     {
+        //Set Date and Time to be Displayed on the Next Screen
         NSDate *chosen = [self.datePicker date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"h:mm a"];
@@ -71,7 +72,7 @@
         
         if(result == NSOrderedAscending)
         {
-            NSLog(@"now is later than chosen");
+            //NSLog(@"now is later than chosen");
             now = [now dateByAddingTimeInterval:60*60*24]; //add 1 Day
         }
         
@@ -104,6 +105,24 @@
         
         // Pass any objects to the view controller here, like...
         allSetVC.timeLabelText = [[NSString alloc] initWithFormat: @"%@ at %@", weekday, time];
+        
+        //Test Time
+        NSDate *test = [NSDate date];
+        test = [test dateByAddingTimeInterval:5]; //add 5 seconds
+        
+        
+        //Set Up the Notification
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = test;
+        localNotification.alertBody = @"Salsa Verde Chicken Wraps";
+        //localNotification.alertAction = @"see the grocery list";
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
+        // Request to reload table view data
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
     
 
     }

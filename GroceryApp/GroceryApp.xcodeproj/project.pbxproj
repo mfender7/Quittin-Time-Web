@@ -29,6 +29,10 @@
 		B45CEF28194413C000C05499 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF27194413C000C05499 /* EmptySegue.m */; };
 		B45CEF2B1944157C00C05499 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2A1944157C00C05499 /* RecipeViewController.m */; };
 		B45CEF2E1944159500C05499 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CEF2D1944159500C05499 /* GroceryListViewController.m */; };
+		B4859E8C1964EDC200B2D981 /* MealChoices.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4859E8B1964EDC200B2D981 /* MealChoices.plist */; };
+		B4859E901964EEE600B2D981 /* ChickenKabobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4859E8D1964EEE600B2D981 /* ChickenKabobs.jpg */; };
+		B4859E911964EEE600B2D981 /* ThaiChickenTenders.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4859E8E1964EEE600B2D981 /* ThaiChickenTenders.jpg */; };
+		B4859E921964EEE600B2D981 /* ChickenWraps.png in Resources */ = {isa = PBXBuildFile; fileRef = B4859E8F1964EEE600B2D981 /* ChickenWraps.png */; };
 		B496AE1F195128FB00BD83BC /* UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B496AE1E195128FB00BD83BC /* UsernameViewController.m */; };
 		B4F610FC1960BAFB00A21E44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F610FB1960BAFB00A21E44 /* QuartzCore.framework */; };
 		B4F610FF1961147800A21E44 /* AllSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F610FE1961147800A21E44 /* AllSetViewController.m */; };
@@ -45,6 +49,8 @@
 		B4F6111819613EDC00A21E44 /* Classic Meals.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F6111019613EDC00A21E44 /* Classic Meals.png */; };
 		B4F6111B1961400D00A21E44 /* ChooseMealStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F6111A1961400D00A21E44 /* ChooseMealStyleViewController.m */; };
 		B4F6111E1961493200A21E44 /* MealStyleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F6111D1961493200A21E44 /* MealStyleCollectionViewCell.m */; };
+		B4FE073C19678FE30044AED3 /* splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4FE073B19678FE30044AED3 /* splash.jpeg */; };
+		B4FE073E19679D190044AED3 /* splash-text.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FE073D19679D190044AED3 /* splash-text.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +98,10 @@
 		B45CEF2A1944157C00C05499 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		B45CEF2C1944159500C05499 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		B45CEF2D1944159500C05499 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
+		B4859E8B1964EDC200B2D981 /* MealChoices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MealChoices.plist; sourceTree = "<group>"; };
+		B4859E8D1964EEE600B2D981 /* ChickenKabobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ChickenKabobs.jpg; path = "Images/Meal Choices/ChickenKabobs.jpg"; sourceTree = "<group>"; };
+		B4859E8E1964EEE600B2D981 /* ThaiChickenTenders.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ThaiChickenTenders.jpg; path = "Images/Meal Choices/ThaiChickenTenders.jpg"; sourceTree = "<group>"; };
+		B4859E8F1964EEE600B2D981 /* ChickenWraps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChickenWraps.png; path = "Images/Meal Choices/ChickenWraps.png"; sourceTree = "<group>"; };
 		B496AE1D195128FB00BD83BC /* UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsernameViewController.h; sourceTree = "<group>"; };
 		B496AE1E195128FB00BD83BC /* UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsernameViewController.m; sourceTree = "<group>"; };
 		B4F610FB1960BAFB00A21E44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -114,6 +124,8 @@
 		B4F6111A1961400D00A21E44 /* ChooseMealStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMealStyleViewController.m; sourceTree = "<group>"; };
 		B4F6111C1961493200A21E44 /* MealStyleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealStyleCollectionViewCell.h; sourceTree = "<group>"; };
 		B4F6111D1961493200A21E44 /* MealStyleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealStyleCollectionViewCell.m; sourceTree = "<group>"; };
+		B4FE073B19678FE30044AED3 /* splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpeg; path = "Images/Meal Choices/splash.jpeg"; sourceTree = "<group>"; };
+		B4FE073D19679D190044AED3 /* splash-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash-text.png"; path = "Images/Meal Choices/splash-text.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,7 @@
 		B45CEED41943E09900C05499 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4859E8B1964EDC200B2D981 /* MealChoices.plist */,
 				B4F6110819613ECE00A21E44 /* Images */,
 				B4F61100196117C700A21E44 /* SettingsList.plist */,
 				B45CEF26194413C000C05499 /* EmptySegue.h */,
@@ -255,6 +268,11 @@
 		B4F6110819613ECE00A21E44 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE073D19679D190044AED3 /* splash-text.png */,
+				B4FE073B19678FE30044AED3 /* splash.jpeg */,
+				B4859E8D1964EEE600B2D981 /* ChickenKabobs.jpg */,
+				B4859E8E1964EEE600B2D981 /* ThaiChickenTenders.jpg */,
+				B4859E8F1964EEE600B2D981 /* ChickenWraps.png */,
 				B4F6110919613EDC00A21E44 /* Kid Friendly.png */,
 				B4F6110A19613EDC00A21E44 /* Low Carb.png */,
 				B4F6110B19613EDC00A21E44 /* Low Fat.png */,
@@ -343,19 +361,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4859E8C1964EDC200B2D981 /* MealChoices.plist in Resources */,
 				B4F6111819613EDC00A21E44 /* Classic Meals.png in Resources */,
 				B45CEEE41943E09900C05499 /* Main_iPad.storyboard in Resources */,
 				B45CEEE91943E09900C05499 /* Images.xcassets in Resources */,
 				B4F6111719613EDC00A21E44 /* Clean Eating.png in Resources */,
+				B4859E911964EEE600B2D981 /* ThaiChickenTenders.jpg in Resources */,
+				B4FE073C19678FE30044AED3 /* splash.jpeg in Resources */,
 				B4F6111219613EDC00A21E44 /* Low Carb.png in Resources */,
 				B4F6111319613EDC00A21E44 /* Low Fat.png in Resources */,
 				B4F6111119613EDC00A21E44 /* Kid Friendly.png in Resources */,
+				B4859E901964EEE600B2D981 /* ChickenKabobs.jpg in Resources */,
 				B4F61101196117C700A21E44 /* SettingsList.plist in Resources */,
 				B45CEEE11943E09900C05499 /* Main_iPhone.storyboard in Resources */,
 				B45CEED81943E09900C05499 /* InfoPlist.strings in Resources */,
+				B4FE073E19679D190044AED3 /* splash-text.png in Resources */,
 				B4F6111419613EDC00A21E44 /* Slow Cooker.png in Resources */,
 				B4F6111519613EDC00A21E44 /* Low Calorie.png in Resources */,
 				B4F6111619613EDC00A21E44 /* Paleo.png in Resources */,
+				B4859E921964EEE600B2D981 /* ChickenWraps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

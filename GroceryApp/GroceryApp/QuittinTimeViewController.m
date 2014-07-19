@@ -55,10 +55,31 @@
         NSDate *now = [NSDate date];
         NSDateFormatter *formatterDay = [[NSDateFormatter alloc] init];
         [formatterDay setDateFormat:@"EEEE"];
+        
+        
+        unsigned int flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+        NSCalendar* calendar = [NSCalendar currentCalendar];
+        
+        NSDateComponents* chosenTime = [calendar components:flags fromDate:chosen];
+        NSDateComponents* nowTime = [calendar components:flags fromDate:now];
+        
+        NSDate* chosenTimeOnly = [calendar dateFromComponents:chosenTime];
+        NSDate* nowTimeOnly = [calendar dateFromComponents:nowTime];
+        
+        NSComparisonResult result = [chosenTimeOnly compare:nowTimeOnly];
+        
+        
+        if(result == NSOrderedAscending)
+        {
+            NSLog(@"now is later than chosen");
+            now = [now dateByAddingTimeInterval:60*60*24]; //add 1 Day
+        }
+        
         NSString *weekday = [formatterDay stringFromDate:now];
+
         
         if ([weekday isEqualToString:@"Friday"]) {
-            NSComparisonResult result = [chosen compare:now];
+
             if(result == NSOrderedDescending)
             {
                 //NSLog(@"chosen is later than now");

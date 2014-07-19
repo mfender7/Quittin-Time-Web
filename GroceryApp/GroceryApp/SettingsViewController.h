@@ -10,6 +10,7 @@
 
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (IBAction)restart:(id)sender;
 
 
 @end

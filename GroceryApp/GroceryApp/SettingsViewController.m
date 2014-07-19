@@ -93,4 +93,9 @@
 }
 */
 
+- (IBAction)restart:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"firstUse"];
+    [defaults synchronize];
+}
 @end

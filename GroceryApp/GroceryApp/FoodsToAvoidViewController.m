@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    avoidedFoods = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
+    avoidedFoods = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
     avoidedFoodsSorted = [avoidedFoods sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
 }
@@ -45,7 +45,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return avoidedFoodsSorted.count;
+    return avoidedFoods.count;
 }
 
 
@@ -61,6 +61,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [avoidedFoodsSorted objectAtIndex:indexPath.row];
+
     
     return cell;
 }

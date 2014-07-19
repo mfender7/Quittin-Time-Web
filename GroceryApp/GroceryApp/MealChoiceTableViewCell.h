@@ -10,5 +10,7 @@
 
 @interface MealChoiceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *mealImage;
+@property (weak, nonatomic) IBOutlet UILabel *mealLabel;
 
 @end

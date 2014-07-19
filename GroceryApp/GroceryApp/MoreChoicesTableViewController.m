@@ -9,14 +9,18 @@
 #import "MoreChoicesTableViewController.h"
 #import "MealChoiceTableViewCell.h"
 
-@interface MoreChoicesTableViewController ()
+@interface MoreChoicesTableViewController () {
+    NSArray *imageArray;
+}
 
 @end
+
 
 @implementation MoreChoicesTableViewController {
     NSDictionary *mealChoices;
     NSArray *mealNames;
 }
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,9 +41,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
-    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
-    mealNames = mealChoices.allKeys;
+    //NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    //mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    //mealNames = mealChoices.allKeys;
+    mealNames = [NSArray arrayWithObjects:@"Salsa Verde Chicken Wraps", @"Sweet Apple Chicken Sausage Kabobs",@"Thai Chicken Tenders", nil];
+    imageArray =  [NSArray arrayWithObjects:@"ChickenWraps.png",@"ChickenKabobs.jpg",@"ThaiChickenTenders.jpg",nil];
     
 }
 
@@ -54,7 +60,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return mealChoices.count;
+    return mealNames.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -75,7 +81,9 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = mealNames[indexPath.section];
+    cell.mealImage.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.section]];
+    NSString *mealName = [mealNames objectAtIndex: indexPath.section];
+    cell.mealLabel.text = mealName;
     
     
     return cell;

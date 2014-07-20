@@ -150,6 +150,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mealTitle" destination="sFZ-1z-ra3" id="3ZS-T8-TEY"/>
+                        <outlet property="recipeImage" destination="mFx-w4-6je" id="RCf-Ic-Dm5"/>
                         <outlet property="viewSelect" destination="deR-Kg-POt" id="UtK-Zr-dTh"/>
                     </connections>
                 </viewController>
@@ -602,10 +603,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jv3-iw-790">
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" id="jv3-iw-790">
                                                     <rect key="frame" x="46" y="0.0" width="259" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

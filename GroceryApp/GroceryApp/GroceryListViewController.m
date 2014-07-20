@@ -15,8 +15,8 @@
 @end
 
 @implementation GroceryListViewController{
-    NSDictionary *mealChoices;
-    NSArray *mealNames;
+    //NSDictionary *mealChoices;
+    NSArray *mealName;
     NSDictionary *ingredientsDict;
     NSMutableArray *groceryList;
 }
@@ -38,12 +38,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
-    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
-    mealNames = mealChoices.allKeys;
+    //NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    //mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    //mealNames = mealChoices.allKeys;
+    
+    
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     groceryList = [userDefaults objectForKey:@"groceryList"];
+    
 
 
 

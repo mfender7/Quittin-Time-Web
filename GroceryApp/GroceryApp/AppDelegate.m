@@ -16,12 +16,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //Request Recipes
-    self.responseData = [NSMutableData data];
-    [self performRequest:nil];
-
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults setObject:nil forKey:@"foodsToAvoid"];
+    //[defaults synchronize];
+    //Request Recipes
+    self.responseData = [NSMutableData data];
+    
+
+
+    
+    
     
     BOOL firstUse = YES;
     
@@ -35,7 +40,8 @@
         [defaults setObject:[NSNumber numberWithBool:YES] forKey:@"firstUse"];
         [defaults synchronize];
     }
-
+    
+    UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
 
     if (!firstUse)
     {
@@ -50,7 +56,7 @@
         [navController setViewControllers:controllers];
         
         // Handle launching from a notification
-        UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+
         if (locationNotification) {
             // Set icon badge number to zero
             application.applicationIconBadgeNumber = 0;
@@ -62,6 +68,11 @@
             
         }
         
+    }
+    
+    if (locationNotification) {
+        // Set icon badge number to zero
+        application.applicationIconBadgeNumber = 0;
     }
 
 
@@ -86,6 +97,8 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"connectionDidFinishLoading");
     NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:nil];
+    [[NSUserDefaults standardUserDefaults] setObject:jsonDict forKey:@"jsonDictionary"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"NSURLConnectionDidFinish" object:nil];
 
     //NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:nil];
@@ -163,6 +176,10 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if (application.applicationIconBadgeNumber > 0) {
+        // Set icon badge number to zero
+        application.applicationIconBadgeNumber = 0;
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -174,7 +191,32 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NOTE: This will not take foods to avoid into consideration the first time the user sets up the app
+    NSMutableArray *foodsToAvoid = [defaults objectForKey:@"foodsToAvoid"];
+    NSDate *todaysDate = [[NSDate alloc] init];
+    NSDateFormatter *formatterDay = [[NSDateFormatter alloc] init];
+    [formatterDay setDateFormat:@"MMddYYYY"];
+    NSString *date = [formatterDay stringFromDate:todaysDate];
+    //NSLog(@"%@",date);
+    
+    if ([(NSString *)[defaults objectForKey:@"dateOfLastLoad"] isEqualToString: nil]) {
+        [self performRequest:foodsToAvoid];
+        [defaults setObject:date forKey:@"dateOfLastLoad"];
+        [defaults synchronize];
+        NSLog(@"here");
+    } else if ([(NSString *)[defaults objectForKey:@"dateOfLastLoad"] isEqualToString: date]) {
+        NSLog(@"nowhere");
+    } else {
+        [self performRequest:foodsToAvoid];
+        [defaults setObject:date forKey:@"dateOfLastLoad"];
+        [defaults synchronize];
+        NSLog(@"there");
+    }
+    
+    
+    
     
     BOOL firstUse = YES;
     
@@ -207,6 +249,11 @@
             [navController popToViewController:vc1 animated:NO];
         }
         
+    }
+    
+    if (application.applicationIconBadgeNumber > 0) {
+        // Set icon badge number to zero
+        application.applicationIconBadgeNumber = 0;
     }
     
 }

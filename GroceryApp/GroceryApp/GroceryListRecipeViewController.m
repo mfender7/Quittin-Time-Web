@@ -19,10 +19,12 @@
     NSDictionary *mealChoices;
     NSArray *mealNames;
     BOOL viewIsGroceryList;
+
 }
 
 @synthesize mealTitle;
 @synthesize viewSelect;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -45,6 +47,7 @@
 {
     
     if ([segue.identifier isEqualToString:@"embedContainer"]) {
+
         self.containerViewController = segue.destinationViewController;
     }
 }

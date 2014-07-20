@@ -25,6 +25,9 @@
 
 @implementation ContainerViewController
 
+@synthesize groceryList;
+@synthesize recipe;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,6 +35,7 @@
     self.transitionInProgress = NO;
     self.currentSegueIdentifier = SegueIdentifierFirst;
     [self performSegueWithIdentifier:self.currentSegueIdentifier sender:nil];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

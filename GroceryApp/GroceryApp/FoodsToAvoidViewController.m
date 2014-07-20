@@ -34,6 +34,7 @@
     avoidedFoodsSorted = [avoidedFoods sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     selectedFoods = [[NSMutableArray alloc] init];
     
+    
 }
 
 #pragma mark - Table view data source
@@ -99,6 +100,27 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"gotoTimeSelect"])
+    {
+        NSMutableArray *foodsToAvoid = [[NSMutableArray alloc] init];
+        for (NSNumber *row in selectedFoods) {
+            NSInteger rowInteger = [row integerValue];
+            [foodsToAvoid addObject:[selectedFoods objectAtIndex:rowInteger]];
+        }
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:foodsToAvoid forKey:@"foodsToAvoid"];
+        [userDefaults synchronize];
+        
+    }
 }
 
 /*

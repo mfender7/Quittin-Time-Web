@@ -11,11 +11,15 @@
 
 @implementation AppDelegate
 
-
+@synthesize responseData = _responseData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.	
+    // Override point for customization after application launch.
+    //Request Recipes
+    self.responseData = [NSMutableData data];
+    [self performRequest:nil];
+
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -63,6 +67,73 @@
 
     return YES;
 }
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"didReceiveResponse");
+    [self.responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"didFailWithError");
+    //NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"connectionDidFinishLoading");
+    NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NSURLConnectionDidFinish" object:nil];
+
+    //NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:nil];
+    
+    //    for( NSString *aKey in [jsonDict allKeys] )
+    //    {
+    //        // do something like a log:
+    //        NSLog(aKey);
+    //    }
+    //
+    //    // show all values
+//    for(id recipeName in jsonDict) {
+//        
+//        id value = [jsonDict objectForKey:recipeName];
+//        
+//        NSString *keyAsString = (NSString *)recipeName;
+//        NSString *valueAsString = (NSString *)value;
+//        
+//        NSLog(@"key: %@", keyAsString);
+//        NSLog(@"value: %@", valueAsString);
+//    }
+    
+    // convert to JSON
+   // NSError *myError = nil;
+    //NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myError];
+    
+    //    // show all values
+    //    for(id key in res) {
+    //
+    //        id value = [res objectForKey:key];
+    //
+    //        NSString *keyAsString = (NSString *)key;
+    //        NSString *valueAsString = (NSString *)value;
+    //
+    //        NSLog(@"key: %@", keyAsString);
+    //        NSLog(@"value: %@", valueAsString);
+    //    }
+    //
+    //    // extract specific value...
+    //    NSArray *results = [res objectForKey:@"results"];
+    //
+    //    for (NSDictionary *result in results) {
+    //        NSString *icon = [result objectForKey:@"icon"];
+    //        NSLog(@"icon: %@", icon);
+    //    }
+    
+}
+
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
@@ -143,6 +214,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)performRequest:(NSMutableArray *)foodsToAvoid
+    {
+    
+    NSString *urlString = [NSString stringWithFormat: @"http://80.74.134.201:3000/somerecipe"];
+    if (foodsToAvoid != nil) {
+        for (NSString *item in foodsToAvoid) {
+            [urlString stringByAppendingString:[NSString stringWithFormat:@"&excluded[]=%@",item]];
+        }
+    }
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             [NSURL URLWithString:urlString]];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
 

@@ -13,4 +13,7 @@
 - (void)showGroceryListViewController;
 - (void)showRecipeViewController;
 
+@property (weak, nonatomic) NSArray *groceryList;
+@property (weak, nonatomic) NSArray *recipe;
+
 @end

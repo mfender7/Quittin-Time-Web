@@ -18,10 +18,11 @@
     NSDictionary *mealChoices;
     NSArray *mealNames;
     NSDictionary *ingredientsDict;
-    NSArray *ingredientsList;
+    NSMutableArray *groceryList;
 }
 
 @synthesize selectedIngredients;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,19 +42,16 @@
     mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
     mealNames = mealChoices.allKeys;
     
-   // NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"Ingredients" withExtension:@"plist"];
-   // ingredientsDict = [NSDictionary dictionaryWithContentsOfURL:url2];
-    //ingredientsList = ingredientsDict.allKeys;
-    ingredientsList = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    groceryList = [userDefaults objectForKey:@"groceryList"];
+
+
+
+    //ingredientsList = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
     
     if (selectedIngredients == nil) {
         selectedIngredients = [[NSMutableArray alloc] init];
     }
-    
-    
-    
-    
-    
 }
 
 #pragma mark - Table view data source
@@ -67,7 +65,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return ingredientsList.count;
+    return groceryList.count;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -113,7 +111,7 @@
     }
     
     // Configure the cell...
-    cell.ingredientName.text = [ingredientsList objectAtIndex: indexPath.row];
+    cell.ingredientName.text = [groceryList objectAtIndex: indexPath.row];
     
     
     return cell;

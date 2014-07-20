@@ -10,4 +10,6 @@
 
 @interface GroceryListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property(retain,nonatomic) NSMutableArray *selectedIngredients;
+
 @end

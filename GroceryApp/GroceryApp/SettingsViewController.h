@@ -10,6 +10,8 @@
 
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (IBAction)restart:(id)sender;
 
+- (IBAction)triggerNotification:(id)sender;
 
 @end

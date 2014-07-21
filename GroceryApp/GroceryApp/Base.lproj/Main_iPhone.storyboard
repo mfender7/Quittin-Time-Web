@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dMd-bI-i29">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dMd-bI-i29">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -75,7 +75,7 @@
         <!--Grocery List Recipe View Controller-->
         <scene sceneID="fgP-61-Dqf">
             <objects>
-                <viewController storyboardIdentifier="SteadyState" id="fcv-T3-CaK" customClass="GroceryListRecipeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="groceryListVC" id="fcv-T3-CaK" customClass="GroceryListRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rKv-yO-BO6"/>
                         <viewControllerLayoutGuide type="bottom" id="6f3-7r-yqJ"/>
@@ -100,7 +100,7 @@
                                         <rect key="frame" x="0.0" y="1" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exampleMeal.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-w4-6je">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChickenWraps.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-w4-6je">
                                         <rect key="frame" x="5" y="4" width="100" height="104"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -150,6 +150,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mealTitle" destination="sFZ-1z-ra3" id="3ZS-T8-TEY"/>
+                        <outlet property="recipeImage" destination="mFx-w4-6je" id="RCf-Ic-Dm5"/>
                         <outlet property="viewSelect" destination="deR-Kg-POt" id="UtK-Zr-dTh"/>
                     </connections>
                 </viewController>
@@ -192,7 +193,7 @@
                                     <!--2014-06-29 21:00:00 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -210,7 +211,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When's quitting time for you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ye-cC-tSJ">
@@ -349,6 +350,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="lRM-6P-JIr" id="97e-FY-X2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOt-RY-BMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,7 +424,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TMq-SJ-YJN" kind="push" id="Ysc-e1-lYx"/>
+                                    <segue destination="TMq-SJ-YJN" kind="push" identifier="gotoTimeSelect" id="Ysc-e1-lYx"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -490,6 +494,30 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="v7o-Yu-EEr">
+                                    <rect key="frame" x="0.0" y="153" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <items>
+                                        <barButtonItem title="Restart" id="wDo-4K-wYR">
+                                            <connections>
+                                                <action selector="restart:" destination="vXZ-lx-hvc" id="iLk-N3-cBi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="CNK-nV-L1t"/>
+                                        <barButtonItem style="plain" id="AE2-KX-JGl">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1JF-vH-J7d">
+                                                <rect key="frame" x="174" y="7" width="130" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Trigger Notification">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="triggerNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Vz-tF-8l2"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </items>
+                                </toolbar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsCell" textLabel="WdQ-k5-hYE" style="IBUITableViewCellStyleDefault" id="tmg-Al-RBI">
                                         <rect key="frame" x="0.0" y="99" width="320" height="44"/>
@@ -563,18 +591,44 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VMr-BG-diH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VMr-BG-diH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="288"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Ingredient" selectionStyle="none" indentationWidth="10" reuseIdentifier="IngredientsCell" id="JnL-9T-588">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="Ingredient" selectionStyle="none" indentationWidth="10" reuseIdentifier="IngredientsCell" textLabel="jv3-iw-790" imageView="WDq-x3-soD" style="IBUITableViewCellStyleDefault" id="JnL-9T-588" customClass="IngredientTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JnL-9T-588" id="bjw-FY-9T4">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="259" id="jv3-iw-790">
+                                                    <rect key="frame" x="46" y="0.0" width="259" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="checkbox" id="WDq-x3-soD">
+                                                    <rect key="frame" x="15" y="13" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohT-eY-zyy">
+                                                    <rect key="frame" x="34" y="21" width="266" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkbox" destination="WDq-x3-soD" id="vAR-2L-bf4"/>
+                                            <outlet property="ingredientName" destination="jv3-iw-790" id="BgK-K8-BI0"/>
+                                            <outlet property="strikethrough" destination="ohT-eY-zyy" id="Umy-aJ-1m9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -633,6 +687,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="mealImage" destination="obu-yx-ufN" id="eIz-eo-cLk"/>
+                                    <outlet property="mealLabel" destination="WOd-V0-Vec" id="erL-P0-Og9"/>
                                     <segue destination="fcv-T3-CaK" kind="push" identifier="selectMeal" id="I1L-YH-oz1"/>
                                 </connections>
                             </tableViewCell>
@@ -685,9 +741,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="AppLogo" width="152" height="152"/>
+        <image name="ChickenWraps.png" width="141" height="141"/>
         <image name="Classic Meals.png" width="215" height="211"/>
         <image name="SettingsIcon" width="38" height="38"/>
         <image name="borderBox.png" width="50" height="51"/>
+        <image name="checkbox" width="16" height="16"/>
         <image name="exampleMeal.png" width="141" height="141"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -696,6 +754,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s8Z-Sg-4Jx"/>
+        <segue reference="Jd4-6Q-LgZ"/>
     </inferredMetricsTieBreakers>
 </document>

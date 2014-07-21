@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ChooseMealStyleViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @end

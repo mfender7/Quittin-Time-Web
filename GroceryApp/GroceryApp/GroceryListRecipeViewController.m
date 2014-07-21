@@ -16,13 +16,16 @@
 
 
 @implementation GroceryListRecipeViewController{
-    NSDictionary *mealChoices;
-    NSArray *mealNames;
+    //NSDictionary *mealChoices;
+    //NSArray *mealNames;
     BOOL viewIsGroceryList;
+
 }
 
 @synthesize mealTitle;
 @synthesize viewSelect;
+@synthesize recipeImage;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -45,6 +48,7 @@
 {
     
     if ([segue.identifier isEqualToString:@"embedContainer"]) {
+
         self.containerViewController = segue.destinationViewController;
     }
 }
@@ -52,10 +56,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
-    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
-    mealNames = mealChoices.allKeys;
-    mealTitle.text = mealNames[1];
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+//    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+//    mealNames = mealChoices.allKeys;
+//    mealTitle.text = mealNames[1];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    mealTitle.text = [userDefaults objectForKey:@"recipeName"];
+    
+    NSString *path = [userDefaults objectForKey:@"recipeImage"];
+    NSURL *url = [NSURL URLWithString:path];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    recipeImage.image = [[UIImage alloc] initWithData:data];
+
     viewIsGroceryList = YES;
     
     //Change Segmented Control Font Size

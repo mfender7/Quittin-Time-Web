@@ -11,11 +11,14 @@
 
 @interface ChooseMealStyleViewController () {
     NSArray *imageArray;
+    int selectionCount;
 }
 
 @end
 
 @implementation ChooseMealStyleViewController
+
+@synthesize myCollectionView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +33,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    imageArray =  [NSArray arrayWithObjects:@"Classic Meals.png", @"Clean Eating.png", @"Paleo.png", @"Low Calorie.png", @"Slow Cooker.png", @"Low Fat.png", @"Low Carb.png", @"Kid Friendly.png",nil];
+    imageArray =  [NSArray arrayWithObjects:@"Classic Meals", @"Clean Eating", @"Paleo", @"Low Calorie", @"Slow Cooker", @"Low Fat", @"Low Carb", @"Kid Friendly",nil];
+    self.myCollectionView.allowsMultipleSelection = YES;
+    selectionCount = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,19 +67,28 @@
     }
     
     //cell.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]]];
-    cell.imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
+    NSString* imageName = [NSString stringWithFormat:@"Meal Plan - %@", [imageArray objectAtIndex:indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:imageName];
     
     return cell;
     
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
     UICollectionViewCell* cell = [collectionView  cellForItemAtIndexPath:indexPath];
-    cell.backgroundColor = [UIColor orangeColor]; //     //cell.lblImgTitle.text = @"xxx";
+    if (selectionCount <= 2) {
+        cell.backgroundColor = [UIColor orangeColor];
+        selectionCount++;
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     UICollectionViewCell* cell = [collectionView  cellForItemAtIndexPath:indexPath];
+    if (selectionCount <= 3 && cell.backgroundColor == [UIColor orangeColor]) {
+        selectionCount--;
+    }
     cell.backgroundColor = [UIColor clearColor];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "GroceryListViewController.h"
+#import "IngredientTableViewCell.h"
 
 @interface GroceryListViewController ()
 
@@ -14,11 +15,14 @@
 @end
 
 @implementation GroceryListViewController{
-    NSDictionary *mealChoices;
-    NSArray *mealNames;
+    //NSDictionary *mealChoices;
+    NSArray *mealName;
     NSDictionary *ingredientsDict;
-    NSArray *ingredientsList;
+    NSMutableArray *groceryList;
 }
+
+@synthesize selectedIngredients;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,16 +38,23 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
-    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
-    mealNames = mealChoices.allKeys;
-    
-    NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"Ingredients" withExtension:@"plist"];
-    ingredientsDict = [NSDictionary dictionaryWithContentsOfURL:url2];
-    ingredientsList = ingredientsDict.allKeys;
+    //NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
+    //mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
+    //mealNames = mealChoices.allKeys;
     
     
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    groceryList = [userDefaults objectForKey:@"groceryList"];
+    
+
+
+
+    //ingredientsList = [NSArray arrayWithObjects:@"Liver", @"Lima Beans", @"Mushrooms", @"Eggs", @"Okra", @"Tuna Fish", @"Beets", @"Brussel Sprouts", @"Olives", @"Raisins", @"Onions", @"Blue Cheese", @"Peas",nil];
+    
+    if (selectedIngredients == nil) {
+        selectedIngredients = [[NSMutableArray alloc] init];
+    }
 }
 
 #pragma mark - Table view data source
@@ -57,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return ingredientsList.count;
+    return groceryList.count;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -78,18 +89,32 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IngredientsCell"];
+    IngredientTableViewCell *cell = (IngredientTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"IngredientsCell"];
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"IngredientsCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    //NSArray *ingredients = [[NSArray alloc] initWithArray:mealNames];
+
     
-    
+    NSNumber *rowNsNum = [NSNumber numberWithUnsignedInt:indexPath.row];
+    if ( [selectedIngredients containsObject:rowNsNum]  )
+    {
+        //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.checkbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        cell.strikethrough.hidden = NO;
+        cell.ingredientName.textColor = [UIColor lightGrayColor];
+    }
+    else
+    {
+        //cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.checkbox.image = [UIImage imageNamed:@"checkbox"];
+        cell.strikethrough.hidden = YES;
+        cell.ingredientName.textColor = [UIColor blackColor];
+    }
     
     // Configure the cell...
-    cell.textLabel.text = [ingredientsDict objectForKey:ingredientsList[indexPath.row]];
+    cell.ingredientName.text = [groceryList objectAtIndex: indexPath.row];
     
     
     return cell;
@@ -97,7 +122,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    IngredientTableViewCell *cell = (IngredientTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NSNumber *rowNsNum = [NSNumber numberWithUnsignedInt:indexPath.row];
+    if (cell.strikethrough.hidden) {
+        cell.checkbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        cell.strikethrough.hidden = NO;
+        cell.ingredientName.textColor = [UIColor lightGrayColor];
+        [selectedIngredients addObject:rowNsNum];
+        // Reflect selection in data model
+    } else if (!cell.strikethrough.hidden) {
+        cell.checkbox.image = [UIImage imageNamed:@"checkbox"];
+        cell.strikethrough.hidden = YES;
+        cell.ingredientName.textColor = [UIColor blackColor];
+        [selectedIngredients removeObject:rowNsNum];
+        // Reflect deselection in data model
+    }
 }
 
 - (void)didReceiveMemoryWarning

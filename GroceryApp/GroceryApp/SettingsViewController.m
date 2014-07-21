@@ -93,4 +93,32 @@
 }
 */
 
+- (IBAction)restart:(id)sender {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:[NSNumber numberWithBool:YES] forKey:@"firstUse"];
+    [userDefaults synchronize];
+}
+
+- (IBAction)triggerNotification:(id)sender {
+    //Test Time
+    
+    NSDate *test = [NSDate date];
+    test = [test dateByAddingTimeInterval:5]; //add 5 seconds
+    
+    
+    //Set Up the Notification
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = test;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    localNotification.alertBody = [userDefaults objectForKey:@"recipeName"];
+    //localNotification.alertAction = @"see the grocery list";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    // Request to reload table view data
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    
+}
 @end

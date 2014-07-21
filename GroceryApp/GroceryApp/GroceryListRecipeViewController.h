@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *mealTitle;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *viewSelect;
 
+@property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
+
 
 @end

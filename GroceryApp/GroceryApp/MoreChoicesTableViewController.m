@@ -8,15 +8,23 @@
 
 #import "MoreChoicesTableViewController.h"
 #import "MealChoiceTableViewCell.h"
+#import "AppDelegate.h"
 
-@interface MoreChoicesTableViewController ()
+@interface MoreChoicesTableViewController () {
+    NSMutableArray *imageArray;
+}
 
 @end
 
+
 @implementation MoreChoicesTableViewController {
     NSDictionary *mealChoices;
-    NSArray *mealNames;
+    NSMutableArray *mealNames;
+    NSDictionary *jsonDict;
+    AppDelegate *appDelegate;
 }
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +35,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,11 +45,96 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"MealChoices" withExtension:@"plist"];
-    mealChoices = [NSDictionary dictionaryWithContentsOfURL:url];
-    mealNames = mealChoices.allKeys;
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    //NSMutableArray *foodsToAvoid = [userDefaults objectForKey:@"foodToAvoid"];
+    //[appDelegate performRequest:foodsToAvoid];
+    [self reloadTableData];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(dataLoaded)
+                                                 name:@"NSURLConnectionDidFinish"
+                                               object:nil];
     
+
+
+
+    
+    //mealNames = [NSArray arrayWithObjects:@"Salsa Verde Chicken Wraps", @"Sweet Apple Chicken Sausage Kabobs",@"Thai Chicken Tenders", nil];
+    //imageArray =  [NSArray arrayWithObjects:@"ChickenWraps.png",@"ChickenKabobs.jpg",@"ThaiChickenTenders.jpg",nil];
+    
+}
+
+-(void) reloadTableData {
+    // finish up
+    NSLog(@"reload called");
+    mealNames = [[NSMutableArray alloc] init];
+    imageArray = [[NSMutableArray alloc] init];
+    // convert to JSON
+    //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sampleJSON" ofType:@"json"];
+    //NSData* data = [NSData dataWithContentsOfFile:filePath];
+    //NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    jsonDict = [userDefaults objectForKey:@"jsonDictionary"];
+    
+
+    
+    //jsonDict = [NSJSONSerialization JSONObjectWithData:appDelegate.responseData options:kNilOptions error:nil];
+    
+    //    for( NSString *aKey in [jsonDict allKeys] )
+    //    {
+    //        // do something like a log:
+    //        NSLog(aKey);
+    //    }
+    //
+    // show all values
+//    for(id recipeName in jsonDict) {
+//        
+//        id value = [jsonDict objectForKey:recipeName];
+//        
+//        NSString *keyAsString = (NSString *)recipeName;
+//        NSString *valueAsString = (NSString *)value;
+//        
+//        NSLog(@"key: %@", keyAsString);
+//        NSLog(@"value: %@", valueAsString);
+//    }
+    
+    // extract specific value...
+    NSArray *results = [jsonDict objectForKey:@"matches"];
+    int recipeCount = 0;
+    for (NSDictionary *result in results) {
+        if (recipeCount < 3) {
+            NSString *recipeName = [result objectForKey:@"recipeName"];
+            [mealNames addObject:recipeName];
+            //NSLog(@"Recipe Name: %@", recipeName);
+            
+            NSDictionary *totalPath = [result objectForKey:@"images"];
+            NSString *path = [totalPath objectForKey:@"smallUrl"];
+            NSURL *url = [NSURL URLWithString:path];
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            UIImage *recipeImage = [[UIImage alloc] initWithData:data];
+            [imageArray addObject:recipeImage];
+            //NSLog(@"Path: %@", path);
+            if (![userDefaults objectForKey:@"recipeName"]) {
+                [self saveSelectedRecipe:recipeName];
+                NSLog(@"%@",[userDefaults objectForKey:@"recipeName"]);
+            }
+            recipeCount++;
+        }
+        
+        
+    }
+
+    [self.tableView reloadData];
+
+}
+
+
+
+-(void)dataLoaded {
+    [self reloadTableData];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +148,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return mealChoices.count;
+    return mealNames.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -75,7 +169,9 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = mealNames[indexPath.section];
+    cell.mealImage.image = [imageArray objectAtIndex:indexPath.section];
+    NSString *mealName = [mealNames objectAtIndex: indexPath.section];
+    cell.mealLabel.text = mealName;
     
     
     return cell;
@@ -83,9 +179,49 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    MealChoiceTableViewCell *cell = (MealChoiceTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NSString *selectedMeal = [NSString stringWithFormat:@"%@", cell.mealLabel.text];
+    [self saveSelectedRecipe:selectedMeal];
 }
 
+-(void)saveSelectedRecipe: (NSString *) selectedMeal {
+
+    //Get Recipe and Directions
+    NSArray *results = [jsonDict objectForKey:@"matches"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    for (NSDictionary *result in results) {
+        
+        NSMutableArray *groceryList = [[NSMutableArray alloc] init];
+        NSMutableArray *recipe = [[NSMutableArray alloc] init];
+        NSString *recipeName = [result objectForKey:@"recipeName"];
+        
+        if ([recipeName isEqualToString:selectedMeal]) {
+            
+            
+            groceryList = [result objectForKey:@"ingredients"];
+            recipe = [result objectForKey:@"directions"];
+            
+            
+            
+            NSDictionary *totalPath = [result objectForKey:@"images"];
+            NSString *imagePath = [totalPath objectForKey:@"smallUrl"];
+            
+            
+            [userDefaults setObject:selectedMeal forKey:@"recipeName"];
+            [userDefaults setObject:groceryList forKey:@"groceryList"];
+            [userDefaults setObject:recipe forKey:@"recipe"];
+            [userDefaults setObject:imagePath forKey:@"recipeImage"];
+            [userDefaults synchronize];
+            return;
+            
+        }
+        
+        
+        
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

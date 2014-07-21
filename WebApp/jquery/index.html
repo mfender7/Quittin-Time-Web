@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Quittin' Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Make address bar disappear in iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"> -->
+	<link rel="apple-touch-startup-image" href="images/QuittinTimeIcon.png" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+</head>
+<body>
+  <!-- <div id="outermostDiv" class="center"> -->
+	<!-- splash -->
+    <section data-role="page" class="header_default" id="splash">
+        <div data-role="content">
+            <h1><a href="#mealSelector" class="ui-btn ui-corner-all">Choose a meal</a></h1>
+			<img src="images/QuittinTimeIcon.png" alt="Quittin' Time Icon" id="QuittinTimeIcon">
+        </div><!-- /content -->
+    </section><!-- /splash -->
+	
+	<!-- Choose a dinner -->
+	<section data-role="page" class="header_default" id="mealSelector" data-title="Recipe List"> 
+        <div data-role="content" id="recipelist">
+
+        </div><!-- /content --> 
+    </section><!-- recipe selector -->
+	
+	<!-- Recipe detail -->
+	<section data-role="page" class="header_default" id="recipeDetail" data-title="Recipe Detail"> 
+        <div data-role="content" id="desiredRecipeContent">
+
+        </div><!-- /content --> 
+    </section><!-- recipe detail -->
+	
+	<!-- Settings -->
+	<section data-role="page" class="header_settings" id="settings" data-title="Settings"> 
+        <div data-role="content" id="settingsContent">
+			<h3>
+				<!-- cuisine selector -->
+				<a href="#cuisineSelector" class="ui-btn ui-corner-all">
+					Choose a cuisine
+				</a>
+				<!-- family size -->
+				<label for="slider">Family Size</label>
+				<input type="range" name="slider" id="slider" value="2" min="0" max="8">
+				<!-- Foods I won't eat -->
+				<a href="#excludedFoods" class="ui-btn ui-corner-all">
+					Foods I won't eat
+				</a>
+				<!-- Login -->
+				<a href="#login" class="ui-btn ui-corner-all">
+					Login
+				</a>
+				<!-- Store Locator -->
+				<a href="#storeLocator" class="ui-btn ui-corner-all">
+					Store Locator
+				</a>
+				<!-- Notifications -->
+				<a href="#notifications" class="ui-btn ui-corner-all">
+					Set up notifications
+				</a>
+			
+			</h3>
+        </div><!-- /content --> 
+    </section><!-- settings -->
+	
+	<!-- Cuisine Selector -->
+	<section data-role="page" class="header_settings" id="cuisineSelector" data-title="Cuisine Selector"> 
+        <div data-role="content" id="cuisineSelectorContent">
+			<ul id="cuisineList">
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Classic Meals')">Classic Meals</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Clean Eating')">Clean Eating</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Kid')">Kid</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Low Calorie')">Low Calorie</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Low Carb')">Low Carb</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Low Fat')">Low Fat</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Paleo')">Paleo</li>
+				<li class="ui-btn ui-corner-all" onClick="setCuisine('Slow Cooker')">Slow Cooker</li>
+			</ul>
+			<!-- <fieldset data-role="controlgroup">
+				<legend>Choose a pet:</legend>
+			     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+			     	<label for="radio-choice-1">Cat</label>
+			
+			     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+			     	<label for="radio-choice-2">Dog</label>
+			
+			     	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+			     	<label for="radio-choice-3">Hamster</label>
+			
+			     	<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
+			     	<label for="radio-choice-4">Lizard</label>
+			</fieldset> -->
+        </div><!-- /content -->
+    </section><!-- cuisine selector -->
+	
+	<!-- Foods I won't eat -->
+	<section data-role="page" class="header_settings" id="excludedFoods" data-title="Foods I won't eat"> 
+        <div data-role="content" id="excludedFoodsContent">
+        </div><!-- /content -->
+    </section><!-- foods I won't eat -->
+    
+    <!-- Find a store -->
+	<section data-role="page" class="header_settings" id="storeLocator" data-title="Store Locator"> 
+        <div data-role="content" id="storeLocatorContent">
+			<form>
+	          <!-- <input id="groceryKeyword" type="text" placeholder="Keyword" size="90" /> -->
+	          <input id="groceryZip" type="text" placeholder="Custom zip code" size="90" /> 
+	          <!-- TODO: allow for city,state -->
+	        </form>
+	        <button class="ui-btn ui-corner-all" onclick="getLocation()">
+				Search
+			</button>
+        	<div id="storeLocatorResults"></div>
+        </div><!-- /content -->
+    </section><!-- Find a store -->
+	
+	<!-- Store detail -->
+	<section data-role="page" class="header_settings" id="storeDetail" data-title="Store Detail"> 
+        <div data-role="content" id="shownStoreContent">
+
+        </div><!-- /content --> 
+    </section><!-- store detail -->
+	
+	<!-- Login -->
+	<section data-role="page" class="header_settings" id="login" data-title="Login">
+        <div data-role="content" id="loginContent">
+        	<!-- This is implemented dynamically  -->
+        </div><!-- /content -->
+    </section><!-- login -->
+    
+    <!-- Notifications -->
+	<section data-role="page" class="header_settings" id="notifications" data-title="Notifications"> 
+        <div data-role="content" id="notificationsContent">
+        	<label for="notifyTimePicker">When's quittin' time for you?</label>
+			<input name="notifyTimePicker" id="notifyTimePicker" type="date" data-role="datebox"
+			   data-options='{"mode": "timeflipbox"}'>
+			<button class="ui-btn ui-corner-all" onClick="notifyMe()">Notify me</button>
+			<div id="amIsetup">
+				<!-- This is to write if you're set up -->
+			</div>
+		</div><!-- /content --> 
+    </section><!-- notifications content -->
+
+	<script src="js/script.js"></script>
+	<!-- <script src="js/jquery-notify.js"></script> -->
+	<link type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" /> 
+	<!-- NOTE: Script load order is significant! -->
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	
+</body>
+</html>
+					

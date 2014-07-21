@@ -1,0 +1,42 @@
+TODO
+
+Low Priority
+<!-- TODO Set an image for application startup for iPhone-->
+<link rel="apple-touch-startup-image" href="filename.png" />
+<!-- TODO should sync meal preferences and others with the server -->
+// TODO change temp meal icon logo to our logo and splash logo to our logo
+// TODO insert description into recipeDetail? output += '<p>' + excerpt + "</p>";
+// TODO change this to our logo in showDesiredRecipe
+// comment code
+// implement full login sequence
+
+Must do
+// TODO hit server RESTful API $.get("URL to set cuisine");
+
+Deprecated: 
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>  -->
+	<!-- <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.datebox.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.durationbox.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.slidebox.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.js"></script> -->
+	<!-- <script type="text/javascript" src="../extras.js"></script> -->
+	<!-- <script type="text/javascript" src="http://dev.jtsage.com/gpretty/prettify.js"></script> -->
+	<!-- <link type="text/css" href="http://dev.jtsage.com/gpretty/prettify.css" rel="stylesheet" /> -->
+	<!-- <script type="text/javascript">
+		$('div').live('pagecreate', function() {
+			prettyPrint()
+		});
+	</script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.css" />  -->
+	<!-- <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.js"></script> -->
+	<!-- <script src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.js"></script> -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.css" /> -->
+	<!-- <link type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" rel="stylesheet" />  -->
+	<!-- <link type="text/css" href="http://dev.jtsage.com/jQM-DateBox/css/demos.css" rel="stylesheet" />  -->
+	
+	<!-- <script src="js/jquery.cookie.js"></script>
+	<script src="js/jquery.json.js"></script> <!-- Provides improved functionality to output to JSON-->
+	<!-- <script src="js/jquery-notify.js"></script> -->

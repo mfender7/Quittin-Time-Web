@@ -45,18 +45,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     //NSMutableArray *foodsToAvoid = [userDefaults objectForKey:@"foodToAvoid"];
     //[appDelegate performRequest:foodsToAvoid];
-    [self reloadData];
+    [self reloadTableData];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reloadData)
+                                             selector:@selector(dataLoaded)
                                                  name:@"NSURLConnectionDidFinish"
                                                object:nil];
     
-    mealNames = [[NSMutableArray alloc] init];
-    imageArray = [[NSMutableArray alloc] init];
+
 
 
     
@@ -65,15 +66,19 @@
     
 }
 
--(void) reloadData {
+-(void) reloadTableData {
     // finish up
     NSLog(@"reload called");
+    mealNames = [[NSMutableArray alloc] init];
+    imageArray = [[NSMutableArray alloc] init];
     // convert to JSON
     //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sampleJSON" ofType:@"json"];
     //NSData* data = [NSData dataWithContentsOfFile:filePath];
     //NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     jsonDict = [userDefaults objectForKey:@"jsonDictionary"];
+    
+
     
     //jsonDict = [NSJSONSerialization JSONObjectWithData:appDelegate.responseData options:kNilOptions error:nil];
     
@@ -84,16 +89,16 @@
     //    }
     //
     // show all values
-    for(id recipeName in jsonDict) {
-        
-        id value = [jsonDict objectForKey:recipeName];
-        
-        NSString *keyAsString = (NSString *)recipeName;
-        NSString *valueAsString = (NSString *)value;
-        
-        NSLog(@"key: %@", keyAsString);
-        NSLog(@"value: %@", valueAsString);
-    }
+//    for(id recipeName in jsonDict) {
+//        
+//        id value = [jsonDict objectForKey:recipeName];
+//        
+//        NSString *keyAsString = (NSString *)recipeName;
+//        NSString *valueAsString = (NSString *)value;
+//        
+//        NSLog(@"key: %@", keyAsString);
+//        NSLog(@"value: %@", valueAsString);
+//    }
     
     // extract specific value...
     NSArray *results = [jsonDict objectForKey:@"matches"];
@@ -111,12 +116,24 @@
             UIImage *recipeImage = [[UIImage alloc] initWithData:data];
             [imageArray addObject:recipeImage];
             //NSLog(@"Path: %@", path);
-            
+            if (![userDefaults objectForKey:@"recipeName"]) {
+                [self saveSelectedRecipe:recipeName];
+                NSLog(@"%@",[userDefaults objectForKey:@"recipeName"]);
+            }
             recipeCount++;
         }
         
+        
     }
+
     [self.tableView reloadData];
+
+}
+
+
+
+-(void)dataLoaded {
+    [self reloadTableData];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -164,6 +181,11 @@
 {
     MealChoiceTableViewCell *cell = (MealChoiceTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     NSString *selectedMeal = [NSString stringWithFormat:@"%@", cell.mealLabel.text];
+    [self saveSelectedRecipe:selectedMeal];
+}
+
+-(void)saveSelectedRecipe: (NSString *) selectedMeal {
+
     //Get Recipe and Directions
     NSArray *results = [jsonDict objectForKey:@"matches"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -198,9 +220,8 @@
         
         
     }
+    
 }
-
-
 
 /*
 // Override to support conditional editing of the table view.

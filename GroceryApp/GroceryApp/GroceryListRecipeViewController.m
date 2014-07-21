@@ -62,6 +62,7 @@
 //    mealTitle.text = mealNames[1];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     mealTitle.text = [userDefaults objectForKey:@"recipeName"];
+    
     NSString *path = [userDefaults objectForKey:@"recipeImage"];
     NSURL *url = [NSURL URLWithString:path];
     NSData *data = [NSData dataWithContentsOfURL:url];

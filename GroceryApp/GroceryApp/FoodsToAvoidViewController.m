@@ -114,7 +114,7 @@
         NSMutableArray *foodsToAvoid = [[NSMutableArray alloc] init];
         for (NSNumber *row in selectedFoods) {
             NSInteger rowInteger = [row integerValue];
-            [foodsToAvoid addObject:[selectedFoods objectAtIndex:rowInteger]];
+            [foodsToAvoid addObject:[avoidedFoodsSorted objectAtIndex:rowInteger]];
         }
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:foodsToAvoid forKey:@"foodsToAvoid"];

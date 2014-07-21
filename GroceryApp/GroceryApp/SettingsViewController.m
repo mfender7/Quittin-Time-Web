@@ -101,6 +101,7 @@
 
 - (IBAction)triggerNotification:(id)sender {
     //Test Time
+    
     NSDate *test = [NSDate date];
     test = [test dateByAddingTimeInterval:5]; //add 5 seconds
     
@@ -117,7 +118,7 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
     // Request to reload table view data
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
     
 }
 @end

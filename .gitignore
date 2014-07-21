@@ -39,6 +39,12 @@ Thumbs.db
 # NPM log
 npm-debug.log
 .gitignore~
+<<<<<<< HEAD
 GroceryApp/GroceryApp.xcodeproj/project.xcworkspace/xcshareddata/
 GroceryApp/GroceryApp.xcodeproj/project.xcworkspace/xcuserdata/mfender.xcuserdatad/
 GroceryApp/GroceryApp.xcodeproj/xcuserdata/mfender.xcuserdatad/
+=======
+
+# Aptana
+.project
+>>>>>>> webapp

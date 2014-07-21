@@ -1,3 +1,29 @@
+#notificationsContent .ui-btn{
+	/* For button to pick date and time of notification */
+	position: relative;
+	margin-top: 0;
+}
+
+.ui-content {
+	margin-left: auto;
+	margin-right: auto;
+	max-width:600px;
+}
+
+img{
+	padding: 5px;
+}
+
+.ui-header{
+	margin-left: auto;
+    margin-right: auto;
+	max-width:600px;
+}
+
+#placeholderIcon{
+	max-width:300px;
+}
+
 #home .ui-controlgroup {
   width: 60%;
   margin: 0 auto;
@@ -22,10 +48,6 @@ padding-left: 100px;
 #recipeInstructions > ol > li {
 white-space: normal;
 }
-
-/* #home {
-  background: url('../images/background_viewsource.png')
-} */
 
 li.ui-li-has-thumb img {
   margin: 10px;

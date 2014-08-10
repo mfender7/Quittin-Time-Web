@@ -256,11 +256,11 @@
 - (void)performRequest:(NSMutableArray *)foodsToAvoid
     {
     
-    NSString *urlString = [NSString stringWithFormat: @"http://80.74.134.201:3000/somerecipe"];
+    NSString *urlString = [NSString stringWithFormat: @"http://80.74.134.201:3000/recipes"];
     if (foodsToAvoid != nil) {
-        for (NSString *item in foodsToAvoid) {
-            [urlString stringByAppendingString:[NSString stringWithFormat:@"&excluded[]=%@",item]];
-        }
+        //for (NSString *item in foodsToAvoid) {
+          //  [urlString stringByAppendingString:[NSString stringWithFormat:@"&excluded[]=%@",item]];
+        //}
     }
     
     NSURLRequest *request = [NSURLRequest requestWithURL:

@@ -193,9 +193,11 @@
     NSDate *todaysDate = [[NSDate alloc] init];
     NSDateFormatter *formatterDay = [[NSDateFormatter alloc] init];
     [formatterDay setDateFormat:@"MMddYYYY"];
-    NSString *date = [formatterDay stringFromDate:todaysDate];
+    //NSString *date = [formatterDay stringFromDate:todaysDate];
     //NSLog(@"%@",date);
-    
+    NSLog(@"go go go");
+    [self performRequest:foodsToAvoid];
+   /*
     if ([(NSString *)[defaults objectForKey:@"dateOfLastLoad"] isEqualToString: nil]) {
         [self performRequest:foodsToAvoid];
         [defaults setObject:date forKey:@"dateOfLastLoad"];
@@ -208,7 +210,7 @@
         [defaults setObject:date forKey:@"dateOfLastLoad"];
         [defaults synchronize];
         NSLog(@"there");
-    }
+    } */
     
     
     
